@@ -1,0 +1,289 @@
+---
+title: "Automatic Transfer Switch Maintenance Guide: NFPA 110 Requirements and Preventive Maintenance Schedules"
+description: "Complete ATS maintenance guide with NFPA 110 testing requirements, annual inspection checklists, failure mode prevention, and detailed maintenance schedules."
+vertical: "generators"
+category: "maintenance-schedules"
+date: "2026-03-15"
+author: "FCH Editorial Team"
+keywords: ["automatic transfer switch", "ATS maintenance", "NFPA 110 ATS requirements", "transfer switch testing", "ATS inspection checklist", "bypass isolation switch", "emergency power transfer"]
+featured: true
+---
+
+## The Critical Role of the Automatic Transfer Switch
+
+The automatic transfer switch is arguably the most critical single component in an emergency power supply system (EPSS). It is the device that detects a loss of normal utility power, signals the emergency generator to start, and transfers the building's emergency loads from the utility source to the generator. When utility power is restored, the ATS monitors the returning source for stability and transfers the loads back.
+
+A generator can be perfectly maintained, fully fueled, and tested monthly -- but if the ATS fails to detect the outage, fails to send the start signal, or fails to transfer the load, the entire emergency power system is rendered useless. ATS failures account for a substantial percentage of all EPSS failures, and many of these failures are preventable through proper maintenance and testing.
+
+NFPA 110 recognizes the criticality of the ATS and dedicates specific provisions to its testing and maintenance. This guide covers those requirements in detail and provides a practical maintenance framework for facility managers and maintenance teams.
+
+## How an Automatic Transfer Switch Works
+
+Understanding ATS operation is essential for effective maintenance. The transfer sequence follows a specific logic:
+
+### Normal-to-Emergency Transfer
+
+1. **Voltage sensing** -- The ATS continuously monitors utility voltage on all phases. When voltage drops below a predetermined threshold (typically 85-90% of nominal), the ATS registers a utility failure.
+2. **Time delay on failure** -- A programmable time delay (typically 1-5 seconds) prevents nuisance transfers during momentary utility fluctuations. The ATS waits to confirm the outage is sustained before initiating the transfer sequence.
+3. **Engine start signal** -- After the time delay expires, the ATS sends a start signal to the generator control panel, initiating the engine cranking sequence.
+4. **Generator voltage sensing** -- The ATS monitors the generator output, waiting for voltage and frequency to reach acceptable levels (typically 90% of nominal voltage and within 0.5 Hz of rated frequency).
+5. **Time delay on transfer** -- An optional brief delay after generator voltage is confirmed allows the generator to stabilize before accepting load.
+6. **Transfer operation** -- The ATS mechanically transfers the load contacts from the utility source to the generator source. In a standard open-transition transfer, there is a momentary interruption (typically 50-100 milliseconds) as the contacts break from one source and make to the other.
+
+### Emergency-to-Normal Retransfer
+
+1. **Utility restoration sensing** -- When utility power returns, the ATS monitors voltage and frequency for stability.
+2. **Time delay on retransfer** -- A programmable delay (typically 5-30 minutes) ensures the utility source is stable before retransferring. This prevents cycling between sources during intermittent utility restoration.
+3. **Retransfer operation** -- The ATS transfers loads back to the utility source.
+4. **Generator cooldown** -- The ATS maintains the engine start signal for a programmable cooldown period (typically 5-10 minutes), allowing the generator to run unloaded before shutdown.
+5. **Engine shutdown** -- After the cooldown period, the ATS removes the start signal and the generator shuts down.
+
+The entire sequence -- from utility failure to full emergency power delivery -- must complete within 10 seconds for Level 1 EPSS installations per NFPA 110. Every time delay, every sensing threshold, and every mechanical operation must be calibrated and maintained to fit within that window.
+
+## NFPA 110 Chapter 8 ATS Testing Requirements
+
+NFPA 110 Chapter 8 establishes the testing and maintenance requirements for all EPSS components, including the ATS.
+
+### Monthly Testing -- Section 8.4.1
+
+The ATS must be exercised as part of the monthly EPSS test required by Section 8.4.2. During each monthly test, the following ATS functions must be verified:
+
+- The ATS detects the simulated or actual loss of normal power
+- The ATS sends the engine start signal to the generator
+- The ATS transfers loads to the generator after the generator achieves acceptable voltage and frequency
+- The ATS retransfers loads to normal power when the utility source is restored (or simulated as restored)
+- All time delays operate within their programmed parameters
+- Transfer and retransfer operations complete without abnormal noise, arcing, or hesitation
+
+Monthly testing should be performed by simulating a utility outage at the ATS (using the test switch or by opening the normal source breaker) rather than waiting for an actual outage. This ensures the test is controlled and documented.
+
+### Semi-Annual Inspection -- Section 8.3.4
+
+The semi-annual EPSS inspection should include a thorough examination of the ATS covering:
+
+- Physical condition of the enclosure, wiring, and mechanical components
+- Tightness of all electrical connections (torque verification)
+- Condition of main transfer contacts (look for pitting, erosion, or discoloration)
+- Operation of the mechanical transfer mechanism
+- Verification of all sensing and control circuits
+- Review of the ATS event log (if equipped with electronic controls)
+
+### Annual Maintenance
+
+While NFPA 110 does not prescribe a separate annual ATS maintenance protocol distinct from the semi-annual inspection, industry best practice and most ATS manufacturers recommend a comprehensive annual maintenance service that goes beyond the semi-annual visual and operational check.
+
+<Callout type="info" title="Manufacturer Requirements">
+Always follow the ATS manufacturer's specific maintenance recommendations in addition to NFPA 110 requirements. Manufacturer guidelines often include additional inspection points, specific torque values, and component replacement intervals that are essential for maintaining warranty coverage and long-term reliability.
+</Callout>
+
+## Monthly ATS Exercising Procedures
+
+The monthly ATS exercise should follow a consistent, documented procedure. The following protocol covers the essential steps:
+
+### Pre-Test Checks
+
+1. Verify the generator is in automatic standby mode and ready to start
+2. Confirm fuel level is adequate for the test duration
+3. Check the ATS controller display for any active alarms or fault indications
+4. Notify building occupants and relevant personnel that a power transfer test is about to begin
+5. Ensure any connected loads that are sensitive to momentary power interruption are protected or bypassed
+
+### Test Execution
+
+1. **Initiate the test** by activating the ATS test function. Most modern ATS units have a test position on the controller that simulates a utility failure without requiring the normal source breaker to be opened.
+2. **Observe the transfer sequence** -- Verify that the generator starts within the expected cranking time, achieves rated voltage and frequency, and that the ATS transfers smoothly.
+3. **Monitor operating parameters** during the loaded run period -- voltage, frequency, and current on the emergency bus.
+4. **Time the transfer** -- Using a stopwatch or the ATS controller's built-in timer, record the elapsed time from simulated utility loss to load transfer. For Level 1 systems, this must be within 10 seconds.
+5. **Initiate retransfer** by returning the ATS test switch to the normal position. Verify the ATS retransfers to the utility source after the programmed time delay.
+6. **Verify generator cooldown** -- Confirm the generator continues to run for the programmed cooldown period before shutting down.
+7. **Check for alarms** -- After the test is complete, verify the ATS controller shows no active alarms and has returned to normal standby mode.
+
+### Post-Test Documentation
+
+Record the following information for each monthly test:
+
+- Date and time of test
+- Name of person conducting the test
+- Transfer time (seconds from utility loss to emergency power at the load)
+- Retransfer time delay (minutes)
+- Generator cooldown duration
+- Any abnormalities observed (unusual noise, hesitation, arcing, alarm conditions)
+- Corrective actions taken or required
+
+## Annual ATS Maintenance Checklist
+
+The annual ATS maintenance service is the most thorough maintenance event in the ATS lifecycle. It should be performed by a qualified technician familiar with the specific ATS make and model.
+
+<Callout type="danger" title="Safety Warning">
+ATS maintenance involves working on energized electrical equipment. All maintenance procedures must be performed in accordance with NFPA 70E requirements for electrical safety in the workplace. Qualified personnel must use appropriate PPE, follow lockout/tagout procedures where applicable, and maintain safe approach distances from energized conductors. Some ATS maintenance tasks require de-energization of both the normal and emergency sources.
+</Callout>
+
+### Mechanical Inspection
+
+- Inspect main transfer contacts for pitting, erosion, discoloration, or excessive wear
+- Measure contact gap and wipe per manufacturer specifications
+- Check contact spring tension and mechanical linkage alignment
+- Lubricate mechanical pivot points per manufacturer instructions (use only approved lubricants)
+- Inspect the operating mechanism (motor operator or solenoid) for wear or damage
+- Verify mechanical interlocks operate correctly -- contacts must not bridge between sources
+- Check the enclosure for moisture intrusion, corrosion, or pest entry
+
+### Electrical Inspection
+
+- Perform infrared thermography scan of all connections under load (if accessible without de-energization)
+- Torque all power connections to manufacturer specifications
+- Torque all control wiring terminations
+- Inspect all wiring for damaged insulation, loose terminations, or signs of overheating
+- Check grounding connections for tightness and continuity
+- Verify proper phase rotation on both normal and emergency sources
+- Test overcurrent protective devices (if integral to the ATS)
+
+### Controls and Sensing
+
+- Calibrate voltage sensing -- Verify the ATS picks up (transfers) and drops out (retransfers) at the correct voltage thresholds
+- Calibrate frequency sensing -- Verify frequency sensing thresholds are set correctly
+- Test and verify all time delays: time delay on failure, time delay on transfer, time delay on retransfer, engine cooldown timer
+- Test all auxiliary contacts and control relays
+- Verify the engine start signal circuit operates correctly
+- Test the ATS exerciser timer (if equipped) for correct day and time programming
+- Download and review the ATS event log for anomalies
+- Replace the controller battery (if applicable) per manufacturer schedule
+
+### Comprehensive Annual Maintenance Schedule
+
+| Task | Frequency | Performed By | Notes |
+|---|---|---|---|
+| Visual inspection of enclosure | Monthly | Facility staff | Check for damage, moisture, pest entry |
+| Exercise test (transfer and retransfer) | Monthly | Facility staff | Document transfer time and any anomalies |
+| Check controller display for alarms | Monthly | Facility staff | Clear and investigate any active faults |
+| Infrared thermography scan | Semi-annually | Qualified technician | Identify hot connections under load |
+| Torque verification of power connections | Annually | Qualified technician | Use calibrated torque wrench; follow mfg specs |
+| Main contact inspection | Annually | Qualified technician | Check for pitting, erosion, wear |
+| Mechanical linkage inspection | Annually | Qualified technician | Lubricate per manufacturer requirements |
+| Voltage and frequency sensing calibration | Annually | Qualified technician | Verify pickup and dropout thresholds |
+| Time delay verification and adjustment | Annually | Qualified technician | All programmable delays |
+| Control wiring torque check | Annually | Qualified technician | All control terminations |
+| Event log review | Annually | Qualified technician | Download and archive log data |
+| Controller battery replacement | Per manufacturer (typically 3-5 years) | Qualified technician | Do not exceed recommended interval |
+| Contact replacement | Per manufacturer or condition-based | Qualified technician | Replace when pitting exceeds limits |
+
+## Voltage and Frequency Sensing Calibration
+
+The ATS voltage and frequency sensing circuits are the decision-making elements that determine when to transfer and retransfer. Incorrect calibration can cause either nuisance transfers (sensing thresholds too tight) or failure to transfer (thresholds too loose).
+
+### Voltage Sensing Parameters
+
+**Pickup voltage (transfer threshold):** The voltage level below which the ATS considers the utility to have failed. Typically set at 85-90% of nominal voltage. For a 480V system, this means a transfer initiates when voltage drops below approximately 408-432V.
+
+**Dropout voltage (retransfer threshold):** The voltage level above which the ATS considers the utility to have been restored. Typically set at 90-95% of nominal. This value must be higher than the pickup voltage to prevent cycling.
+
+### Frequency Sensing Parameters
+
+**Underfrequency pickup:** The frequency below which the ATS considers the source unacceptable. Typically set at 95% of nominal (57 Hz for a 60 Hz system).
+
+**Overfrequency pickup:** The frequency above which the source is considered unacceptable. Typically set at 105% of nominal (63 Hz).
+
+Frequency sensing is particularly important for the generator source, as governor instability or overloading can cause frequency deviations that should prevent load transfer until the generator stabilizes.
+
+## Common ATS Failure Modes and Prevention
+
+Understanding the most common ATS failure modes allows you to focus maintenance efforts where they will have the greatest impact.
+
+### Contact Welding
+
+**Cause:** High-current arcing during transfer or retransfer welds the contacts in the closed position. This is most common in older ATS units that have not been exercised regularly.
+
+**Prevention:** Monthly exercising keeps contacts clean and free-moving. Annual contact inspection identifies early signs of pitting that could lead to welding. Properly sized ATS rated for the connected load prevents contacts from operating near their thermal limits.
+
+### Controller Failure
+
+**Cause:** Electronic control board failure due to power surges, moisture intrusion, component aging, or firmware corruption.
+
+**Prevention:** Surge protection on the ATS control circuit, regular inspection for moisture intrusion, and maintaining controller firmware updates per manufacturer recommendations. Keep a spare controller board on-site for critical installations.
+
+### Mechanical Binding
+
+**Cause:** Corrosion, debris, or lack of lubrication in the mechanical transfer mechanism prevents the contacts from moving freely.
+
+**Prevention:** Annual lubrication per manufacturer specifications, enclosure integrity maintenance to prevent moisture and debris entry, and monthly exercising that keeps mechanical components moving.
+
+### Sensing Circuit Drift
+
+**Cause:** Voltage and frequency sensing thresholds drift over time due to component aging, resulting in either nuisance transfers or failure to transfer.
+
+**Prevention:** Annual sensing calibration verification and adjustment as part of the maintenance program.
+
+### Loose Connections
+
+**Cause:** Thermal cycling of power connections causes gradual loosening over time. Loose connections create resistance, which generates heat, which accelerates further loosening in a destructive cycle.
+
+**Prevention:** Annual torque verification of all power and control connections. Semi-annual infrared thermography to identify hot spots before they cause failure.
+
+## Open-Transition vs. Closed-Transition Transfer
+
+The transfer method used by the ATS has implications for both the connected loads and the maintenance program.
+
+### Open-Transition Transfer
+
+In an open-transition transfer, the ATS breaks contact with the current source before making contact with the new source. There is a momentary power interruption -- typically 50 to 100 milliseconds -- during which the load is disconnected from both sources.
+
+**Characteristics:**
+- Simplest and most common transfer method
+- Momentary interruption acceptable for most emergency loads (lighting, fire alarm, smoke control)
+- No risk of paralleling the generator with the utility
+- Lower equipment cost
+
+### Closed-Transition Transfer
+
+In a closed-transition (make-before-break) transfer, the ATS briefly connects both sources simultaneously before disconnecting the original source. The overlap period is typically less than 100 milliseconds, and both sources are synchronized before the overlap occurs.
+
+**Characteristics:**
+- No power interruption to the load during transfer
+- Requires source synchronization capability
+- Brief period of generator-utility parallel operation (requires utility company approval)
+- Higher equipment cost and more complex controls
+- Preferred for sensitive loads such as data center UPS systems and variable frequency drives
+
+**Maintenance implications:** Closed-transition ATS units require additional maintenance of the synchronization controls, phase-matching circuits, and the paralleling logic. Annual maintenance should verify synchronization accuracy and confirm the overlap duration does not exceed the programmed limit.
+
+## Bypass Isolation Switch Considerations
+
+Many critical ATS installations include a bypass isolation switch that allows the ATS to be electrically isolated for maintenance while maintaining power to the emergency loads through a manual bypass path.
+
+### Why a Bypass Isolation Switch Matters
+
+Without a bypass isolation switch, performing ATS maintenance requires either de-energizing the emergency loads or working on energized equipment. Neither option is acceptable for facilities where continuous emergency power availability is required (such as hospitals or data centers).
+
+A bypass isolation switch provides three operational positions:
+
+1. **Normal operation** -- Load is fed through the ATS, which operates automatically
+2. **Bypass to normal** -- Load is fed directly from the utility source, bypassing the ATS, allowing ATS maintenance while maintaining power
+3. **Bypass to emergency** -- Load is fed directly from the generator source, bypassing the ATS
+
+### Bypass Switch Maintenance
+
+The bypass isolation switch itself requires maintenance, though less frequently than the ATS:
+
+- Annual inspection of bypass contacts and mechanical operation
+- Torque verification of all bypass switch connections
+- Functional test to verify the bypass path provides power to the load
+- Verification that the ATS is properly isolated when the bypass switch is in the service position
+- Interlock verification to confirm the ATS cannot transfer while in bypass mode
+
+<Callout type="warning" title="Important">
+Operating in bypass mode disables automatic transfer capability. The facility has no automatic emergency power transfer while the ATS is bypassed. Schedule bypass operations during periods of low outage risk and have qualified personnel available to manually transfer loads if needed. Minimize the duration of bypass operation.
+</Callout>
+
+## Building a Sustainable ATS Maintenance Program
+
+A reliable ATS maintenance program integrates the following elements:
+
+1. **Monthly exercise testing** with documented transfer times and operational verification
+2. **Semi-annual thermographic inspections** to catch connection issues before they cause failure
+3. **Annual comprehensive maintenance** by qualified technicians familiar with your specific ATS make and model
+4. **Spare parts inventory** for critical components -- at minimum, keep a spare controller and a set of main contacts on-site for critical installations
+5. **Condition-based replacement planning** -- Track contact wear over annual inspections and plan replacement before contacts reach their wear limits
+6. **Training for facility staff** -- Ensure on-site personnel can perform monthly exercise tests, recognize alarm conditions, and operate the bypass isolation switch in an emergency
+7. **Service contract with qualified provider** -- Maintain an ongoing relationship with a service provider who knows your equipment and can respond quickly to emergency repairs
+
+The ATS is the bridge between your generator and your emergency loads. Maintain it with the same priority you give to the generator itself, and it will deliver reliable automatic power transfer when your facility needs it most.
