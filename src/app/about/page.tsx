@@ -19,7 +19,7 @@ export default function AboutPage() {
         <div className="mt-8 space-y-6 text-lg leading-relaxed text-gray-600">
           <p>
             <strong className="text-gray-900">
-              FacilityComplianceHub.com is the definitive online resource for
+              FacilityComplianceHub.org is the definitive online resource for
               commercial facility compliance.
             </strong>{" "}
             We aggregate maintenance requirements, code standards, inspection

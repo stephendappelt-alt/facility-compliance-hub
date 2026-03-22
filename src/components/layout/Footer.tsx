@@ -85,7 +85,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 py-6">
           <p className="text-center text-xs text-gray-500">
-            &copy; {new Date().getFullYear()} FacilityComplianceHub.com. An
+            &copy; {new Date().getFullYear()} FacilityComplianceHub.org. An
             independent industry resource. All rights reserved.
           </p>
         </div>

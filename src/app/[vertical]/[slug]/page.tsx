@@ -13,6 +13,7 @@ import Breadcrumbs from "@/components/layout/Breadcrumbs";
 import TableOfContents from "@/components/article/TableOfContents";
 import SponsorSidebar from "@/components/article/SponsorSidebar";
 import RelatedArticles from "@/components/article/RelatedArticles";
+import Disclaimer from "@/components/article/Disclaimer";
 import MDXContent from "@/components/mdx/MDXContent";
 import Badge from "@/components/ui/Badge";
 import { categoryLabels } from "@/types/article";
@@ -105,6 +106,9 @@ export default function ArticlePage({ params }: ArticlePageProps) {
 
             {/* Article Body */}
             <MDXContent source={article.content} />
+
+            {/* Disclaimer */}
+            <Disclaimer />
 
             {/* Sponsor Strip */}
             {sponsor && (
