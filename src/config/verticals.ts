@@ -96,6 +96,25 @@ export const verticals: VerticalConfig[] = [
       "faq",
     ],
   },
+  {
+    slug: "electrical",
+    name: "Electrical Systems",
+    shortName: "Electrical",
+    description:
+      "Arc flash compliance, NFPA 70E workplace safety, electrical panel maintenance, transformer testing, and commercial electrical inspection requirements.",
+    icon: "Bolt",
+    image: "/images/verticals/electrical.jpg",
+    color: "#D97706",
+    active: false,
+    categories: [
+      "compliance-guides",
+      "maintenance-schedules",
+      "checklists",
+      "code-updates",
+      "buyer-guides",
+      "faq",
+    ],
+  },
 ];
 
 export function getVerticalBySlug(slug: string): VerticalConfig | undefined {

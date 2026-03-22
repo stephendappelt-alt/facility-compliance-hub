@@ -9,5 +9,6 @@ export const navigation = {
     { label: "Fire Protection", href: "/fire-protection", active: false },
     { label: "Roofing", href: "/roofing", active: false },
     { label: "Plumbing", href: "/plumbing", active: false },
+    { label: "Electrical", href: "/electrical", active: false },
   ],
 };
