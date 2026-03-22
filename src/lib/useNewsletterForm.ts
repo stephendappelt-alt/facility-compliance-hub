@@ -5,12 +5,9 @@ import { useState, FormEvent } from "react";
 // ============================================================
 // Kit (ConvertKit) Newsletter Integration
 // ============================================================
-// Form ID and API Key are set via environment variables in Vercel.
-// NEXT_PUBLIC_KIT_FORM_ID and NEXT_PUBLIC_KIT_API_KEY
+// Submits to /api/subscribe which proxies to Kit server-side.
+// This avoids browser CORS issues with Kit's API.
 // ============================================================
-
-const KIT_FORM_ID = process.env.NEXT_PUBLIC_KIT_FORM_ID || "";
-const KIT_API_KEY = process.env.NEXT_PUBLIC_KIT_API_KEY || "";
 
 type Status = "idle" | "loading" | "success" | "error";
 
@@ -28,31 +25,20 @@ export function useNewsletterForm() {
       return;
     }
 
-    if (!KIT_FORM_ID || !KIT_API_KEY) {
-      console.log("Newsletter signup (Kit not configured):", email);
-      setStatus("success");
-      setEmail("");
-      return;
-    }
-
     setStatus("loading");
     setErrorMessage("");
 
     try {
-      const res = await fetch(
-        `https://api.convertkit.com/v3/forms/${KIT_FORM_ID}/subscribe`,
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json; charset=utf-8" },
-          body: JSON.stringify({
-            api_key: KIT_API_KEY,
-            email,
-          }),
-        }
-      );
+      const res = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+
+      const data = await res.json();
 
       if (!res.ok) {
-        throw new Error("Subscription failed. Please try again.");
+        throw new Error(data.error || "Subscription failed. Please try again.");
       }
 
       setStatus("success");
