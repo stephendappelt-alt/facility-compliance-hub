@@ -8,9 +8,8 @@ import { useState, FormEvent } from "react";
 // To activate:
 // 1. Sign up at kit.com (free plan)
 // 2. Create an inline form
-// 3. Add these to your .env.local (and Vercel environment variables):
+// 3. Add to your .env.local (and Vercel environment variables):
 //    NEXT_PUBLIC_KIT_FORM_ID=your_form_id
-//    NEXT_PUBLIC_KIT_API_KEY=your_public_api_key   (optional — only needed if form requires it)
 // ============================================================
 
 const KIT_FORM_ID = process.env.NEXT_PUBLIC_KIT_FORM_ID || "";
@@ -32,7 +31,6 @@ export function useNewsletterForm() {
     }
 
     if (!KIT_FORM_ID) {
-      // Fallback: log to console until Kit is configured
       console.log("Newsletter signup (Kit not configured):", email);
       setStatus("success");
       setEmail("");
@@ -43,15 +41,15 @@ export function useNewsletterForm() {
     setErrorMessage("");
 
     try {
+      // Use Kit's HTML form subscription endpoint (no API key required)
+      const formData = new FormData();
+      formData.append("email_address", email);
+
       const res = await fetch(
-        `https://api.convertkit.com/v3/forms/${KIT_FORM_ID}/subscribe`,
+        `https://app.convertkit.com/forms/${KIT_FORM_ID}/subscriptions`,
         {
           method: "POST",
-          headers: { "Content-Type": "application/json; charset=utf-8" },
-          body: JSON.stringify({
-            api_key: process.env.NEXT_PUBLIC_KIT_API_KEY || KIT_FORM_ID,
-            email,
-          }),
+          body: formData,
         }
       );
 
