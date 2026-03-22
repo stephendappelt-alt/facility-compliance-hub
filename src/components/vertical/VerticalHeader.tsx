@@ -38,7 +38,11 @@ export default function VerticalHeader({
               {vertical.description}
             </p>
           </div>
-          {sponsor && <SponsorBadge sponsor={sponsor} size="lg" />}
+          {sponsor && (
+            <div className="flex-shrink-0 sm:self-center">
+              <SponsorBadge sponsor={sponsor} size="lg" />
+            </div>
+          )}
         </div>
       </div>
     </div>
