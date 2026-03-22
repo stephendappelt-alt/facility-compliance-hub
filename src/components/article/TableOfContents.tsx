@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface TOCItem {
   id: string;
@@ -11,6 +11,8 @@ interface TOCItem {
 export default function TableOfContents() {
   const [headings, setHeadings] = useState<TOCItem[]>([]);
   const [activeId, setActiveId] = useState("");
+  const activeRef = useRef<HTMLAnchorElement>(null);
+  const scrollContainerRef = useRef<HTMLUListElement>(null);
 
   useEffect(() => {
     const article = document.querySelector("article");
@@ -39,6 +41,24 @@ export default function TableOfContents() {
     return () => observer.disconnect();
   }, []);
 
+  // Auto-scroll the TOC to keep the active item visible
+  useEffect(() => {
+    if (activeRef.current && scrollContainerRef.current) {
+      const container = scrollContainerRef.current;
+      const activeEl = activeRef.current;
+      const containerRect = container.getBoundingClientRect();
+      const activeRect = activeEl.getBoundingClientRect();
+
+      // If active item is below the visible area or above it, scroll to center it
+      if (
+        activeRect.bottom > containerRect.bottom ||
+        activeRect.top < containerRect.top
+      ) {
+        activeEl.scrollIntoView({ block: "center", behavior: "smooth" });
+      }
+    }
+  }, [activeId]);
+
   if (headings.length === 0) return null;
 
   return (
@@ -46,10 +66,14 @@ export default function TableOfContents() {
       <h4 className="mb-3 text-xs font-semibold uppercase tracking-wider text-gray-400">
         On this page
       </h4>
-      <ul className="space-y-1 border-l border-gray-200">
+      <ul
+        ref={scrollContainerRef}
+        className="max-h-[calc(100vh-12rem)] space-y-1 overflow-y-auto border-l border-gray-200 scrollbar-thin"
+      >
         {headings.map((heading) => (
           <li key={heading.id}>
             <a
+              ref={activeId === heading.id ? activeRef : undefined}
               href={`#${heading.id}`}
               className={`block border-l-2 py-1 text-sm transition ${
                 heading.level === 3 ? "pl-6" : "pl-4"
