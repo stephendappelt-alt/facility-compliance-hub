@@ -139,8 +139,8 @@ export default function ArticlePage({ params }: ArticlePageProps) {
           {/* Sidebar */}
           <div className="hidden w-72 flex-shrink-0 lg:block">
             <div className="sticky top-24 space-y-6">
-              <TableOfContents />
               {sponsor && <SponsorSidebar sponsor={sponsor} />}
+              <TableOfContents />
             </div>
           </div>
         </div>
