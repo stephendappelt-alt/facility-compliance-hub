@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Sponsor } from "@/types/sponsor";
 
 interface SponsorBadgeProps {
@@ -12,9 +13,13 @@ export default function SponsorBadge({ sponsor, size = "sm" }: SponsorBadgeProps
         size === "lg" ? "px-5 py-3" : "px-4 py-2"
       }`}
     >
-      <div className="flex h-8 w-8 items-center justify-center rounded bg-white text-xs font-bold text-primary-700 shadow-sm">
-        {sponsor.shortName}
-      </div>
+      <Image
+        src={sponsor.logo}
+        alt={sponsor.name}
+        width={size === "lg" ? 40 : 32}
+        height={size === "lg" ? 40 : 32}
+        className="rounded object-contain"
+      />
       <div>
         <p className="text-[10px] font-semibold uppercase tracking-wider text-gray-400">
           Platinum Sponsor

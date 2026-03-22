@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Sponsor } from "@/types/sponsor";
 
 interface SponsorSidebarProps {
@@ -10,9 +11,13 @@ export default function SponsorSidebar({ sponsor }: SponsorSidebarProps) {
       <p className="mb-3 text-[10px] font-semibold uppercase tracking-wider text-gray-400">
         Platinum Sponsor
       </p>
-      <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-white text-sm font-bold text-primary-700 shadow-sm">
-        {sponsor.shortName}
-      </div>
+      <Image
+        src={sponsor.logo}
+        alt={sponsor.name}
+        width={160}
+        height={40}
+        className="mb-3 object-contain"
+      />
       <h4 className="font-semibold text-gray-900">{sponsor.name}</h4>
       <p className="mt-1 text-xs text-gray-500">{sponsor.tagline}</p>
       <p className="mt-3 text-sm leading-relaxed text-gray-600">

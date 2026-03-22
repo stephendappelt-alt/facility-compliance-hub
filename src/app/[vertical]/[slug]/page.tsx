@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import {
@@ -108,9 +109,13 @@ export default function ArticlePage({ params }: ArticlePageProps) {
             {/* Sponsor Strip */}
             {sponsor && (
               <div className="mt-8 flex items-center gap-4 rounded-lg border border-gray-200 bg-gray-50 p-4">
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-white text-xs font-bold text-primary-700 shadow-sm">
-                  {sponsor.shortName}
-                </div>
+                <Image
+                  src={sponsor.logo}
+                  alt={sponsor.name}
+                  width={120}
+                  height={32}
+                  className="object-contain"
+                />
                 <div className="flex-1">
                   <p className="text-xs text-gray-500">
                     This guide is brought to you by our Platinum Sponsor
