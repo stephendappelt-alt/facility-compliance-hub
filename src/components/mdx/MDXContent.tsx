@@ -1,4 +1,5 @@
 import { compileMDX } from "next-mdx-remote/rsc";
+import remarkGfm from "remark-gfm";
 import Callout from "./Callout";
 
 function slugify(text: string) {
@@ -43,7 +44,10 @@ export default async function MDXContent({ source }: MDXContentProps) {
   const { content } = await compileMDX({
     source,
     components,
-    options: { parseFrontmatter: false },
+    options: {
+      parseFrontmatter: false,
+      mdxOptions: { remarkPlugins: [remarkGfm] },
+    },
   });
 
   return <article className="prose prose-lg max-w-none">{content}</article>;
