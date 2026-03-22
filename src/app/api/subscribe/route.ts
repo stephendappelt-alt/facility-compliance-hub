@@ -1,11 +1,13 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const KIT_FORM_ID = process.env.NEXT_PUBLIC_KIT_FORM_ID || "";
-const KIT_API_KEY = process.env.NEXT_PUBLIC_KIT_API_KEY || "";
-
 export async function POST(req: NextRequest) {
   try {
     const { email } = await req.json();
+
+    // Read env vars at runtime, not build time
+    // Check both prefixed and non-prefixed versions
+    const KIT_FORM_ID = process.env.NEXT_PUBLIC_KIT_FORM_ID || process.env.KIT_FORM_ID || "";
+    const KIT_API_KEY = process.env.NEXT_PUBLIC_KIT_API_KEY || process.env.KIT_API_KEY || "";
 
     if (!email || !email.includes("@")) {
       return NextResponse.json(
@@ -16,6 +18,8 @@ export async function POST(req: NextRequest) {
 
     if (!KIT_FORM_ID || !KIT_API_KEY) {
       console.log("Newsletter signup (Kit not configured):", email);
+      console.log("FORM_ID:", KIT_FORM_ID ? "set" : "MISSING");
+      console.log("API_KEY:", KIT_API_KEY ? "set" : "MISSING");
       return NextResponse.json({ success: true });
     }
 
