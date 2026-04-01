@@ -34,6 +34,12 @@ export default function Hero() {
               Explore Generator Compliance
             </Link>
             <Link
+              href="/hvac"
+              className="rounded-lg bg-teal-500 px-6 py-3 text-sm font-semibold text-white shadow-lg hover:bg-teal-400"
+            >
+              Explore HVAC Compliance
+            </Link>
+            <Link
               href="/about"
               className="rounded-lg border border-white/30 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10"
             >
