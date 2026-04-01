@@ -17,6 +17,7 @@ export default function SponsorSidebar({ sponsor }: SponsorSidebarProps) {
         width={160}
         height={40}
         className="mb-3 object-contain"
+        loading="eager"
       />
       <h4 className="font-semibold text-gray-900">{sponsor.name}</h4>
       <p className="mt-1 text-xs text-gray-500">{sponsor.tagline}</p>

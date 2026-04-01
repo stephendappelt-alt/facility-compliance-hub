@@ -60,6 +60,18 @@ export default function FeaturedArticles({ articles }: FeaturedArticlesProps) {
             );
           })}
         </div>
+
+        <div className="mt-10 text-center">
+          <Link
+            href="/generators"
+            className="inline-flex items-center gap-2 rounded-lg border border-primary-700 px-6 py-3 text-sm font-semibold text-primary-700 hover:bg-primary-50 transition"
+          >
+            Browse All Compliance Guides
+            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+            </svg>
+          </Link>
+        </div>
       </div>
     </section>
   );

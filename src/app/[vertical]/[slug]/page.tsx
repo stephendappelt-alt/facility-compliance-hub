@@ -119,6 +119,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                   width={120}
                   height={32}
                   className="object-contain"
+                  loading="eager"
                 />
                 <div className="flex-1">
                   <p className="text-xs text-gray-500">

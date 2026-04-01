@@ -11,6 +11,8 @@ import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
+  display: "swap",
+  preload: true,
 });
 
 export const metadata: Metadata = {
@@ -45,6 +47,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={inter.variable}>
+      <head>
+        {/* Preconnect to external domains for faster loading */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://api.convertkit.com" />
+      </head>
       <body className="flex min-h-screen flex-col font-sans">
         <GoogleAnalytics />
         <Header />
