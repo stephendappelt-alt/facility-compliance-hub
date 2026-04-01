@@ -5,7 +5,7 @@ export const navigation = {
   ],
   verticals: [
     { label: "Generators", href: "/generators", active: true },
-    { label: "HVAC", href: "/hvac", active: false },
+    { label: "HVAC", href: "/hvac", active: true },
     { label: "Fire Protection", href: "/fire-protection", active: false },
     { label: "Roofing", href: "/roofing", active: false },
     { label: "Plumbing", href: "/plumbing", active: false },

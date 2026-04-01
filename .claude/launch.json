@@ -2,10 +2,10 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "dev",
-      "runtimeExecutable": "C:\\Users\\steph\\node-v20.18.3-win-x64\\npx.cmd",
-      "runtimeArgs": ["next", "dev", "-p", "3456"],
-      "port": 3456
+      "name": "facility-compliance-hub",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "port": 3000
     }
   ]
 }
