@@ -2,6 +2,20 @@ import { Sponsor } from "@/types/sponsor";
 
 export const sponsors: Sponsor[] = [
   {
+    id: "hvac-sponsor-placeholder",
+    name: "Your Company Here",
+    shortName: "Sponsor",
+    logo: "/images/sponsors/placeholder.png",
+    website: "#",
+    tagline: "Platinum Sponsor Opportunity",
+    description:
+      "This space is available for a Platinum Sponsor in the Commercial HVAC vertical. Contact us to learn about sponsorship opportunities.",
+    ctaText: "Become a Sponsor",
+    ctaUrl: "mailto:hello@facilitycompliancehub.org",
+    verticals: ["hvac"],
+    tier: "platinum",
+  },
+  {
     id: "buffalo-power-solutions",
     name: "Buffalo Power Solutions",
     shortName: "BPS",

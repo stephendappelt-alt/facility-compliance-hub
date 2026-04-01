@@ -29,7 +29,7 @@ export const verticals: VerticalConfig[] = [
     icon: "Wind",
     image: "/images/verticals/hvac.jpg",
     color: "#1D4ED8",
-    active: false,
+    active: true,
     categories: [
       "compliance-guides",
       "maintenance-schedules",
