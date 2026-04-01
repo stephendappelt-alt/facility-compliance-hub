@@ -1,0 +1,522 @@
+---
+title: "Building Automation System Compliance Requirements: ASHRAE 90.1, Guideline 36, and Energy Code Mandates"
+description: "Complete guide to BAS and DDC controls compliance requirements including ASHRAE 90.1-2022 Section 6 mandates, Guideline 36 sequences, demand-controlled ventilation, economizer controls, and energy monitoring requirements."
+vertical: "hvac"
+category: "compliance-guides"
+date: "2026-03-31"
+lastUpdated: "2026-03-31"
+author: "FCH Editorial Team"
+readingTime: 15
+featured: false
+keywords:
+  - building automation system compliance
+  - ASHRAE 90.1 controls requirements
+  - ASHRAE Guideline 36
+  - demand controlled ventilation
+  - BAS DDC requirements
+  - economizer controls compliance
+  - HVAC controls energy code
+---
+
+## Why BAS Compliance Is Now a Core Facility Management Obligation
+
+Building automation systems have shifted from a premium feature to a code-mandated requirement for virtually every commercial HVAC installation of meaningful size. Federal legislation, energy codes adopted in most states, and California's nationally influential Title 24 program have collectively established a framework where a functional, properly programmed BAS is no longer optional -- it is the compliance mechanism for a wide range of HVAC control functions.
+
+For facility managers, this shift has significant implications. A building can have fully compliant mechanical equipment and still fail a code inspection or energy audit if the control sequences are incorrect, the DDC programming is incomplete, or the energy monitoring infrastructure is absent. The BAS is no longer just a convenience tool; it is evidence that a building's HVAC system is performing as the code requires.
+
+This guide covers the four control compliance areas that draw the most regulatory attention: ASHRAE 90.1-2022 Section 6 DDC mandates, ASHRAE Guideline 36 sequences of operation, demand-controlled ventilation (DCV), and energy monitoring requirements. California Title 24 2025 requirements are addressed as a leading indicator of where national code adoption is heading.
+
+## ASHRAE 90.1-2022: The Mandatory Controls Framework
+
+### What Section 6 Actually Requires
+
+ANSI/ASHRAE/IES Standard 90.1-2022, *Energy Standard for Sites and Buildings Except Low-Rise Residential Buildings*, is the primary energy code for commercial construction in the United States. Most states reference 90.1 directly in their building codes or adopt an energy code equivalent to it under the federal commercial building energy requirements administered by the U.S. Department of Energy.
+
+Section 6 of the standard governs heating, ventilating, and air-conditioning systems. It is the section facility managers and HVAC engineers must know in detail because it contains the mandatory controls provisions -- requirements with no exceptions for buildings that fall within the standard's scope.
+
+Under ASHRAE 90.1-2022, direct digital control (DDC) is required for:
+
+- HVAC systems with cooling capacity exceeding **54,000 Btu/h (4.5 tons)**
+- HVAC systems with heating capacity exceeding **15,000 Btu/h**
+
+These thresholds mean that essentially all commercial split systems, packaged rooftop units, air handling units, and central plant equipment require DDC. Pneumatic-only controls and non-programmable thermostats no longer satisfy code requirements for covered equipment.
+
+### Mandatory DDC Capabilities Under Section 6
+
+When DDC is required, the controller must be capable of performing -- and must actually be configured to perform -- specific functions. The standard distinguishes between hardware capability and active configuration; a controller that is capable of setback control but has not been programmed to implement it does not satisfy the requirement.
+
+<table>
+  <thead>
+    <tr>
+      <th>Required DDC Function</th>
+      <th>ASHRAE 90.1-2022 Reference</th>
+      <th>Practical Compliance Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Automatic setback during unoccupied hours</td>
+      <td>Section 6.4.3.2</td>
+      <td>Program occupied/unoccupied setpoints; verify schedules match actual occupancy</td>
+    </tr>
+    <tr>
+      <td>Optimal start capability</td>
+      <td>Section 6.4.3.3</td>
+      <td>Enable adaptive optimal start algorithm; do not use fixed pre-conditioning time</td>
+    </tr>
+    <tr>
+      <td>Zone isolation during unoccupied periods</td>
+      <td>Section 6.4.3.7</td>
+      <td>Configure zone-level occupancy inputs; ensure VAV boxes close in unoccupied zones</td>
+    </tr>
+    <tr>
+      <td>Supply air temperature reset</td>
+      <td>Section 6.5.3.3</td>
+      <td>Implement reset logic tied to zone demand, outdoor air temp, or time of day</td>
+    </tr>
+    <tr>
+      <td>Heating/cooling system interlock (deadband)</td>
+      <td>Section 6.4.3.1</td>
+      <td>Establish minimum 5°F deadband between heating and cooling setpoints</td>
+    </tr>
+    <tr>
+      <td>Fan pressure reset (VAV systems)</td>
+      <td>Section 6.5.3.2</td>
+      <td>Program duct static pressure reset logic responding to zone VAV box demand</td>
+    </tr>
+    <tr>
+      <td>Demand-controlled ventilation (where applicable)</td>
+      <td>Section 6.4.3.8</td>
+      <td>Install CO2 sensors and program DCV logic for qualifying spaces</td>
+    </tr>
+  </tbody>
+</table>
+
+### Setback and Setpoint Requirements
+
+ASHRAE 90.1-2022 Section 6.4.3.2 requires that each HVAC zone that is heated to 60°F or above during occupied periods be capable of setback to no more than 55°F during unoccupied periods. Zones cooled to 90°F or below during occupied periods must be capable of setup to 90°F or warmer during unoccupied periods.
+
+These are maximum setback values -- the BAS must be programmed to a setback no less aggressive than these thresholds. Leaving systems at occupied setpoints around the clock is a code violation, not merely an energy waste.
+
+### Optimal Start Requirements
+
+Section 6.4.3.3 requires optimal start controls that adjust the time the system begins conditioning a space so that occupied setpoints are reached no earlier than the time of occupancy. Systems may not simply use a fixed pre-conditioning window. The control algorithm must be adaptive, learning from actual building thermal performance to minimize early conditioning time while ensuring occupant comfort at the start of occupancy.
+
+For facility managers, this means verifying that:
+
+1. The DDC system has optimal start enabled and is not overridden to a fixed schedule
+2. The algorithm is using outdoor air temperature and zone temperature as inputs
+3. The pre-conditioning window is being minimized, not padded for comfort margin
+
+## ASHRAE Guideline 36: High-Performance Sequences of Operation
+
+### What Guideline 36 Is -- and What It Isn't
+
+ASHRAE Guideline 36-2024, *High-Performance Sequences of Operation for HVAC Systems*, is a voluntary guideline that specifies detailed control logic for common commercial HVAC systems. Unlike Standard 90.1, it is not directly enforceable as a building code in most jurisdictions. However, its compliance significance has grown substantially for two reasons.
+
+First, California's 2025 Title 24 energy code now references Guideline 36 sequences for qualifying commercial HVAC systems, making it enforceable in the nation's largest building market. Second, green building certification programs including LEED v4.1 and WELL Building Standard reference Guideline 36 compliance as a pathway to credits, increasing its practical relevance for projects seeking certification.
+
+Third, and most importantly for long-term compliance planning, the DOE's Better Buildings program and multiple state energy offices have identified Guideline 36 as the likely next step in national code development. Facility managers who understand and implement Guideline 36 sequences today are positioned ahead of the regulatory curve.
+
+### System Types Covered by Guideline 36
+
+The 2024 edition covers the following HVAC system configurations:
+
+<table>
+  <thead>
+    <tr>
+      <th>System Type</th>
+      <th>Guideline 36 Coverage</th>
+      <th>Key Sequence Elements</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Single-zone VAV AHU</td>
+      <td>Section 5</td>
+      <td>Supply air temp reset, economizer, fan speed modulation, morning warm-up</td>
+    </tr>
+    <tr>
+      <td>Multiple-zone VAV AHU</td>
+      <td>Section 5</td>
+      <td>SAT reset by zone demand, duct static pressure reset, minimum OA control, DCV integration</td>
+    </tr>
+    <tr>
+      <td>VAV terminal units (cooling only)</td>
+      <td>Section 5.6</td>
+      <td>Zone minimum airflow, reheat lockout, occupancy-based minimum airflow</td>
+    </tr>
+    <tr>
+      <td>VAV terminal units with reheat</td>
+      <td>Section 5.6</td>
+      <td>Parallel/series fan terminal sequences, sequential heating/cooling control</td>
+    </tr>
+    <tr>
+      <td>Chilled water and hot water plants</td>
+      <td>Section 6</td>
+      <td>Chiller sequencing, pump differential pressure reset, chilled water supply temp reset</td>
+    </tr>
+    <tr>
+      <td>Zone humidity control</td>
+      <td>Section 5 (2024 addenda)</td>
+      <td>Three new modular dehumidification strategies added in 2024 edition</td>
+    </tr>
+  </tbody>
+</table>
+
+### The Energy Case for Guideline 36
+
+ASHRAE's own research and independent studies by the Lawrence Berkeley National Laboratory have documented significant energy savings from Guideline 36 implementation compared to typical BAS programming. Studies have found 30 to 40 percent reductions in HVAC energy consumption in buildings transitioning from conventional controls to Guideline 36-compliant sequences, primarily through supply air temperature reset, duct static pressure reset, and optimized minimum outdoor air control.
+
+The performance gains are not from individual features in isolation -- they come from the integrated, fault-tolerant logic that Guideline 36 requires across all operating modes. A building with piecemeal BAS programming may implement individual features correctly while still operating inefficiently because those features are not coordinated.
+
+### Fault Detection and Diagnostics in Guideline 36
+
+One of the distinctive contributions of Guideline 36 is its integration of fault detection and diagnostics (FDD) into the sequences of operation. The guideline specifies that DDC systems implementing Guideline 36 sequences must generate alarms and alerts for defined fault conditions, including:
+
+- AHU supply air temperature too far from setpoint
+- Economizer dampers stuck or not modulating correctly
+- Heating and cooling operating simultaneously (simultaneous heating and cooling)
+- Zone airflow out of expected range
+- CO2 sensor readings diverging from expected values
+
+This built-in FDD capability is significant for compliance purposes because it creates an audit trail. When a commissioning authority or energy auditor reviews BAS data, Guideline 36-compliant systems provide self-documented evidence of correct operation -- or documented fault histories that explain deviations.
+
+## Demand-Controlled Ventilation: Compliance Details
+
+### When DCV Is Mandatory Under ASHRAE 90.1
+
+ASHRAE 90.1-2022 Section 6.4.3.8 makes demand-controlled ventilation mandatory for specific space types. The triggering criteria are:
+
+- The space has a design occupancy for ventilation purposes of **25 or more people per 1,000 square feet** of floor area
+- The space has a floor area greater than **500 square feet**
+- The HVAC system serving the space has an air-side economizer, automatic modulating control of the outdoor air damper, or design outdoor airflow greater than **3,000 CFM**
+
+Spaces that commonly meet these criteria include conference rooms, assembly spaces, training rooms, retail areas, restaurant dining rooms, lobbies, and classrooms. Open-plan offices with high workstation density can also qualify.
+
+The standard does not mandate CO2-based DCV specifically -- it requires that the ventilation system respond to actual occupancy levels. CO2 sensing is the most common implementation because it is relatively low-cost, reliable, and directly correlated with human occupancy. Occupancy sensor-based DCV and direct people-counting systems are also compliant approaches.
+
+### CO2 Sensor Requirements
+
+When CO2-based DCV is implemented, ASHRAE 62.1-2022 (which governs the ventilation design) specifies that CO2 sensors must be:
+
+- Certified by the manufacturer to be accurate within **±75 ppm** of the measured value
+- Located in or representative of the breathing zone of the space being served
+- Calibrated and verified at installation and periodically thereafter
+
+Sensors must be positioned to avoid placement near supply air diffusers, exhaust grilles, entryways, or other locations that would not represent average zone CO2 concentration. The DDC system must be programmed to respond to sensor readings by modulating outdoor air dampers, adjusting VAV terminal unit minimum airflow setpoints, or both -- depending on the system configuration.
+
+<table>
+  <thead>
+    <tr>
+      <th>Space Type</th>
+      <th>DCV Required?</th>
+      <th>Typical CO2 Setpoint</th>
+      <th>Sensor Location</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Conference room (&gt;500 SF, high density)</td>
+      <td>Yes</td>
+      <td>1,100 ppm maximum</td>
+      <td>Return air or room, 4–6 ft height</td>
+    </tr>
+    <tr>
+      <td>Open office (&lt;25 people/1,000 SF)</td>
+      <td>Not required by 90.1</td>
+      <td>N/A (may implement voluntarily)</td>
+      <td>Return air or room</td>
+    </tr>
+    <tr>
+      <td>Assembly/auditorium (&gt;500 SF, high density)</td>
+      <td>Yes</td>
+      <td>1,100 ppm maximum</td>
+      <td>Room, representative of occupant zone</td>
+    </tr>
+    <tr>
+      <td>Classroom</td>
+      <td>Yes (typically)</td>
+      <td>1,100 ppm maximum</td>
+      <td>Return air or wall-mounted in room</td>
+    </tr>
+    <tr>
+      <td>Retail floor</td>
+      <td>Depends on occupant density</td>
+      <td>1,100 ppm if required</td>
+      <td>Return air representative of floor</td>
+    </tr>
+    <tr>
+      <td>Restaurant dining area</td>
+      <td>Yes (typically)</td>
+      <td>1,100 ppm maximum</td>
+      <td>Room level, away from kitchen exhaust</td>
+    </tr>
+  </tbody>
+</table>
+
+### Common DCV Compliance Failures
+
+Facility managers conducting internal audits or preparing for commissioning reviews should verify that DCV systems are not subject to these common failures:
+
+**Sensors bypassed or points not enabled in BAS.** CO2 sensors are often installed during construction but never wired into the DDC logic or are placed in manual override. Physical installation does not equal functional compliance.
+
+**DCV disabled during occupied schedules.** Some programming defaults lock the outdoor air damper at design minimum during occupied hours regardless of CO2 readings. This disables the DCV function entirely.
+
+**No low-limit on outdoor air.** DCV systems must still maintain minimum ventilation rates per ASHRAE 62.1 even when CO2 readings are low. A DCV sequence that allows outdoor air to drop to zero is not compliant.
+
+**Incorrect setpoint.** The CO2 setpoint is derived from ASHRAE 62.1 equations based on outdoor CO2 concentration and the acceptable indoor concentration for the space -- it is not a universal fixed value. Using a setpoint that has not been calculated for the specific space is a compliance deficiency.
+
+## Economizer Controls: Section 6.5.1 Requirements
+
+### Mandatory Airside Economizer Use
+
+ASHRAE 90.1-2022 Section 6.5.1 requires airside economizers on cooling systems based on climate zone and unit capacity thresholds. The economizer must be capable of modulating the outdoor air and return air dampers to provide up to 100 percent of the design supply air quantity as outdoor air for cooling.
+
+The control sequence must:
+
+1. Sequence economizer dampers with mechanical cooling -- outdoor air should pre-cool the building before mechanical cooling stages on
+2. Not rely solely on mixed air temperature control -- outdoor air enthalpy, dry-bulb temperature, or a combination must be used for high-limit shutoff
+3. Automatically reduce outdoor air intake to design minimum when outdoor conditions no longer provide cooling benefit
+4. Include means to relieve excess outdoor air during economizer operation to prevent building over-pressurization
+
+### Economizer High-Limit Controls
+
+The BAS must implement economizer high-limit shutoff based on the control strategy specified in Table 6-21 of ASHRAE 90.1-2022. The permissible high-limit strategies vary by climate zone:
+
+<table>
+  <thead>
+    <tr>
+      <th>High-Limit Control Strategy</th>
+      <th>Climate Zones Permitted</th>
+      <th>BAS Implementation Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Fixed dry-bulb temperature</td>
+      <td>1B, 2B, 3B, 3C, 4B, 4C, 5B, 5C, 6B, 7, 8</td>
+      <td>Program shutoff setpoint per Table 6-21 for climate zone</td>
+    </tr>
+    <tr>
+      <td>Differential dry-bulb temperature</td>
+      <td>All zones</td>
+      <td>Requires outdoor and return air temp sensors; DDC logic compares both</td>
+    </tr>
+    <tr>
+      <td>Fixed enthalpy</td>
+      <td>1B, 2B, 3B, 3C, 4B, 4C, 5B, 5C, 6B, 7, 8</td>
+      <td>Requires outdoor air enthalpy sensor or dewpoint + temperature</td>
+    </tr>
+    <tr>
+      <td>Differential enthalpy</td>
+      <td>All zones</td>
+      <td>Requires outdoor and return air enthalpy sensors; most accurate control</td>
+    </tr>
+  </tbody>
+</table>
+
+Economizer faults -- dampers stuck open or closed, sensor failures, and logic overrides -- are among the most common findings in commercial building energy audits and retrocommissioning projects. The BAS must have active fault monitoring for economizer components.
+
+## Energy Monitoring Requirements: Section 8 Mandates
+
+### Metering Thresholds and Required Endpoints
+
+ASHRAE 90.1-2022 Section 8.4.3 establishes mandatory electrical energy monitoring for commercial buildings exceeding **25,000 square feet** of conditioned area. The standard requires that energy consumption be metered separately by end-use category -- it is not sufficient to monitor only total building consumption.
+
+Required monitored load categories include:
+
+- Total building electrical consumption
+- HVAC systems (combined)
+- Interior lighting
+- Exterior lighting
+- Receptacle and plug loads
+
+Each monitored circuit must record consumption at intervals no greater than **15 minutes**, and the data must be retained for a minimum of **36 months**. Data must be reportable at daily, monthly, and annual intervals.
+
+For tenant buildings: individual tenant spaces exceeding **10,000 square feet** require individual submetering, allowing independent verification of each tenant's energy consumption separate from common area and landlord-controlled loads.
+
+### Energy Management Control System Requirements
+
+Section 8.4.3 also establishes requirements for the Energy Management Control System (EMCS) -- the software and hardware infrastructure that collects, stores, and reports metering data. The EMCS must be capable of:
+
+- Storing 36 months of interval data without data loss
+- Generating reports by time period and end-use category
+- Providing demand data (peak kW) in addition to consumption data (kWh)
+- Supporting export of data in a format accessible for analysis
+
+For facility managers, the EMCS obligation means that a BAS with only real-time display capability -- no historical data storage -- does not satisfy Section 8.4.3. The system must be configured for data logging with sufficient storage capacity or integration with a cloud-based data platform.
+
+<table>
+  <thead>
+    <tr>
+      <th>Building Characteristic</th>
+      <th>Monitoring Requirement</th>
+      <th>Data Retention</th>
+      <th>Interval</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Commercial building &gt;25,000 SF</td>
+      <td>Whole-building + end-use submetering</td>
+      <td>36 months</td>
+      <td>15-minute maximum</td>
+    </tr>
+    <tr>
+      <td>Tenant space &gt;10,000 SF</td>
+      <td>Individual tenant submeter</td>
+      <td>36 months</td>
+      <td>15-minute maximum</td>
+    </tr>
+    <tr>
+      <td>All metered loads</td>
+      <td>Demand (kW) + consumption (kWh)</td>
+      <td>36 months</td>
+      <td>15-minute maximum</td>
+    </tr>
+    <tr>
+      <td>Buildings &lt;25,000 SF</td>
+      <td>Not required under 90.1 (state/local codes may apply)</td>
+      <td>N/A</td>
+      <td>N/A</td>
+    </tr>
+  </tbody>
+</table>
+
+## California Title 24 2025: A Preview of National Code Direction
+
+### Guideline 36 as an Enforceable Requirement
+
+California's 2025 Building Energy Efficiency Standards (Title 24, Part 6), which took effect January 1, 2026, represent the most significant advancement in BAS compliance requirements in the United States. The California Energy Commission incorporated ASHRAE Guideline 36 sequences as a reference standard for nonresidential HVAC systems with DDC controllers capable of field programming.
+
+Specifically, Title 24 2025 requires that:
+
+- Field-programmable DDC controllers shall use control logic originating from a programming library based on ASHRAE Guideline 36 sequences of operation
+- Non-programmable controllers for VAV zone terminal units shall comply with manufacturer sequences that meet Guideline 36 minimum performance requirements
+- Acceptance testing must verify that economizer sequences, supply air temperature reset, duct static pressure reset, and DCV logic operate correctly per the design sequences
+
+This is a significant enforcement step: it makes the content of the BAS programming -- not just the hardware -- a mandatory compliance element subject to third-party acceptance testing.
+
+### Acceptance Testing Requirements
+
+Title 24 requires functional acceptance testing performed by technicians certified through the Acceptance Test Technician Certification Provider (ATTCP) program administered by the California Energy Commission. For BAS and HVAC controls, acceptance testing must verify:
+
+- Economizer high-limit shutoff operation and damper modulation
+- Demand-controlled ventilation response to CO2 concentration changes
+- Supply air temperature reset sequences
+- Duct static pressure reset under varying zone demand conditions
+- Optimal start and setback programming
+- Fault detection and diagnostics alarm generation
+
+For facility managers in California, this means that BAS commissioning is now a regulated activity -- not just an owner-elected quality assurance measure.
+
+### Fault Detection and Diagnostics Expansion
+
+The 2025 Title 24 standards place expanded emphasis on FDD capabilities, requiring that BAS systems for qualifying commercial buildings be capable of detecting and reporting specific fault conditions in real time. This extends beyond the Guideline 36 FDD requirements to include cooling plant faults, hydronic system faults, and lighting control failures as part of an integrated building performance monitoring framework.
+
+## BAS Compliance: A Practical Facility Manager Checklist
+
+Use this framework when conducting an internal BAS compliance review or preparing for a commissioning inspection:
+
+<table>
+  <thead>
+    <tr>
+      <th>Compliance Area</th>
+      <th>Key Verification Points</th>
+      <th>Standard Reference</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>DDC System Coverage</td>
+      <td>All units &gt;54,000 Btu/h cooling or &gt;15,000 Btu/h heating have DDC installed and active</td>
+      <td>ASHRAE 90.1-2022 Section 6</td>
+    </tr>
+    <tr>
+      <td>Setback Controls</td>
+      <td>Occupied/unoccupied schedules programmed; setback temperatures meet 90.1 minimums; schedules match actual use</td>
+      <td>ASHRAE 90.1-2022 Section 6.4.3.2</td>
+    </tr>
+    <tr>
+      <td>Optimal Start</td>
+      <td>Adaptive algorithm enabled; not overridden to fixed time; using outdoor and zone temp inputs</td>
+      <td>ASHRAE 90.1-2022 Section 6.4.3.3</td>
+    </tr>
+    <tr>
+      <td>Deadband/Interlock</td>
+      <td>Minimum 5°F deadband between heating and cooling setpoints; simultaneous H&C prevented</td>
+      <td>ASHRAE 90.1-2022 Section 6.4.3.1</td>
+    </tr>
+    <tr>
+      <td>Demand-Controlled Ventilation</td>
+      <td>CO2 sensors installed, wired, and active in DDC logic; DCV not bypassed; low-limit maintained</td>
+      <td>ASHRAE 90.1-2022 Section 6.4.3.8</td>
+    </tr>
+    <tr>
+      <td>Economizer Controls</td>
+      <td>Dampers modulate correctly; high-limit strategy matches climate zone; not locked in override</td>
+      <td>ASHRAE 90.1-2022 Section 6.5.1</td>
+    </tr>
+    <tr>
+      <td>Supply Air Temp Reset</td>
+      <td>Reset logic active and tied to zone demand or OAT; not locked at design SAT year-round</td>
+      <td>ASHRAE 90.1-2022 Section 6.5.3.3</td>
+    </tr>
+    <tr>
+      <td>Duct Static Pressure Reset</td>
+      <td>VAV system pressure setpoint resets down when zone demand is low; not fixed at design pressure</td>
+      <td>ASHRAE 90.1-2022 Section 6.5.3.2 / Guideline 36</td>
+    </tr>
+    <tr>
+      <td>Energy Metering</td>
+      <td>Buildings &gt;25,000 SF have end-use submetering; 15-min interval data being logged; 36-month storage confirmed</td>
+      <td>ASHRAE 90.1-2022 Section 8.4.3</td>
+    </tr>
+    <tr>
+      <td>Guideline 36 Sequences (CA)</td>
+      <td>Programming library references Guideline 36; acceptance testing documentation on file</td>
+      <td>Title 24 2025 / CEC</td>
+    </tr>
+  </tbody>
+</table>
+
+## Common Compliance Gaps and How to Address Them
+
+The most frequently documented BAS compliance deficiencies in commercial buildings fall into three categories:
+
+**Programming overrides that have never been removed.** During construction or initial occupancy, contractors and commissioning agents routinely place systems in override to facilitate testing or occupant comfort. These overrides -- locked damper positions, disabled optimal start, bypassed DCV, fixed setpoints -- are often never removed. A systematic review of all BAS points for active overrides is the single highest-value compliance action a facility manager can take.
+
+**Sensor failures creating invisible non-compliance.** A failed CO2 sensor may cause the BAS to assume a default low-CO2 condition, permanently reducing outdoor air to minimum. A stuck economizer damper position sensor may prevent the control system from opening the damper even when conditions favor free cooling. Because these failures often do not trigger alarms, they can persist for years. Annual sensor verification should be a standard maintenance task.
+
+**Energy metering gaps in buildings that have been renovated.** Buildings that were constructed before Section 8.4.3 thresholds were adopted, or that have been expanded past the 25,000 SF threshold through renovation, frequently lack the required metering infrastructure. Triggering a metering compliance review when undertaking building expansions or major HVAC replacements prevents this gap from becoming a code violation at the next permit inspection.
+
+## Sources and References
+
+- **ASHRAE Standard 90.1 -- Energy Standard for Sites and Buildings Except Low-Rise Residential Buildings.** ASHRAE Technical Resources and Bookstore. [https://www.ashrae.org/technical-resources/bookstore/standard-90-1](https://www.ashrae.org/technical-resources/bookstore/standard-90-1)
+
+- **ASHRAE Guideline 36-2024 -- High-Performance Sequences of Operation for HVAC Systems.** ASHRAE Store. [https://ashrae.org/G36](https://ashrae.org/G36)
+
+- **ASHRAE Guideline 36 Overview -- Sustainable Engineering Solutions.** [https://sustainable-eng.com/ashrae-36-overview/](https://sustainable-eng.com/ashrae-36-overview/)
+
+- **ASHRAE Guideline 36: Best-in-Class HVAC Control Sequences.** ASHRAE Professional Development. [https://www.ashrae.org/professional-development/all-instructor-led-training/catalog-of-instructor-led-training/guideline-36-best-in-class-hvac-control-sequences](https://www.ashrae.org/professional-development/all-instructor-led-training/catalog-of-instructor-led-training/guideline-36-best-in-class-hvac-control-sequences)
+
+- **2025 Building Energy Efficiency Standards.** California Energy Commission. [https://www.energy.ca.gov/programs-and-topics/programs/building-energy-efficiency-standards/2025-building-energy-efficiency](https://www.energy.ca.gov/programs-and-topics/programs/building-energy-efficiency-standards/2025-building-energy-efficiency)
+
+- **Building Energy Efficiency Standards.** California Energy Commission. [https://www.energy.ca.gov/programs-and-topics/programs/building-energy-efficiency-standards](https://www.energy.ca.gov/programs-and-topics/programs/building-energy-efficiency-standards)
+
+- **California's Energy Code Update Guides the Construction of Cleaner, Healthier Buildings.** California Energy Commission News. [https://www.energy.ca.gov/news/2026-01/californias-energy-code-update-guides-construction-cleaner-healthier-buildings](https://www.energy.ca.gov/news/2026-01/californias-energy-code-update-guides-construction-cleaner-healthier-buildings)
+
+- **Nonresidential HVAC Controls -- ASHRAE Guideline 36 CASE Report.** California Title 24 Stakeholders. [https://title24stakeholders.com/wp-content/uploads/2023/08/2025_T24_CASE-Report-Final_NR-HVAC-Guideline-36.pdf](https://title24stakeholders.com/wp-content/uploads/2023/08/2025_T24_CASE-Report-Final_NR-HVAC-Guideline-36.pdf)
+
+- **ASHRAE 90.1 and Metering Requirements.** Eaton Corporation. [https://www.eaton.com/us/en-us/products/low-voltage-power-distribution-control-systems/us-energy-codes/metering-faqs/ashrae90-1-iecc-energy-metering.html](https://www.eaton.com/us/en-us/products/low-voltage-power-distribution-control-systems/us-energy-codes/metering-faqs/ashrae90-1-iecc-energy-metering.html)
+
+- **CO2-Based Demand-Controlled Ventilation with ASHRAE Standard 62.1.** Trane. [https://www.trane.com/content/dam/Trane/Commercial/global/products-systems/education-training/engineers-newsletters/standards-codes/admapn017en_1005.pdf](https://www.trane.com/content/dam/Trane/Commercial/global/products-systems/education-training/engineers-newsletters/standards-codes/admapn017en_1005.pdf)
+
+- **ASHRAE 90.1's Requirements for Electrical Monitoring.** Utilivisor. [https://www.utilivisor.com/news/ashrae-90-1.html](https://www.utilivisor.com/news/ashrae-90-1.html)
+
+- **Ensuring ASHRAE 62.1 Compliance for CO2 Sensors in Demand-Controlled Ventilation.** Kaiterra. [https://learn.kaiterra.com/en/resources/ensuring-ashrae-62.1-compliance-for-co2-sensors-in-demand-controlled-ventilation-dcv](https://learn.kaiterra.com/en/resources/ensuring-ashrae-62.1-compliance-for-co2-sensors-in-demand-controlled-ventilation-dcv)
+
+- **Ten Things to Know About ASHRAE 90.1-2022 Updates.** Consulting-Specifying Engineer. [https://www.csemag.com/ten-things-to-know-about-ashrae-90-1-2022-updates/](https://www.csemag.com/ten-things-to-know-about-ashrae-90-1-2022-updates/)
+
+- **U.S. Department of Energy -- Building Energy Codes Program.** DOE Office of Energy Efficiency and Renewable Energy. [https://www.energycodes.gov/](https://www.energycodes.gov/)
