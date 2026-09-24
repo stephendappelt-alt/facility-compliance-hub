@@ -37,7 +37,7 @@ export const sponsors: Sponsor[] = [
     website: "https://www.buffalopowersolutions.com",
     tagline: "Locally Owned. Professionally Managed. Always Ready.",
     description:
-      "Turnkey generator installations, maintenance contracts, and 24/7 emergency response for commercial and residential power systems across Texas and the Southeast.",
+      "Turnkey generator installations, maintenance contracts, and 24/7 emergency response for commercial and residential power systems across Texas.",
     ctaText: "Schedule a Free Compliance Assessment",
     ctaUrl: "https://www.buffalopowersolutions.com/contact",
     phone: "(979) 985-2632",
