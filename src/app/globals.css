@@ -17,3 +17,46 @@
     @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
   }
 }
+
+/* Printable logs: on pages that contain one, print only the forms */
+@media print {
+  body:has(.printable-log) * {
+    visibility: hidden;
+  }
+  body:has(.printable-log) .printable-log,
+  body:has(.printable-log) .printable-log * {
+    visibility: visible;
+  }
+  body:has(.printable-log) .printable-log {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+  .printable-log h3 {
+    break-before: page;
+    margin-top: 0;
+  }
+  .printable-log h3:first-child {
+    break-before: auto;
+  }
+  .printable-log table {
+    width: 100%;
+    font-size: 11px;
+    border-collapse: collapse;
+  }
+  .printable-log th,
+  .printable-log td {
+    border: 1px solid #555;
+    padding: 10px 6px;
+  }
+  .print-hidden {
+    display: none !important;
+  }
+}
+
+/* Blank log tables on screen */
+.printable-log td {
+  border: 1px solid #e5e7eb;
+  height: 2.25rem;
+}

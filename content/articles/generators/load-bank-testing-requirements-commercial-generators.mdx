@@ -1,25 +1,29 @@
 ---
 title: "Load Bank Testing Requirements for Commercial Generators: NFPA 110 Compliance and Best Practices"
 description: "Complete guide to load bank testing for commercial generators covering NFPA 110 Section 8.4.9, wet stacking prevention, testing procedures, and costs."
+seoTitle: "Generator Load Bank Testing Requirements (NFPA 110)"
+seoDescription: "Load bank testing for commercial generators: when NFPA 110 requires it, how to prevent wet stacking, step-by-step test procedures, and cost factors."
 vertical: "generators"
 category: "compliance-guides"
 date: "2026-03-05"
+lastUpdated: "2026-09-24"
 author: "FCH Editorial Team"
 keywords: ["load bank testing", "generator load test", "NFPA 110 Section 8.4.9", "wet stacking", "generator maintenance", "resistive load bank", "reactive load bank"]
 featured: true
+topics: ["healthcare"]
 ---
 
 ## Why Load Bank Testing Is Essential for Commercial Generators
 
 Emergency generators in commercial facilities spend the vast majority of their operational life sitting idle, waiting for a power outage that may never come. When these units are exercised monthly, they often run at a fraction of their rated capacity because the connected building loads during testing rarely approach the generator's full output.
 
-This chronic under-loading creates a serious problem. Diesel engines that run consistently below 30% of their rated capacity develop a condition known as wet stacking, where unburned fuel accumulates in the exhaust system, turbocharger, and cylinder walls. Over time, this leads to carbon deposits, glazed cylinder liners, fouled injectors, and degraded engine performance. A generator suffering from severe wet stacking may fail to pick up its rated load during an actual emergency -- the exact moment when full performance is most critical.
+This chronic under-loading creates a serious problem. Diesel engines that run for extended periods below about 30% of their rated capacity cannot reach the temperatures needed to burn fuel completely, and they develop a condition known as wet stacking, where unburned fuel builds up in the exhaust system. Over time, this fouls injectors, causes valve guide wear, and can damage pistons, liners, and rings, degrading engine performance. A generator in poor condition from chronic under-loading may struggle to carry its load during an actual emergency -- the exact moment when full performance is most critical.
 
-Load bank testing solves this problem by applying a controlled, measured electrical load to the generator independent of the building's connected loads. It is both a maintenance necessity and a code requirement under NFPA 110.
+Load bank testing addresses this problem by applying a controlled, measured electrical load to the generator independent of the building's connected loads. It is good maintenance practice, and under [NFPA 110](/generators/nfpa-110-emergency-generator-compliance-guide) it becomes a requirement when a diesel generator's monthly tests cannot reach the minimum load.
 
 ## What Is a Load Bank
 
-A load bank is a device that provides an artificial electrical load to a generator. It converts the generator's electrical output into heat, which is dissipated through resistive elements and cooling fans. Load banks come in portable and stationary configurations and can be sized to match any generator from 50 kW to several megawatts.
+A load bank is a device that provides an artificial electrical load to a generator. It converts the generator's electrical output into heat, which is dissipated through resistive elements and cooling fans. Load banks come in portable and stationary configurations and are available in a wide range of sizes, from small units to multi-megawatt installations.
 
 There are three primary types of load banks used in commercial generator testing:
 
@@ -33,102 +37,168 @@ Reactive load banks apply an inductive (kVAR) load that forces the generator to 
 
 ### Combined Resistive-Reactive Load Banks
 
-These units combine both resistive and reactive elements to test the generator at a specific power factor (typically 0.8 PF), which represents a realistic approximation of actual building loads. Combined testing provides the most thorough evaluation of both engine and alternator performance.
+These units combine both resistive and reactive elements to test the generator at a specific power factor, commonly 0.8 PF, the power factor at which generator sets are typically rated. Combined testing provides the most thorough evaluation of both engine and alternator performance.
 
 <Callout type="info" title="Which Type Do You Need?">
-For routine NFPA 110 compliance testing, a resistive load bank is sufficient and is the standard used by most testing contractors. Reactive or combined testing is recommended for commissioning, post-overhaul verification, and facilities with large motor loads where power factor performance is critical.
+For routine NFPA 110 site testing, a resistive load bank is commonly used; NFPA 110 site tests can be run at unity power factor if the manufacturer tested the complete unit at its 0.8 PF rated load before shipment. Reactive or combined testing is often chosen for commissioning, post-overhaul verification, and facilities with large motor loads where power factor performance is critical.
 </Callout>
 
 ## NFPA 110 Load Testing Requirements
 
-NFPA 110 establishes specific requirements for generator load testing that facility managers must understand and follow.
+NFPA 110 establishes specific requirements for generator load testing that facility managers must understand and follow. The section numbers below are from the 2010 edition, which CMS enforces for healthcare facilities through NFPA 99-2012; the testing rules are similar in later editions, but confirm the numbering in the edition your AHJ has adopted.
 
 ### Monthly Exercise Testing -- Section 8.4.2
 
 The standard requires monthly exercise of the EPSS under the following conditions:
 
-- The generator must run for a minimum of **30 minutes**
-- The unit should carry a load of at least **30% of its nameplate kW rating**
-- If the connected building loads cannot provide 30% loading, supplemental load bank testing must be used or the manufacturer's exercise recommendations must be followed
+- The generator must run under load for a minimum of **30 minutes**
+- A diesel unit must carry a load of at least **30% of its nameplate kW rating**, or a load that maintains the **minimum exhaust gas temperature recommended by the manufacturer**
+- Healthcare facilities must run the monthly test 12 times a year at intervals of not less than 20 days and not more than 40 days
 
-The 30% threshold is not arbitrary. It is the minimum loading required to achieve sufficient cylinder pressure and exhaust temperature to prevent wet stacking and ensure proper combustion. Running below this level provides little maintenance benefit and can actually accelerate engine degradation.
+The 30% figure matches what engine makers say about wet stacking: below roughly 30% load for extended periods, a diesel engine cannot sustain the temperatures needed to burn its fuel completely.
 
-### Annual Load Testing -- Section 8.4.9
+### Annual Supplemental Load Test -- Section 8.4.2.3
 
-Section 8.4.9 is the primary code section governing annual load bank testing. The requirements are as follows:
+A load bank test is not required every year for every generator. It becomes required when monthly tests do not reach the minimum load. **If a diesel unit's monthly tests do not reach 30% of nameplate or the manufacturer's minimum exhaust temperature**, it must still be exercised monthly with the available load, and once a year it must be run with supplemental load for 1.5 continuous hours:
 
-**If monthly testing consistently achieves 30% or greater loading with building loads**, the annual test must verify the generator can carry the full connected emergency load for a duration that confirms operational capability.
+1. **At least 50% of nameplate kW for 30 continuous minutes**, followed by
+2. **At least 75% of nameplate kW for 60 continuous minutes**
 
-**If monthly testing does not achieve 30% loading**, the generator must be tested annually using one of these methods:
+Building load may serve as part of the load, with a load bank supplying the rest.
 
-1. **Supplemental load bank testing** to bring the total load to at least 50% of nameplate for 30 minutes, then 75% of nameplate for 60 minutes, then 100% of nameplate for 120 minutes
-2. **Operating at the available building load** supplemented by load bank capacity to reach the required levels
+### Annual Supplemental Load Test Protocol
 
-The stepped loading protocol (50-75-100%) provides a progressive evaluation of engine and alternator performance and is the industry standard approach for annual load bank testing.
+<table>
+  <thead>
+    <tr>
+      <th>Load Step</th>
+      <th>% of Nameplate kW</th>
+      <th>Minimum Duration</th>
+      <th>Purpose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Step 1</td>
+      <td>50%</td>
+      <td>30 minutes</td>
+      <td>Initial loaded operation</td>
+    </tr>
+    <tr>
+      <td>Step 2</td>
+      <td>75%</td>
+      <td>60 minutes</td>
+      <td>Sustained higher-load operation</td>
+    </tr>
+    <tr>
+      <td><strong>Total minimum</strong></td>
+      <td>--</td>
+      <td><strong>1.5 continuous hours</strong></td>
+      <td><strong>Meets the annual supplemental requirement</strong></td>
+    </tr>
+  </tbody>
+</table>
 
-### Annual Load Bank Testing Protocol
+Some owners and contractors add a step at 100% of nameplate to confirm full rated capacity. That is a reasonable practice, but NFPA 110 does not require it.
 
-| Load Step | % of Nameplate Rating | Minimum Duration | Purpose |
-|---|---|---|---|
-| Step 1 | 50% | 30 minutes | Warm-up and initial performance verification |
-| Step 2 | 75% | 60 minutes | Mid-range performance and governor response |
-| Step 3 | 100% | 120 minutes | Full-load sustained performance verification |
-| **Total minimum** | -- | **3.5 hours** | **Complete load profile evaluation** |
+### 36-Month Test -- Section 8.4.9
+
+Level 1 systems must also be tested at least once every 36 months for a minimum of 4 continuous hours (or the duration of the system's Class, if that is shorter), at not less than 30% of nameplate kW or the manufacturer's minimum exhaust gas temperature for diesel units. The annual supplemental test and the 36-month test may be combined: the first 3 hours at not less than 30% of nameplate (or the minimum exhaust temperature) and the final hour at not less than 75% of nameplate. See our [36-month 4-hour load test guide](/generators/generator-36-month-4-hour-load-test-guide) for planning details.
 
 <Callout type="warning" title="Important">
-The stepped loading protocol outlined above is the standard prescribed when supplemental load testing is required. Some AHJs may accept alternative protocols. Always confirm the required procedure with your local authority before scheduling a load bank test.
+The loading steps above are the minimums NFPA 110 sets when supplemental load testing is required. Your AHJ, accreditor, insurer, or manufacturer may require more. Always confirm the required procedure and the NFPA 110 edition being enforced before scheduling a load bank test.
 </Callout>
 
 ## Monthly Exercise vs. Annual Load Test: Key Differences
 
-Understanding the distinction between monthly exercises and annual load tests is critical for building a compliant testing program.
+Understanding the distinction between monthly exercises, the annual supplemental test, and the 36-month test is critical for building a compliant testing program.
 
-| Parameter | Monthly Exercise | Annual Load Test |
-|---|---|---|
-| Frequency | Once per month, every month | Once per year |
-| Minimum load | 30% of nameplate kW | 50%, 75%, and 100% stepped |
-| Minimum duration | 30 minutes | 3.5 hours (stepped protocol) |
-| Equipment needed | Building loads or portable load bank | Load bank (typically) |
-| Primary purpose | Verify starting and basic operation | Verify sustained full-load capability |
-| Code reference | Section 8.4.2 | Section 8.4.9 |
-| Documentation | Required | Required |
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Monthly Exercise</th>
+      <th>Annual Supplemental Test</th>
+      <th>36-Month Test (Level 1)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>When required</td>
+      <td>Every month</td>
+      <td>Once a year, only if monthly tests do not reach the minimum load</td>
+      <td>At least once every 36 months</td>
+    </tr>
+    <tr>
+      <td>Minimum load</td>
+      <td>30% of nameplate kW or manufacturer's minimum exhaust temperature</td>
+      <td>50%, then 75% of nameplate kW</td>
+      <td>30% of nameplate kW or minimum exhaust temperature</td>
+    </tr>
+    <tr>
+      <td>Minimum duration</td>
+      <td>30 minutes</td>
+      <td>1.5 continuous hours</td>
+      <td>4 continuous hours (or the Class duration if shorter)</td>
+    </tr>
+    <tr>
+      <td>Equipment needed</td>
+      <td>Building load or load bank</td>
+      <td>Load bank (typically), with or without building load</td>
+      <td>Building load, load bank, or both</td>
+    </tr>
+    <tr>
+      <td>NFPA 110-2010 reference</td>
+      <td>Section 8.4.2</td>
+      <td>Section 8.4.2.3</td>
+      <td>Section 8.4.9</td>
+    </tr>
+    <tr>
+      <td>Documentation</td>
+      <td>Required</td>
+      <td>Required</td>
+      <td>Required</td>
+    </tr>
+  </tbody>
+</table>
 
-Monthly exercises confirm the generator will start, transfer, and carry a basic load. Annual load testing confirms the generator can sustain its rated output for an extended period -- the kind of performance required during a prolonged outage event.
+Monthly exercises confirm the generator will start, transfer, and carry load. The annual supplemental test burns off the effects of light-load running, and the 36-month test confirms the generator can sustain load for an extended period -- the kind of performance required during a prolonged outage.
 
 ## The Problem of Wet Stacking
 
-Wet stacking deserves detailed attention because it is the primary mechanical justification for load bank testing and one of the most common causes of generator underperformance.
+Wet stacking deserves detailed attention because it is the main mechanical reason for load bank testing and a common cause of generator underperformance.
 
 ### How Wet Stacking Occurs
 
-When a diesel engine operates at low load (typically below 30% of its rating), the combustion process is incomplete. Cylinder temperatures and pressures are insufficient to burn all the injected fuel. The unburned fuel and partially combusted byproducts accumulate in several locations:
+When a diesel generator runs at less than about 30% of its capacity for extended periods, the engine cannot sustain the operating temperatures needed to burn its fuel completely. Kohler describes wet stacking (also called engine slobber) as a buildup of unburned fuel in the exhaust system. It typically happens when a generator is oversized for its load or when adequate load is not available during exercise. Common signs include:
 
-- **Exhaust manifold and turbocharger** -- Black, oily residue coats internal surfaces
-- **Cylinder walls** -- Fuel washes past piston rings, diluting crankcase oil
-- **Exhaust stack** -- Visible black smoke and wet, oily deposits at the exhaust outlet
-- **Injector tips** -- Carbon buildup degrades spray patterns and combustion efficiency
+- **Exhaust outlet** -- Black ooze or liquid dripping from the exhaust
+- **Exhaust smoke** -- Continuous black smoke during operation
+- **Soot deposits** -- Buildup of soot in and around the exhaust system
+- **Performance** -- Reduced engine performance during loaded operation
 
 ### Consequences of Wet Stacking
 
-Left uncorrected, wet stacking leads to progressively worsening problems:
+Wet stacking does not usually damage an engine in the short term, but over time it leads to poor performance and reduced engine life:
 
-1. **Reduced power output** -- The engine cannot achieve its rated capacity due to fouled injectors and glazed cylinder liners
-2. **Increased fuel consumption** -- Incomplete combustion wastes fuel and reduces efficiency
-3. **Accelerated wear** -- Fuel-diluted oil provides inadequate lubrication, increasing bearing and ring wear
-4. **Exhaust system damage** -- Accumulated carbon can ignite, damaging exhaust components
-5. **Failure under load** -- A severely wet-stacked generator may stall or fail to carry the emergency load during an actual outage
+1. **Fouled injectors** -- Deposits degrade fuel injection and combustion
+2. **Engine wear** -- Kohler lists excessive valve guide wear and possible damage to pistons, liners, and rings
+3. **Exhaust fires** -- In extreme cases, accumulated material in the exhaust can ignite when high exhaust temperatures are applied quickly
+4. **Emissions equipment** -- Newer engines with diesel oxidation catalysts, SCR systems, or particulate filters are more sensitive to light-load operation; low-temperature running can risk damage to aftertreatment or plug a particulate filter
+5. **Higher repair costs** -- Advanced cases may need professional cleaning or an engine overhaul
 
-### How Load Bank Testing Corrects Wet Stacking
+### How Load Bank Testing Helps
 
-Running a generator at 75-100% of its rated load for an extended period raises cylinder pressures and exhaust temperatures to levels that burn off accumulated deposits. A properly executed load bank test effectively cleans the engine internally by:
+Running a generator at a substantial load for a sustained period raises exhaust temperatures enough to burn off accumulated fuel and deposits. Generator Source, for example, recommends running an early-stage wet-stacked unit at its designed operating temperature with a 75% load. A properly executed load bank test also:
 
-- Burning carbon deposits from cylinder walls and piston crowns
-- Clearing exhaust system residue through sustained high-temperature operation
-- Restoring injector spray patterns through high-pressure operation
-- Confirming that the engine can achieve and sustain its rated output
+- Clears exhaust system residue through sustained high-temperature operation
+- Confirms that the engine can reach and hold the tested load
+- Produces a documented record of engine and alternator performance under load
+
+If your generator has aftertreatment equipment, follow the manufacturer's guidance on loading and regeneration, because it may differ from older engines.
 
 <Callout type="tip" title="Visual Indicator">
-During a load bank test, it is common to see black smoke from the exhaust during the initial loading phase as accumulated deposits burn off. The smoke should clear as the test progresses. If heavy black smoke persists at full load, this indicates a mechanical issue that requires further investigation.
+During a load bank test, it is common to see black smoke from the exhaust during the initial loading phase as accumulated deposits burn off. The smoke should clear as the test progresses. If heavy black smoke persists at high load, have a technician investigate for a mechanical or fuel system problem.
 </Callout>
 
 ## How to Prepare for a Load Bank Test
@@ -139,12 +209,12 @@ Proper preparation ensures the load bank test proceeds safely and produces valid
 
 **Engine and Generator:**
 - Verify engine oil level and condition; change oil if due or overdue
-- Check coolant level and concentration (50/50 mix typical for most climates)
+- Check coolant level and concentration against the engine manufacturer's specification
 - Inspect and replace air filters if dirty or due for replacement
-- Verify fuel level -- a full load test at nameplate rating consumes substantial fuel
+- Verify fuel level -- a loaded test consumes substantial fuel
 - Check battery terminal voltage and connections
 - Inspect belts, hoses, and visible wiring for damage
-- Confirm block heater is operational and engine is at operating temperature
+- Confirm the engine heater is operating and keeping the engine at the manufacturer's standby temperature
 
 **Fuel System:**
 - Ensure adequate fuel supply for the full test duration plus a reserve margin
@@ -152,7 +222,7 @@ Proper preparation ensures the load bank test proceeds safely and produces valid
 - Check fuel filters and replace if due
 
 **Load Bank Setup:**
-- Confirm load bank capacity matches or exceeds the generator's nameplate kW rating
+- Confirm load bank capacity (plus any building load you will use) is enough for the highest planned load step
 - Verify cable sizing is appropriate for the generator's rated current output
 - Confirm load bank placement allows adequate airflow for heat dissipation
 - Verify connection points and ensure proper phase rotation
@@ -167,8 +237,8 @@ Proper preparation ensures the load bank test proceeds safely and produces valid
 
 Monitor the following parameters throughout the test:
 
-- **Voltage** -- Should remain within plus or minus 5% of rated voltage across all load steps
-- **Frequency** -- Should remain within plus or minus 0.5 Hz of rated frequency (typically 60 Hz)
+- **Voltage** -- Should remain within the manufacturer's regulation tolerance for rated voltage across all load steps
+- **Frequency** -- Should remain within the manufacturer's tolerance for rated frequency (60 Hz in the United States)
 - **Oil pressure** -- Must remain within the manufacturer's specified range
 - **Coolant temperature** -- Must stay within the normal operating range; watch for overheating at full load
 - **Exhaust temperature** -- Elevated but stable; monitor for abnormal spikes
@@ -177,7 +247,7 @@ Monitor the following parameters throughout the test:
 
 ## Record-Keeping Requirements
 
-NFPA 110 Section 8.3.7 requires documentation of all testing activities. For load bank testing, your records should include:
+NFPA 110 expects test data and readings to be recorded, and CMS surveyors look for written records of maintenance and testing that are maintained and readily available. For load bank testing, your records should include:
 
 - Date and time of test
 - Name and qualifications of the testing technician
@@ -189,10 +259,10 @@ NFPA 110 Section 8.3.7 requires documentation of all testing activities. For loa
 - Total test duration
 - Any abnormalities or deficiencies observed
 - Black smoke conditions and when they cleared
-- Pass or fail determination based on the generator's ability to achieve and sustain rated output
+- Pass or fail determination based on the generator's ability to reach and hold each required load step
 - Corrective actions required and completion dates
 
-These records must be maintained on-site and available for AHJ review. Industry best practice is to retain load bank test records for a minimum of three years, though some jurisdictions require longer retention.
+Keep these records on-site and available for AHJ or surveyor review. NFPA 110 does not set a single retention period that fits every facility, so confirm how long your AHJ, accreditor, and any air permit require you to keep them. At minimum, keep enough history to show your most recent annual and 36-month tests.
 
 ## Cost Expectations and Scheduling
 
@@ -203,17 +273,18 @@ Load bank testing is a specialized service that requires equipment, qualified te
 The cost of a load bank test depends on several variables:
 
 - **Generator size** -- Larger generators require larger load banks and more fuel, increasing the cost
-- **Test duration** -- The full stepped protocol (3.5 hours minimum) requires more technician time than a simple operational check
+- **Test duration** -- A 1.5-hour annual supplemental test, a 4-hour 36-month test, or a combined test each require different amounts of technician time
 - **Load bank type** -- Resistive-only testing is less expensive than combined resistive-reactive testing
 - **Mobilization** -- Transporting a portable load bank to your site is a significant cost component, especially for remote locations
-- **Fuel consumption** -- A 500 kW generator running at full load for two hours consumes approximately 35-40 gallons of diesel fuel
+- **Fuel consumption** -- Published estimates put a 500 kW diesel generator at roughly 18.5 gallons per hour at half load, about 26 gallons per hour at three-quarter load, and about 36 gallons per hour at full load; check your engine's spec sheet for actual figures
+- **Number of units** -- Sites with multiple generators or paralleled systems need more setup and coordination
 
-For a typical commercial generator in the 100-500 kW range, annual load bank testing costs generally fall between $1,500 and $5,000, including equipment mobilization, technician labor, and test documentation. Larger installations with multiple generators or megawatt-class units will cost proportionally more.
+Prices vary widely by region, generator size, and contractor, so get written quotes that spell out the load steps, durations, fuel, and documentation included.
 
 ### Scheduling Considerations
 
-- **Book early** -- Load bank testing contractors are in high demand, particularly in the spring and fall testing seasons. Schedule your annual test at least 60-90 days in advance.
-- **Coordinate with operations** -- The generator will be running at full load and unavailable for emergency backup during the test. Schedule during a period when a short gap in emergency power coverage is acceptable, or arrange for temporary backup power.
+- **Book early** -- Schedule well ahead of your due date so contractor availability does not push you past your testing interval.
+- **Coordinate with operations** -- Decide in advance how the building will be served if the utility fails while the generator is connected to the load bank, and brief staff on that plan. Arrange temporary backup power if your risk assessment calls for it.
 - **Weather** -- Outdoor load bank testing should be scheduled during favorable weather. Rain, extreme cold, or extreme heat can affect test conditions and safety.
 - **Maintenance first** -- Complete all outstanding preventive maintenance before the load bank test. Testing a generator with known deficiencies wastes time and money.
 
@@ -223,18 +294,18 @@ Load bank testing involves high-voltage electrical connections and equipment tha
 
 ## When Additional Load Bank Testing Is Warranted
 
-Beyond the annual NFPA 110 requirement, there are several situations where additional load bank testing should be considered:
+Beyond the NFPA 110 requirements, there are several situations where additional load bank testing should be considered:
 
 - **After major engine or alternator repairs** -- Confirm the repaired system performs to its rated capacity
 - **After extended periods of inactivity** -- Generators that have not run in several months benefit from a load bank test to clear deposits and verify readiness
 - **Following a fuel contamination event** -- After fuel system cleaning, a load test confirms the engine operates correctly on clean fuel
 - **When wet stacking symptoms are observed** -- Black exhaust, oily residue at the exhaust outlet, or reduced power output during monthly testing
-- **Post-installation commissioning** -- New generator installations should include a full load bank test as part of the acceptance process
+- **Post-installation commissioning** -- NFPA 110 requires an on-site acceptance test of new installations, which often uses a load bank to supplement building load
 - **After a failed emergency start** -- If the generator failed to start or carry load during an actual outage, a thorough evaluation including load bank testing is warranted
 
 ## Conclusion
 
-Load bank testing is not just a regulatory requirement -- it is the most effective method for verifying that your emergency generator can deliver its rated performance when lives and operations depend on it. Monthly exercises confirm the system will start and transfer. Annual load bank testing confirms it can sustain the full load for the duration of an emergency.
+Load bank testing is not just a regulatory requirement -- it is a direct way to verify that your emergency generator can carry substantial load when lives and operations depend on it. Monthly exercises confirm the system will start and transfer. The annual supplemental test, when required, counters the effects of light-load running, and the 36-month test confirms Level 1 systems can run for an extended period.
 
 Build load bank testing into your annual maintenance budget and schedule. Address wet stacking before it degrades performance. Maintain thorough documentation. And work with qualified testing contractors who understand both the mechanical requirements and the code compliance framework.
 
@@ -242,6 +313,12 @@ Your emergency generator exists for one purpose: to deliver reliable power when 
 
 ## Sources and References
 
-- **NFPA 110: Standard for Emergency and Standby Power Systems** -- National Fire Protection Association. [nfpa.org/codes-and-standards/nfpa-110-standard-development/110](https://www.nfpa.org/codes-and-standards/nfpa-110-standard-development/110)
-- **NFPA 110 Section 8.4.2 and 8.4.9** -- Monthly exercise testing and annual load testing requirements. [nfpa.org/product/nfpa-110-standard/p0110code](https://www.nfpa.org/product/nfpa-110-standard/p0110code)
-- **NFPA 70E: Standard for Electrical Safety in the Workplace** -- Safety requirements for load bank testing personnel. [nfpa.org/codes-and-standards/nfpa-70e-standard-development/70e](https://www.nfpa.org/codes-and-standards/nfpa-70e-standard-development/70e)
+- **NFPA 110: Standard for Emergency and Standby Power Systems** -- National Fire Protection Association. [https://www.nfpa.org/codes-and-standards/nfpa-110-standard-development/110](https://www.nfpa.org/codes-and-standards/nfpa-110-standard-development/110)
+- **NFPA 110 Maintenance and Testing** -- Curtis Power Solutions. [https://www.curtispowersolutions.com/nfpa-110-maintenance-testing](https://www.curtispowersolutions.com/nfpa-110-maintenance-testing)
+- **NFPA 110 Levels 1 and 2 Standards for Generator Systems (Information Sheet 25)** -- Clifford Power Systems. [https://cliffordpower.com/wp-content/uploads/2024/02/IS_25_NFPA110_Level1_2-REV-11-1-19.pdf](https://cliffordpower.com/wp-content/uploads/2024/02/IS_25_NFPA110_Level1_2-REV-11-1-19.pdf)
+- **Complying with Inspection, Testing and Maintenance for Electrical Systems** -- Health Facilities Management (HFM) Magazine. [https://www.hfmmagazine.com/articles/4461-complying-with-inspection-testing-and-maintenance-for-electrical-systems](https://www.hfmmagazine.com/articles/4461-complying-with-inspection-testing-and-maintenance-for-electrical-systems)
+- **Form CMS-2786R, Fire Safety Survey Report, 2012 Life Safety Code, Health Care (K918)** -- Centers for Medicare and Medicaid Services. [https://www.cms.gov/Medicare/CMS-Forms/CMS-Forms/downloads/cms2786R.pdf](https://www.cms.gov/Medicare/CMS-Forms/CMS-Forms/downloads/cms2786R.pdf)
+- **Diesel Generator Maintenance: Feasibility and Benefits of No-Load Exercising (Power Systems Topics 130)** -- Kohler Co. [https://resources.kohler.com/power/kohler/industrial/pdf/NoLoadMaintenanceWP.pdf](https://resources.kohler.com/power/kohler/industrial/pdf/NoLoadMaintenanceWP.pdf)
+- **Wet Stacking and How to Eliminate It** -- Generator Source. [https://generatorsource.com/generator-service/wet-stacking-and-how-to-eliminate-it/](https://generatorsource.com/generator-service/wet-stacking-and-how-to-eliminate-it/)
+- **Diesel Generator Fuel Consumption Chart** -- Generator Source. [https://generatorsource.com/tools-info/fuel-consumption-charts/](https://generatorsource.com/tools-info/fuel-consumption-charts/)
+- **NFPA 70E: Standard for Electrical Safety in the Workplace** -- National Fire Protection Association. [https://www.nfpa.org/codes-and-standards/nfpa-70e-standard-development/70e](https://www.nfpa.org/codes-and-standards/nfpa-70e-standard-development/70e)

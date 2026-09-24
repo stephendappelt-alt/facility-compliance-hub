@@ -1,13 +1,17 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import {
   getArticleBySlug,
   getRelatedArticles,
   generateArticleStaticParams,
+  injectBeforeSecondH2,
 } from "@/lib/articles";
 import { getVerticalBySlug } from "@/config/verticals";
-import { getSponsorByVertical } from "@/config/sponsors";
+import { getSponsorByVertical, isPlaceholderSponsor } from "@/config/sponsors";
+import InlineSponsorCTA from "@/components/sponsor/InlineSponsorCTA";
+import SponsorLink from "@/components/sponsor/SponsorLink";
 import Container from "@/components/ui/Container";
 import Breadcrumbs from "@/components/layout/Breadcrumbs";
 import TableOfContents from "@/components/article/TableOfContents";
@@ -33,13 +37,18 @@ export async function generateMetadata({
   const article = getArticleBySlug(params.vertical, params.slug);
   if (!article) return {};
 
+  const title = article.seoTitle || article.title;
+  const description = article.seoDescription || article.description;
+
   return {
-    title: article.title,
-    description: article.description,
+    // seoTitle is written to fit search results on its own, so skip the site-name suffix
+    title: article.seoTitle ? { absolute: title } : title,
+    description,
     keywords: article.keywords,
+    alternates: { canonical: article.url },
     openGraph: {
       title: article.title,
-      description: article.description,
+      description,
       type: "article",
       publishedTime: article.date,
       modifiedTime: article.lastUpdated || article.date,
@@ -49,7 +58,7 @@ export async function generateMetadata({
     twitter: {
       card: "summary_large_image",
       title: article.title,
-      description: article.description,
+      description,
     },
   };
 }
@@ -61,6 +70,33 @@ export default function ArticlePage({ params }: ArticlePageProps) {
   const vertical = getVerticalBySlug(params.vertical);
   const sponsor = getSponsorByVertical(params.vertical);
   const related = getRelatedArticles(article, 3);
+  const realSponsor = sponsor && !isPlaceholderSponsor(sponsor) ? sponsor : undefined;
+
+  // Real sponsors get an in-article CTA after the intro section. Articles can
+  // set a topic-specific headline via `ctaHeadline` in frontmatter.
+  const source = realSponsor
+    ? injectBeforeSecondH2(article.content, "<SponsorCTA />")
+    : article.content;
+  const SponsorCTA = () =>
+    realSponsor ? (
+      <InlineSponsorCTA
+        sponsor={realSponsor}
+        headline={
+          article.ctaHeadline ||
+          `Need help staying compliant? Talk to ${realSponsor.name}.`
+        }
+        body={article.ctaBody}
+        pageId={article.slug}
+        vertical={params.vertical}
+      />
+    ) : null;
+  const updated = article.lastUpdated && article.lastUpdated !== article.date;
+  const fmt = (d: string) =>
+    new Date(`${d}T12:00:00`).toLocaleDateString("en-US", {
+      month: "long",
+      day: "numeric",
+      year: "numeric",
+    });
 
   return (
     <>
@@ -89,15 +125,21 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                 {article.title}
               </h1>
               <p className="mt-4 text-lg text-gray-600">{article.description}</p>
-              <div className="mt-4 flex items-center gap-4 text-sm text-gray-500">
+              {article.topics?.includes("healthcare") && (
+                <Link
+                  href="/healthcare"
+                  className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-rose-700 hover:underline"
+                >
+                  Part of our Healthcare Facility Compliance hub &rarr;
+                </Link>
+              )}
+              <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-gray-500">
                 <span>By {article.author}</span>
                 <span>&middot;</span>
                 <span>
-                  {new Date(article.date).toLocaleDateString("en-US", {
-                    month: "long",
-                    day: "numeric",
-                    year: "numeric",
-                  })}
+                  {updated
+                    ? `Updated ${fmt(article.lastUpdated!)}`
+                    : fmt(article.date)}
                 </span>
                 <span>&middot;</span>
                 <span>{article.readingTime} min read</span>
@@ -105,7 +147,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
             </div>
 
             {/* Article Body */}
-            <MDXContent source={article.content} />
+            <MDXContent source={source} extraComponents={{ SponsorCTA }} />
 
             {/* Disclaimer */}
             <Disclaimer />
@@ -127,14 +169,15 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                   </p>
                   <p className="font-medium text-gray-900">{sponsor.name}</p>
                 </div>
-                <a
-                  href={sponsor.ctaUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <SponsorLink
+                  sponsor={sponsor}
+                  placement="footer-strip"
+                  pageId={article.slug}
+                  vertical={params.vertical}
                   className="rounded-lg bg-primary-700 px-4 py-2 text-sm font-medium text-white hover:bg-primary-600"
                 >
                   {sponsor.ctaText}
-                </a>
+                </SponsorLink>
               </div>
             )}
 
@@ -143,7 +186,13 @@ export default function ArticlePage({ params }: ArticlePageProps) {
 
           {/* Sidebar */}
           <div className="hidden w-72 flex-shrink-0 lg:block">
-            {sponsor && <SponsorSidebar sponsor={sponsor} />}
+            {sponsor && (
+              <SponsorSidebar
+                sponsor={sponsor}
+                pageId={article.slug}
+                vertical={params.vertical}
+              />
+            )}
             <div className="sticky top-24 mt-6">
               <TableOfContents />
             </div>
@@ -162,7 +211,13 @@ export default function ArticlePage({ params }: ArticlePageProps) {
             description: article.description,
             datePublished: article.date,
             dateModified: article.lastUpdated || article.date,
-            author: { "@type": "Person", name: article.author },
+            author: {
+              "@type": "Organization",
+              name: siteConfig.name,
+              url: `${siteConfig.url}/about`,
+            },
+            keywords: article.keywords.join(", "),
+            image: `${siteConfig.url}${article.url}/opengraph-image`,
             publisher: {
               "@type": "Organization",
               name: siteConfig.name,

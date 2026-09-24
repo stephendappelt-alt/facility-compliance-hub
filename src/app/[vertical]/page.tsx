@@ -21,8 +21,11 @@ export function generateMetadata({ params }: VerticalPageProps): Metadata {
   if (!vertical) return {};
 
   return {
-    title: vertical.name,
+    title: { absolute: `${vertical.name} Compliance Guides` },
     description: vertical.description,
+    alternates: { canonical: `/${vertical.slug}` },
+    // Keep empty "coming soon" verticals out of the index until they have content
+    robots: getArticlesByVertical(vertical.slug).length ? undefined : { index: false },
     openGraph: {
       title: `${vertical.name} | ${siteConfig.name}`,
       description: vertical.description,

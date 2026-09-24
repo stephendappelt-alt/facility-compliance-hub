@@ -1,21 +1,25 @@
 ---
 title: "Automatic Transfer Switch Maintenance Guide: NFPA 110 Requirements and Preventive Maintenance Schedules"
 description: "Complete ATS maintenance guide with NFPA 110 testing requirements, annual inspection checklists, failure mode prevention, and detailed maintenance schedules."
+seoTitle: "ATS Maintenance Guide: NFPA 110 Testing & PM Schedule"
+seoDescription: "Automatic transfer switch maintenance under NFPA 110: monthly testing, annual inspection checklists, common failure modes, and a complete PM schedule."
 vertical: "generators"
 category: "maintenance-schedules"
 date: "2026-03-14"
+lastUpdated: "2026-09-24"
 author: "FCH Editorial Team"
 keywords: ["automatic transfer switch", "ATS maintenance", "NFPA 110 ATS requirements", "transfer switch testing", "ATS inspection checklist", "bypass isolation switch", "emergency power transfer"]
 featured: true
+topics: ["healthcare"]
 ---
 
 ## The Critical Role of the Automatic Transfer Switch
 
 The automatic transfer switch is arguably the most critical single component in an emergency power supply system (EPSS). It is the device that detects a loss of normal utility power, signals the emergency generator to start, and transfers the building's emergency loads from the utility source to the generator. When utility power is restored, the ATS monitors the returning source for stability and transfers the loads back.
 
-A generator can be perfectly maintained, fully fueled, and tested monthly -- but if the ATS fails to detect the outage, fails to send the start signal, or fails to transfer the load, the entire emergency power system is rendered useless. ATS failures account for a substantial percentage of all EPSS failures, and many of these failures are preventable through proper maintenance and testing.
+A generator can be perfectly maintained, fully fueled, and tested monthly -- but if the ATS fails to detect the outage, fails to send the start signal, or fails to transfer the load, the entire emergency power system is rendered useless. Many of the conditions that stop an ATS from working, such as loose connections, drifting settings, and stiff mechanisms, can be found and corrected through routine maintenance and testing.
 
-NFPA 110 recognizes the criticality of the ATS and dedicates specific provisions to its testing and maintenance. This guide covers those requirements in detail and provides a practical maintenance framework for facility managers and maintenance teams.
+[NFPA 110](/generators/nfpa-110-emergency-generator-compliance-guide) includes transfer switches in its weekly inspection and monthly testing requirements. This guide covers those requirements, explains where manufacturer instructions and NFPA 70B fill in the details, and provides a practical maintenance framework for facility managers and maintenance teams. Because section numbers have shifted between editions, confirm them against the edition your AHJ enforces.
 
 ## How an Automatic Transfer Switch Works
 
@@ -23,30 +27,34 @@ Understanding ATS operation is essential for effective maintenance. The transfer
 
 ### Normal-to-Emergency Transfer
 
-1. **Voltage sensing** -- The ATS continuously monitors utility voltage on all phases. When voltage drops below a predetermined threshold (typically 85-90% of nominal), the ATS registers a utility failure.
-2. **Time delay on failure** -- A programmable time delay (typically 1-5 seconds) prevents nuisance transfers during momentary utility fluctuations. The ATS waits to confirm the outage is sustained before initiating the transfer sequence.
+1. **Voltage sensing** -- The ATS monitors utility voltage, ideally on all three phases. When voltage falls below the "dropout" setting, the ATS treats the source as failed. ASCO describes 85% of nominal as a typical dropout setting for most loads.
+2. **Time delay on engine start** -- NFPA 110 requires a time delay on starting the generator so that harmless momentary dips do not start it. The NFPA 110 annex says a nominal 1 second is adequate for most applications, and the delay must be short enough for the system to still meet its Type (for example, 10 seconds for Type 10).
 3. **Engine start signal** -- After the time delay expires, the ATS sends a start signal to the generator control panel, initiating the engine cranking sequence.
-4. **Generator voltage sensing** -- The ATS monitors the generator output, waiting for voltage and frequency to reach acceptable levels (typically 90% of nominal voltage and within 0.5 Hz of rated frequency).
+4. **Generator voltage sensing** -- The ATS monitors the generator output, waiting for voltage and frequency to reach their "pickup" settings (ASCO's Group 5 controller defaults to 90% of nominal voltage and 95% of nominal frequency for the emergency source).
 5. **Time delay on transfer** -- An optional brief delay after generator voltage is confirmed allows the generator to stabilize before accepting load.
-6. **Transfer operation** -- The ATS mechanically transfers the load contacts from the utility source to the generator source. In a standard open-transition transfer, there is a momentary interruption (typically 50-100 milliseconds) as the contacts break from one source and make to the other.
+6. **Transfer operation** -- The ATS mechanically transfers the load contacts from the utility source to the generator source. In a standard open-transition transfer, there is a brief interruption as the contacts break from one source and make to the other.
 
 ### Emergency-to-Normal Retransfer
 
 1. **Utility restoration sensing** -- When utility power returns, the ATS monitors voltage and frequency for stability.
-2. **Time delay on retransfer** -- A programmable delay (typically 5-30 minutes) ensures the utility source is stable before retransferring. This prevents cycling between sources during intermittent utility restoration.
+2. **Time delay on retransfer** -- A programmable delay ensures the utility source is stable before retransferring. This prevents cycling between sources during intermittent utility restoration. Settings vary; ASCO's Group 5 controller ships with a 30-minute default, adjustable to suit the site.
 3. **Retransfer operation** -- The ATS transfers loads back to the utility source.
-4. **Generator cooldown** -- The ATS maintains the engine start signal for a programmable cooldown period (typically 5-10 minutes), allowing the generator to run unloaded before shutdown.
+4. **Generator cooldown** -- The ATS maintains the engine start signal for a programmable cooldown period (the same ASCO controller defaults to 5 minutes), allowing the generator to run unloaded before shutdown.
 5. **Engine shutdown** -- After the cooldown period, the ATS removes the start signal and the generator shuts down.
 
-The entire sequence -- from utility failure to full emergency power delivery -- must complete within 10 seconds for Level 1 EPSS installations per NFPA 110. Every time delay, every sensing threshold, and every mechanical operation must be calibrated and maintained to fit within that window.
+NFPA 110 classifies systems by Type, the maximum time the transfer switch load terminals may be without acceptable power. For a Type 10 system -- required for NEC Article 700 emergency loads and healthcare essential electrical systems -- the entire sequence from utility failure to power at the load must complete within 10 seconds. Every time delay, every sensing threshold, and every mechanical operation must be set and maintained to fit within that window.
 
 ## NFPA 110 Chapter 8 ATS Testing Requirements
 
-NFPA 110 Chapter 8 establishes the testing and maintenance requirements for all EPSS components, including the ATS.
+NFPA 110 Chapter 8 establishes the testing and maintenance requirements for all EPSS components, including the ATS. The section numbers below are used in the 2010 and 2016 editions; confirm them in the edition your AHJ enforces. In healthcare, CMS surveyors check that generator and transfer switch maintenance and testing follow NFPA 110 (Life Safety Code tag K918).
 
-### Monthly Testing -- Section 8.4.1
+### Weekly Inspection -- Section 8.4.1
 
-The ATS must be exercised as part of the monthly EPSS test required by Section 8.4.2. During each monthly test, the following ATS functions must be verified:
+The EPSS, including its transfer switches and other appurtenant components, must be inspected weekly. For the ATS, a weekly look typically covers the controller display, alarm and fault indications, the switch being in automatic mode, and the general condition of the enclosure.
+
+### Monthly Operation -- Section 8.4.6
+
+Transfer switches must be operated monthly. The monthly test consists of electrically operating the transfer switch from the primary (normal) position to the alternate (emergency) position and then back to the primary position. This is usually done during the monthly generator exercise required by Section 8.4.2. During each monthly test, verify at least the following ATS functions:
 
 - The ATS detects the simulated or actual loss of normal power
 - The ATS sends the engine start signal to the generator
@@ -57,9 +65,9 @@ The ATS must be exercised as part of the monthly EPSS test required by Section 8
 
 Monthly testing should be performed by simulating a utility outage at the ATS (using the test switch or by opening the normal source breaker) rather than waiting for an actual outage. This ensures the test is controlled and documented.
 
-### Semi-Annual Inspection -- Section 8.3.4
+### Periodic Inspection and Maintenance
 
-The semi-annual EPSS inspection should include a thorough examination of the ATS covering:
+Beyond weekly inspection and monthly operation, NFPA 110 relies on a routine maintenance program based on the manufacturer's recommendations. It also requires EPSS circuit breakers to be exercised: annually (with the generator off) for Level 1 systems at 600 volts or less, and every six months for breakers over 600 volts, with a simulated overload test every two years. Industry guidance on ATS programs commonly calls for one major maintenance service per year plus periodic (for example, quarterly) inspections covering:
 
 - Physical condition of the enclosure, wiring, and mechanical components
 - Tightness of all electrical connections (torque verification)
@@ -68,9 +76,13 @@ The semi-annual EPSS inspection should include a thorough examination of the ATS
 - Verification of all sensing and control circuits
 - Review of the ATS event log (if equipped with electronic controls)
 
-### Annual Maintenance
+### NFPA 70B and Annual Maintenance
 
-While NFPA 110 does not prescribe a separate annual ATS maintenance protocol distinct from the semi-annual inspection, industry best practice and most ATS manufacturers recommend a comprehensive annual maintenance service that goes beyond the semi-annual visual and operational check.
+NFPA 70B, which became a standard (rather than a recommended practice) with its 2023 edition, sets maintenance intervals for electrical equipment based on an equipment condition assessment and calls for infrared thermography at intervals not exceeding 12 months. If your AHJ, insurer, or owner has adopted NFPA 70B, it applies to transfer switches alongside NFPA 110. Most ATS manufacturers also recommend a comprehensive annual maintenance service that goes beyond the monthly operational check.
+
+### 2025 Edition: Start Signal Monitoring
+
+The 2025 edition of NFPA 110 adds a requirement for Level 1 systems: the integrity of the start signal circuit from a remote device such as an ATS must be monitored for broken, disconnected, or shorted wires, and a fault in that circuit must start the generator. Where your AHJ has adopted the 2025 edition, include this monitoring in your ATS and generator checks.
 
 <Callout type="info" title="Manufacturer Requirements">
 Always follow the ATS manufacturer's specific maintenance recommendations in addition to NFPA 110 requirements. Manufacturer guidelines often include additional inspection points, specific torque values, and component replacement intervals that are essential for maintaining warranty coverage and long-term reliability.
@@ -93,7 +105,7 @@ The monthly ATS exercise should follow a consistent, documented procedure. The f
 1. **Initiate the test** by activating the ATS test function. Most modern ATS units have a test position on the controller that simulates a utility failure without requiring the normal source breaker to be opened.
 2. **Observe the transfer sequence** -- Verify that the generator starts within the expected cranking time, achieves rated voltage and frequency, and that the ATS transfers smoothly.
 3. **Monitor operating parameters** during the loaded run period -- voltage, frequency, and current on the emergency bus.
-4. **Time the transfer** -- Using a stopwatch or the ATS controller's built-in timer, record the elapsed time from simulated utility loss to load transfer. For Level 1 systems, this must be within 10 seconds.
+4. **Time the transfer** -- Using a stopwatch or the ATS controller's built-in timer, record the elapsed time from simulated utility loss to load transfer. For Type 10 systems, this must be within 10 seconds. In healthcare, if the 10-second criterion is not met during the monthly test, CMS expects a process to confirm the capability annually for the life safety and critical branches.
 5. **Initiate retransfer** by returning the ATS test switch to the normal position. Verify the ATS retransfers to the utility source after the programmed time delay.
 6. **Verify generator cooldown** -- Confirm the generator continues to run for the programmed cooldown period before shutting down.
 7. **Check for alarms** -- After the test is complete, verify the ATS controller shows no active alarms and has returned to normal standby mode.
@@ -153,10 +165,10 @@ ATS maintenance involves working on energized electrical equipment. All maintena
 
 | Task | Frequency | Performed By | Notes |
 |---|---|---|---|
-| Visual inspection of enclosure | Monthly | Facility staff | Check for damage, moisture, pest entry |
-| Exercise test (transfer and retransfer) | Monthly | Facility staff | Document transfer time and any anomalies |
-| Check controller display for alarms | Monthly | Facility staff | Clear and investigate any active faults |
-| Infrared thermography scan | Semi-annually | Qualified technician | Identify hot connections under load |
+| Visual inspection of switch and controller | Weekly (NFPA 110) | Facility staff | Check for alarms, damage, moisture, pest entry; confirm switch is in automatic |
+| Exercise test (transfer and retransfer) | Monthly (NFPA 110) | Facility staff | Document transfer time and any anomalies |
+| Check controller display for alarms | Weekly and at each test | Facility staff | Clear and investigate any active faults |
+| Infrared thermography scan | At least every 12 months (NFPA 70B) | Qualified technician | Identify hot connections under load |
 | Torque verification of power connections | Annually | Qualified technician | Use calibrated torque wrench; follow mfg specs |
 | Main contact inspection | Annually | Qualified technician | Check for pitting, erosion, wear |
 | Mechanical linkage inspection | Annually | Qualified technician | Lubricate per manufacturer requirements |
@@ -164,24 +176,22 @@ ATS maintenance involves working on energized electrical equipment. All maintena
 | Time delay verification and adjustment | Annually | Qualified technician | All programmable delays |
 | Control wiring torque check | Annually | Qualified technician | All control terminations |
 | Event log review | Annually | Qualified technician | Download and archive log data |
-| Controller battery replacement | Per manufacturer (typically 3-5 years) | Qualified technician | Do not exceed recommended interval |
+| Controller battery replacement | Per manufacturer | Qualified technician | Do not exceed recommended interval |
 | Contact replacement | Per manufacturer or condition-based | Qualified technician | Replace when pitting exceeds limits |
 
 ## Voltage and Frequency Sensing Calibration
 
-The ATS voltage and frequency sensing circuits are the decision-making elements that determine when to transfer and retransfer. Incorrect calibration can cause either nuisance transfers (sensing thresholds too tight) or failure to transfer (thresholds too loose).
+The ATS voltage and frequency sensing circuits are the decision-making elements that determine when to transfer and retransfer. Incorrect calibration can cause either nuisance transfers (sensing thresholds too tight) or failure to transfer (thresholds too loose). The values below are manufacturer defaults and typical settings, not NFPA 110 requirements; use the settings in your switch's documentation and design.
 
 ### Voltage Sensing Parameters
 
-**Pickup voltage (transfer threshold):** The voltage level below which the ATS considers the utility to have failed. Typically set at 85-90% of nominal voltage. For a 480V system, this means a transfer initiates when voltage drops below approximately 408-432V.
+**Dropout voltage (failure threshold):** The voltage level below which the ATS considers the source to have failed and begins the transfer sequence. ASCO gives 85% of nominal as a typical dropout setting for most loads. For a 480V system, that means the sequence starts when voltage drops below about 408V.
 
-**Dropout voltage (retransfer threshold):** The voltage level above which the ATS considers the utility to have been restored. Typically set at 90-95% of nominal. This value must be higher than the pickup voltage to prevent cycling.
+**Pickup voltage (restoration threshold):** The voltage level above which the ATS considers the source acceptable again, a prerequisite for retransfer. ASCO gives 90% of nominal as typical. Pickup is set higher than dropout so the switch does not cycle while voltage hovers near the threshold. Sensitive loads such as healthcare and data equipment may call for closer settings.
 
 ### Frequency Sensing Parameters
 
-**Underfrequency pickup:** The frequency below which the ATS considers the source unacceptable. Typically set at 95% of nominal (57 Hz for a 60 Hz system).
-
-**Overfrequency pickup:** The frequency above which the source is considered unacceptable. Typically set at 105% of nominal (63 Hz).
+**Frequency dropout and pickup:** Frequency works the same way. ASCO's Group 5 controller, for example, defaults to a normal-source frequency dropout of 90% of nominal (54 Hz on a 60 Hz system) and a pickup of 95% (57 Hz). Many controllers also offer over-frequency and over-voltage trip settings.
 
 Frequency sensing is particularly important for the generator source, as governor instability or overloading can cause frequency deviations that should prevent load transfer until the generator stabilizes.
 
@@ -217,7 +227,7 @@ Understanding the most common ATS failure modes allows you to focus maintenance 
 
 **Cause:** Thermal cycling of power connections causes gradual loosening over time. Loose connections create resistance, which generates heat, which accelerates further loosening in a destructive cycle.
 
-**Prevention:** Annual torque verification of all power and control connections. Semi-annual infrared thermography to identify hot spots before they cause failure.
+**Prevention:** Annual torque verification of all power and control connections. Infrared thermography at least every 12 months (more often for critical or poor-condition equipment) to identify hot spots before they cause failure.
 
 ## Open-Transition vs. Closed-Transition Transfer
 
@@ -225,7 +235,7 @@ The transfer method used by the ATS has implications for both the connected load
 
 ### Open-Transition Transfer
 
-In an open-transition transfer, the ATS breaks contact with the current source before making contact with the new source. There is a momentary power interruption -- typically 50 to 100 milliseconds -- during which the load is disconnected from both sources.
+In an open-transition transfer, the ATS breaks contact with the current source before making contact with the new source. There is a brief power interruption during which the load is disconnected from both sources. When transferring between two live sources (as during a test), in-phase monitoring or a delayed-transition switch helps prevent damage to motor loads from residual voltage.
 
 **Characteristics:**
 - Simplest and most common transfer method
@@ -235,14 +245,14 @@ In an open-transition transfer, the ATS breaks contact with the current source b
 
 ### Closed-Transition Transfer
 
-In a closed-transition (make-before-break) transfer, the ATS briefly connects both sources simultaneously before disconnecting the original source. The overlap period is typically less than 100 milliseconds, and both sources are synchronized before the overlap occurs.
+In a closed-transition (make-before-break) transfer, the ATS briefly connects both sources simultaneously before disconnecting the original source. The overlap is kept very short, and the controller checks that voltage, frequency, and phase angle are closely matched before it occurs. Controllers also include an extended-parallel timer that acts if the overlap runs too long (ASCO's Group 5 default is 0.5 seconds).
 
 **Characteristics:**
 - No power interruption to the load during transfer
 - Requires source synchronization capability
-- Brief period of generator-utility parallel operation (requires utility company approval)
+- Brief period of generator-utility parallel operation (the utility may need to approve this under its interconnection rules)
 - Higher equipment cost and more complex controls
-- Preferred for sensitive loads such as data center UPS systems and variable frequency drives
+- Used for loads, such as digital equipment, that cannot tolerate a power interruption during transfers between two live sources
 
 **Maintenance implications:** Closed-transition ATS units require additional maintenance of the synchronization controls, phase-matching circuits, and the paralleling logic. Annual maintenance should verify synchronization accuracy and confirm the overlap duration does not exceed the programmed limit.
 
@@ -278,8 +288,8 @@ Operating in bypass mode disables automatic transfer capability. The facility ha
 
 A reliable ATS maintenance program integrates the following elements:
 
-1. **Monthly exercise testing** with documented transfer times and operational verification
-2. **Semi-annual thermographic inspections** to catch connection issues before they cause failure
+1. **Weekly inspection and monthly exercise testing** with documented transfer times and operational verification
+2. **Thermographic inspections at least every 12 months** to catch connection issues before they cause failure
 3. **Annual comprehensive maintenance** by qualified technicians familiar with your specific ATS make and model
 4. **Spare parts inventory** for critical components -- at minimum, keep a spare controller and a set of main contacts on-site for critical installations
 5. **Condition-based replacement planning** -- Track contact wear over annual inspections and plan replacement before contacts reach their wear limits
@@ -290,6 +300,14 @@ The ATS is the bridge between your generator and your emergency loads. Maintain 
 
 ## Sources and References
 
-- **NFPA 110: Standard for Emergency and Standby Power Systems** -- National Fire Protection Association. [nfpa.org/codes-and-standards/nfpa-110-standard-development/110](https://www.nfpa.org/codes-and-standards/nfpa-110-standard-development/110)
-- **NFPA 70E: Standard for Electrical Safety in the Workplace** -- National Fire Protection Association. [nfpa.org/codes-and-standards/nfpa-70e-standard-development/70e](https://www.nfpa.org/codes-and-standards/nfpa-70e-standard-development/70e)
-- **NFPA 70: National Electrical Code (NEC)** -- National Fire Protection Association. [nfpa.org/codes-and-standards/nfpa-70-standard-development/70](https://www.nfpa.org/codes-and-standards/nfpa-70-standard-development/70)
+- **NFPA 110: Standard for Emergency and Standby Power Systems** -- National Fire Protection Association. [https://www.nfpa.org/codes-and-standards/nfpa-110-standard-development/110](https://www.nfpa.org/codes-and-standards/nfpa-110-standard-development/110)
+- **NFPA 110 Maintenance and Testing** -- Curtis Power Solutions. [https://www.curtispowersolutions.com/nfpa-110-maintenance-testing](https://www.curtispowersolutions.com/nfpa-110-maintenance-testing)
+- **NFPA 110 for Emergency Power Systems: 2025 Updates (PowerHour, August 21, 2025)** -- Cummins Inc. [https://www.cummins.com/sites/default/files/2026-04/2025-aug-nfpa-110-for-emergency-power-systems.pdf](https://www.cummins.com/sites/default/files/2026-04/2025-aug-nfpa-110-for-emergency-power-systems.pdf)
+- **NFPA 110 Levels 1 and 2 Standards for Generator Systems (Information Sheet 25)** -- Clifford Power Systems. [https://cliffordpower.com/wp-content/uploads/2024/02/IS_25_NFPA110_Level1_2-REV-11-1-19.pdf](https://cliffordpower.com/wp-content/uploads/2024/02/IS_25_NFPA110_Level1_2-REV-11-1-19.pdf)
+- **Form CMS-2786R, Fire Safety Survey Report, 2012 Life Safety Code, Health Care (K918)** -- Centers for Medicare and Medicaid Services. [https://www.cms.gov/Medicare/CMS-Forms/CMS-Forms/downloads/cms2786R.pdf](https://www.cms.gov/Medicare/CMS-Forms/CMS-Forms/downloads/cms2786R.pdf)
+- **Basic Control of Automatic Transfer Switches (white paper)** -- ASCO Power Technologies, hosted by Curtis Power Solutions. [https://www.curtispowersolutions.com/hubfs/Files/Technical%20Information/ASCO/White%20Papers/ATS/ASCO%20Basic_Control_of_Automatic_Transfer_Switches_168394_0.pdf](https://www.curtispowersolutions.com/hubfs/Files/Technical%20Information/ASCO/White%20Papers/ATS/ASCO%20Basic_Control_of_Automatic_Transfer_Switches_168394_0.pdf)
+- **User's Guide, Group 5 Controller for 4000 and 7000 Series Transfer Switches** -- ASCO Power Technologies, hosted by CI Group. [https://cigroup-us.com/wp-content/uploads/2023/01/Group-5-Control-Panel-Users-Guide-PN-381333-126.pdf](https://cigroup-us.com/wp-content/uploads/2023/01/Group-5-Control-Panel-Users-Guide-PN-381333-126.pdf)
+- **NFPA 70B: Standard for Electrical Equipment Maintenance** -- National Fire Protection Association. [https://www.nfpa.org/codes-and-standards/nfpa-70b-standard-development/70b](https://www.nfpa.org/codes-and-standards/nfpa-70b-standard-development/70b)
+- **Don't Panic: A Practical Approach to NFPA 70B and IR Thermography** -- Rozel (70E Consultants). [https://www.70econsultants.com/dont-panic-a-practical-approach-to-nfpa-70b-and-ir-thermography/](https://www.70econsultants.com/dont-panic-a-practical-approach-to-nfpa-70b-and-ir-thermography/)
+- **NFPA 70E: Standard for Electrical Safety in the Workplace** -- National Fire Protection Association. [https://www.nfpa.org/codes-and-standards/nfpa-70e-standard-development/70e](https://www.nfpa.org/codes-and-standards/nfpa-70e-standard-development/70e)
+- **NFPA 70: National Electrical Code (NEC)** -- National Fire Protection Association. [https://www.nfpa.org/codes-and-standards/nfpa-70-standard-development/70](https://www.nfpa.org/codes-and-standards/nfpa-70-standard-development/70)

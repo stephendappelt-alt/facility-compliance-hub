@@ -1,10 +1,12 @@
 ---
 title: "Generator Room Design and NFPA 37 Compliance: Ventilation, Clearances, and Noise Requirements"
 description: "Complete guide to NFPA 37 requirements for commercial generator installations including room ventilation, exhaust systems, clearance distances, noise compliance, and permitting."
+seoTitle: "Generator Room Design: NFPA 37 Ventilation & Clearances"
+seoDescription: "NFPA 37 requirements for commercial generator rooms: ventilation and combustion air, exhaust, clearances, fuel storage limits, noise, and permitting."
 vertical: "generators"
 category: "compliance-guides"
 date: "2026-03-24"
-lastUpdated: "2026-03-31"
+lastUpdated: "2026-09-24"
 author: "FCH Editorial Team"
 readingTime: 16
 featured: false
@@ -16,15 +18,17 @@ keywords:
   - generator noise compliance
   - generator installation permits
   - combustion engine installation
+ctaHeadline: "Planning a generator install or room retrofit in Texas?"
+ctaBody: "Buffalo Power Solutions designs and installs commercial generators with ventilation, exhaust, and clearances built to NFPA 37, then keeps them maintained."
 ---
 
 ## Why Generator Room Design Matters for Code Compliance
 
-A poorly designed generator room does more than create maintenance headaches. It creates fire hazards, exhaust accumulation risks, overheating failures, and code violations that can shut down your emergency power system when you need it most. NFPA 37, the Standard for the Installation and Use of Stationary Combustion Engines and Gas Turbines, establishes the baseline fire safety requirements for permanently installed engines, while NFPA 110 governs the performance and reliability of emergency and standby power systems. Together, these standards define how your generator room must be built, ventilated, and maintained.
+A poorly designed generator room does more than create maintenance headaches. It creates fire hazards, exhaust accumulation risks, overheating failures, and code violations that can shut down your emergency power system when you need it most. NFPA 37, the Standard for the Installation and Use of Stationary Combustion Engines and Gas Turbines, establishes the baseline fire safety requirements for permanently installed engines, while [NFPA 110](/generators/nfpa-110-emergency-generator-compliance-guide) governs the performance and reliability of emergency and standby power systems. Together, these standards define how your generator room must be built, ventilated, and maintained.
 
-For commercial facility managers, the consequences of non-compliance extend beyond failed inspections. A generator room that overheats during a sustained power outage can cause the engine to derate or shut down entirely. Inadequate exhaust ventilation can allow carbon monoxide to migrate into occupied spaces. Insufficient clearances can prevent maintenance access and create fire exposure risks.
+For commercial facility managers, the consequences of non-compliance extend beyond failed inspections. A generator room that overheats during a sustained power outage can force the generator to be derated -- Caterpillar's installation guidance calls for derating once engine room temperature exceeds 104 degrees F. Inadequate exhaust design can allow carbon monoxide to migrate into occupied spaces. Insufficient clearances can prevent maintenance access and create fire exposure risks.
 
-This guide covers the critical design parameters that determine whether your generator installation will pass inspection and perform reliably under emergency conditions: ventilation sizing, exhaust system design, clearance distances, noise mitigation, fuel storage limits, and the permitting process.
+This guide covers the critical design parameters that determine whether your generator installation will pass inspection and perform reliably under emergency conditions: ventilation sizing, exhaust system design, clearance distances, noise mitigation, fuel storage limits, and the permitting process. NFPA 37 is currently in its 2024 edition (the next is scheduled for 2027), but your AHJ may enforce an earlier one, so confirm the adopted edition before design begins.
 
 ## Understanding the Applicable Standards
 
@@ -32,15 +36,15 @@ Before diving into specific requirements, it is important to understand which st
 
 ### NFPA 37: Fire Safety for Stationary Engines
 
-NFPA 37 provides minimum fire safety requirements for the installation and operation of stationary combustion engines and gas turbines. It covers engine location, clearances from combustible materials, fuel supply and storage, exhaust systems, and fire protection. This is the primary standard governing the physical installation of your generator.
+NFPA 37 provides minimum fire safety requirements for the installation and operation of stationary combustion engines and gas turbines. It covers engine location, separation from buildings and combustible materials, gaseous fuel systems (Chapter 5), liquid fuel systems (Chapter 6), exhaust systems, and fire protection. This is the primary standard governing the physical installation of your generator.
 
 ### NFPA 110: Emergency and Standby Power Systems
 
-NFPA 110 establishes performance requirements for the emergency power supply system (EPSS) as a whole. For generator room design, its most significant requirements include the two-hour fire resistance rating for Level 1 installations, restrictions on room use, and ventilation provisions that preserve the fire-rated enclosure.
+NFPA 110 establishes performance requirements for the emergency power supply system (EPSS) as a whole. For generator room design, its most significant requirements include the two-hour fire resistance rating for Level 1 generator rooms, restrictions on room use, and ventilation provisions that preserve the fire-rated enclosure.
 
 ### Additional Codes and Standards
 
-Your installation may also need to comply with NFPA 30 (Flammable and Combustible Liquids Code) for fuel storage, NFPA 54/ANSI Z223.1 (National Fuel Gas Code) for natural gas fuel connections, the International Mechanical Code for ventilation systems, and local building codes that may impose requirements beyond the national standards.
+Your installation may also need to comply with NFPA 30 (Flammable and Combustible Liquids Code) for fuel storage, NFPA 54/ANSI Z223.1 (National Fuel Gas Code) for natural gas fuel connections, the International Fire Code for fuel quantity limits, the International Mechanical Code for ventilation systems, and local building codes that may impose requirements beyond the national standards. The International Building Code (Section 2702) also requires emergency and standby power systems to be installed in accordance with NFPA 110.
 
 ## Ventilation Sizing: Combustion Air and Heat Rejection
 
@@ -50,72 +54,71 @@ Ventilation is the single most critical design element of a generator room. The 
 
 Every diesel or natural gas engine requires a substantial volume of air for combustion. If the generator room does not supply enough air, the engine will experience reduced performance, incomplete combustion, and elevated exhaust temperatures. The combustion air requirement is determined by the engine manufacturer based on displacement, rated speed, and fuel type.
 
-As a general planning figure, a diesel engine consumes approximately 2.5 to 3.5 cubic feet per minute (cfm) of air per horsepower at rated load. A 500 kW diesel generator (approximately 700 HP) may therefore require 1,750 to 2,450 cfm of combustion air alone. This air must be drawn from outside the building, not recirculated from conditioned interior spaces.
+As a general planning figure, Caterpillar estimates that a diesel engine consumes approximately 2.5 cubic feet per minute (cfm) of air per brake horsepower produced. Some installations duct combustion air directly to the engine intake from outdoors; others draw it from the room, in which case it becomes a significant part of the room ventilation load. Use the engine-specific figure from the manufacturer's data sheet for final design.
 
 ### Heat Rejection Ventilation
 
-In addition to combustion air, the ventilation system must remove heat radiated by the engine block, alternator, exhaust piping, and other hot surfaces. The formula used by major engine manufacturers to calculate total required ventilation airflow is:
+In addition to combustion air, the ventilation system must remove heat radiated by the engine block, alternator, exhaust piping, and other hot surfaces. Caterpillar's Engine Room Ventilation Application and Installation Guide estimates required ventilation airflow with this formula:
 
-**V = (H / (D x Cp x T)) + Combustion Air**
+**V = (H / (D x Cp x T) + Combustion Air) x F**
 
-Where V is the total ventilation airflow in cfm, H is the total radiated heat in BTU per minute, D is the air density (approximately 0.071 lb/ft3 at 100 degrees F), Cp is the specific heat of air (0.24 BTU/lb/degree F), and T is the permissible temperature rise in degrees F above the inlet air temperature.
+Where V is the ventilating air in cfm, H is the heat radiated by the engine, generator, and auxiliaries in BTU per minute, D is the density of air at 100 degrees F (0.071 lb/ft3), Cp is the specific heat of air (0.24 BTU/lb/degree F), T is the permissible temperature rise in the room in degrees F, and F is a routing factor based on how air moves through the room. If combustion air is supplied to the engine through dedicated ductwork, the combustion air term is omitted.
 
-The permissible temperature rise depends on the installation but is typically limited to 15 to 20 degrees F above ambient for most commercial generator rooms. Higher temperature rises reduce alternator output and accelerate component degradation.
+Caterpillar's guide states that a properly designed engine room ventilation system will keep room air within 15 to 22.5 degrees F above outside ambient, and MacAllister Power Systems describes a usual design rise of 10 to 20 degrees F. If engine room temperature exceeds 104 degrees F, the generator must be derated per the manufacturer's schedule, and air temperature around the engine should never exceed 122 degrees F.
 
 ### Minimum Air Change Rates
 
-While the engineering calculation above yields the most accurate ventilation requirement, many codes and design guides specify minimum air change rates as a baseline. For generator rooms, the commonly accepted minimum is six to ten air changes per hour, though large installations with high heat rejection loads may require significantly more.
+Some design guides express generator room ventilation as air changes per hour, but the rate needed varies with the generator's kW output, heat rejection, and room volume. There is no single air change rate that substitutes for the heat rejection calculation above, so treat any rule-of-thumb air change figure as a cross-check only.
 
 ### Ventilation System Configuration
 
-NFPA 110 imposes specific requirements on ventilation system design for Level 1 installations. Fire dampers, shutters, or other self-closing devices are not permitted in ventilation openings or ductwork serving a Level 1 generator room. This requirement exists because automatic closure devices could cut off combustion air during a fire event, exactly when the emergency generator is needed most. Ventilation air for a Level 1 EPSS must be drawn directly from outside through a two-hour-rated enclosure to maintain the required fire resistance rating.
+NFPA 110 imposes specific requirements on ventilation system design for Level 1 installations. Fire dampers, shutters, or other self-closing devices are not permitted in ventilation openings for a Level 1 generator room, and ventilation air is to be supplied directly from outside. A damper that closed during a fire would starve the engine of cooling and combustion air at exactly the moment the emergency generator is needed most.
 
-The recommended configuration places supply air openings low on the wall opposite the radiator discharge, allowing cool outside air to sweep across the engine before being drawn through the radiator and exhausted. Exhaust fans or louvers should be mounted at the highest point in the room, directly above the primary heat sources.
+Caterpillar recommends providing ventilation air low to the ground at the rear of the generator package so the generator end also receives cool, clean air, and MacAllister notes that the most efficient arrangement pulls air past the switchgear, then over the engine from back to front. Caterpillar also advises that ventilation exhaust fans be mounted or ducted at the highest point in the room, directly over the heat sources, and notes that less favorable air routing can require about 50 percent more airflow.
 
 <table>
   <thead>
     <tr>
-      <th>Generator Rating (kW)</th>
-      <th>Estimated Combustion Air (cfm)</th>
-      <th>Estimated Total Ventilation (cfm)</th>
-      <th>Typical Room Volume (ft3)</th>
+      <th>Variable</th>
+      <th>Meaning</th>
+      <th>Value or Source</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>100</td>
-      <td>375 -- 525</td>
-      <td>2,000 -- 3,500</td>
-      <td>1,500 -- 2,500</td>
+      <td>H</td>
+      <td>Heat radiated by engine, generator, and auxiliaries (BTU/min)</td>
+      <td>Engine and generator manufacturer data sheets</td>
     </tr>
     <tr>
-      <td>250</td>
-      <td>875 -- 1,225</td>
-      <td>5,000 -- 8,000</td>
-      <td>3,000 -- 5,000</td>
+      <td>D</td>
+      <td>Density of air at 100 degrees F</td>
+      <td>0.071 lb/ft3</td>
     </tr>
     <tr>
-      <td>500</td>
-      <td>1,750 -- 2,450</td>
-      <td>10,000 -- 16,000</td>
-      <td>5,000 -- 8,000</td>
+      <td>Cp</td>
+      <td>Specific heat of air</td>
+      <td>0.24 BTU/lb/degree F</td>
     </tr>
     <tr>
-      <td>1,000</td>
-      <td>3,500 -- 4,900</td>
-      <td>20,000 -- 32,000</td>
-      <td>8,000 -- 14,000</td>
+      <td>T</td>
+      <td>Permissible room temperature rise (degrees F)</td>
+      <td>Typically 15 -- 22.5 (Caterpillar)</td>
     </tr>
     <tr>
-      <td>2,000</td>
-      <td>7,000 -- 9,800</td>
-      <td>40,000 -- 60,000</td>
-      <td>14,000 -- 24,000</td>
+      <td>Combustion Air</td>
+      <td>Engine combustion air drawn from the room (cfm)</td>
+      <td>About 2.5 cfm per bhp for diesel; omit if ducted directly to engine</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>Routing factor for the ventilation path</td>
+      <td>1 to 2.5 depending on routing type (Caterpillar guide)</td>
     </tr>
   </tbody>
 </table>
 
-These figures are estimates for planning purposes. Always use the specific heat rejection data from your engine manufacturer for final ventilation design.
+These figures are planning values. Always use the specific heat rejection and airflow data from your engine manufacturer for final ventilation design.
 
 ## Exhaust System Design and Positioning
 
@@ -123,49 +126,48 @@ The generator exhaust system removes combustion byproducts including carbon mono
 
 ### Exhaust Pipe Routing
 
-Exhaust piping must be routed to discharge outdoors, away from building air intakes, operable windows, doors, and any other openings that could allow exhaust gases to enter occupied spaces. NFPA 37 requires that exhaust termination points be positioned to prevent re-entrainment of combustion products into the building.
+Exhaust piping must be routed to discharge outdoors, away from building air intakes, operable windows, doors, and any other openings that could allow exhaust gases to enter occupied spaces. NFPA 37 requires exhaust systems to be designed, constructed, and installed so they do not present a safety or fire hazard during normal operation.
 
-As a practical guideline, most AHJs require the exhaust outlet to be at least 10 feet from any opening that could allow fumes into the building. The exhaust stack should terminate at a minimum height of 12 feet above grade level to promote adequate dispersion of combustion gases.
+National codes do not give a single universal separation distance for generator exhaust outlets; required distances from openings, air intakes, and property lines come from the mechanical code and local amendments your AHJ enforces. Confirm them during design, and consider prevailing winds and nearby air intakes when locating the outlet.
 
 ### Exhaust System Fire Protection
 
-Exhaust piping operates at extremely high temperatures, often exceeding 900 degrees F at the engine turbocharger outlet. NFPA 37 requires that exhaust systems be insulated or guarded where they pass through combustible construction or within reach of personnel. The insulation must be rated for the maximum exhaust temperature and must be protected from oil saturation, which can create a fire hazard.
+Exhaust piping runs hot enough to ignite nearby combustibles and to burn personnel. In practice, meeting the NFPA 37 requirement means maintaining clearance from combustible construction, insulating or guarding piping within reach of personnel, and keeping insulation free of oil saturation, which can create a fire hazard.
 
 Where exhaust piping penetrates a fire-rated wall or floor assembly, the penetration must maintain the fire resistance rating of that assembly. This typically requires a listed firestop system tested and rated for the specific pipe size and configuration.
 
 ### Flexible Connections
 
-A flexible exhaust connection must be installed between the engine exhaust manifold and the building exhaust piping to absorb engine vibration and thermal expansion. This connection prevents stress fractures in rigid piping and protects the wall penetration seals from movement-related damage.
+NFPA 110 requires exhaust piping to be connected to the prime mover with a flexible connector. The flexible section absorbs engine vibration and thermal expansion, preventing stress fractures in rigid piping and protecting wall penetration seals from movement-related damage.
 
 ### Muffler Selection and Placement
 
-Exhaust mufflers serve two functions: noise reduction and spark arrestance. For commercial installations, critical-grade or hospital-grade mufflers provide 25 to 35 dB of attenuation. Industrial-grade mufflers provide less attenuation, typically 15 to 25 dB, and are suitable only where noise is not a concern.
+Exhaust silencers are sold by grade, and the industry grades describe a range of noise reduction rather than a single number. According to the grade table published by W Power Products (based on EGSA standardization), commercial-grade silencers provide roughly 14 to 20 dBA of reduction, residential-grade 19 to 25 dBA, critical-grade 25 to 35 dBA, and super-critical grade 32 to 42 dBA. Critical-grade or better is typical where neighbors or occupants are nearby.
 
 The muffler should be mounted as close to the engine as practical to maximize noise reduction effectiveness, but must be accessible for inspection and replacement. Condensation drains should be installed at low points in the exhaust system to prevent water accumulation.
 
 ## Clearance Requirements Under NFPA 37
 
-NFPA 37 establishes minimum clearance distances to reduce fire risk and ensure adequate maintenance access. These requirements apply to both indoor and outdoor installations, though the specific distances vary by configuration.
+NFPA 37 establishes minimum separation distances to reduce fire risk, and the NEC and manufacturer instructions add requirements for safe working and maintenance access. The specific distances vary by configuration.
 
 ### Outdoor Installation Clearances
 
-For generators installed outdoors, NFPA 37 requires the following minimum clearances:
+For engines and weatherproof housings installed outdoors, NFPA 37 requires the following minimum separations:
 
-- **5 feet (1.5 m)** from any operable openings in building walls, including windows, doors, and ventilation intakes
-- **5 feet (1.5 m)** from structures with combustible exterior walls
-- **5 feet (1.5 m)** overhead clearance from any structure, overhang, or projection from a wall
+- **5 feet (1.5 m)** from any openings in the walls of structures, including windows, doors, and ventilation intakes
+- **5 feet (1.5 m)** from structures with combustible walls
 
-An exception permits reduced clearance where all portions of the structure within 5 feet of the engine enclosure have a fire resistance rating of at least one hour. Some manufacturers have obtained listings that allow placement as close as 18 inches from non-combustible walls based on fire testing, but these reduced clearances apply only to specific listed units.
+Two exceptions permit less than 5 feet. The first applies where all portions of the structure closer than 5 feet to the engine enclosure have a fire resistance rating of at least one hour. The second applies where the enclosure is noncombustible and it has been demonstrated that a fire within the enclosure will not ignite combustible materials outside it. Manufacturers whose enclosures have been tested this way publish the permitted reduced clearance in their installation manuals; those reduced distances apply only to that specific unit installed as the manual directs.
 
 ### Indoor Installation Clearances
 
 For indoor generator rooms, clearance requirements are driven by a combination of NFPA 37, the engine manufacturer's installation manual, and the NEC (NFPA 70). At minimum, the room must provide:
 
 - Sufficient clearance around the engine for routine maintenance tasks including oil changes, filter replacement, belt inspection, and coolant service
-- A minimum of 36 inches of clear working space in front of all electrical panels and switchgear per NEC Article 110.26
+- Working space in front of electrical panels, switchgear, and transfer switches per NEC Section 110.26: at least 3 feet deep for systems up to 150 volts to ground, increasing to 3.5 or 4 feet at 151 to 600 volts depending on what faces the equipment, at least 30 inches wide (or the equipment width), and 6.5 feet high
 - Adequate clearance for engine removal using the anticipated rigging method (overhead crane, forklift, or roller system)
 
-The engine manufacturer's installation manual will specify minimum clearances on all sides of the unit. These distances typically range from 24 to 48 inches depending on the generator size and the specific service points that require access.
+The engine manufacturer's installation manual will specify minimum clearances on all sides of the unit, which depend on the generator size and the service points that require access.
 
 <table>
   <thead>
@@ -177,7 +179,7 @@ The engine manufacturer's installation manual will specify minimum clearances on
   </thead>
   <tbody>
     <tr>
-      <td>Distance from operable building openings (outdoor)</td>
+      <td>Distance from openings in building walls (outdoor)</td>
       <td>5 ft (1.5 m)</td>
       <td>NFPA 37</td>
     </tr>
@@ -187,23 +189,23 @@ The engine manufacturer's installation manual will specify minimum clearances on
       <td>NFPA 37</td>
     </tr>
     <tr>
-      <td>Overhead clearance from structures (outdoor)</td>
-      <td>5 ft (1.5 m)</td>
-      <td>NFPA 37</td>
-    </tr>
-    <tr>
-      <td>Reduced clearance with 1-hour fire-rated wall</td>
-      <td>Less than 5 ft (per listing)</td>
+      <td>Reduced clearance where structure within 5 ft is 1-hour fire rated</td>
+      <td>Less than 5 ft permitted</td>
       <td>NFPA 37 exception</td>
     </tr>
     <tr>
-      <td>Working space in front of electrical panels</td>
-      <td>36 in (914 mm)</td>
-      <td>NEC Article 110.26</td>
+      <td>Reduced clearance for tested noncombustible enclosure</td>
+      <td>Less than 5 ft (per manufacturer testing and manual)</td>
+      <td>NFPA 37 exception</td>
+    </tr>
+    <tr>
+      <td>Working space depth in front of electrical equipment</td>
+      <td>3 ft (0 -- 150 V); 3 -- 4 ft (151 -- 600 V, by condition)</td>
+      <td>NEC Section 110.26</td>
     </tr>
     <tr>
       <td>Maintenance access (all sides, indoor)</td>
-      <td>24 -- 48 in (per manufacturer)</td>
+      <td>Per manufacturer installation manual</td>
       <td>Manufacturer specifications</td>
     </tr>
   </tbody>
@@ -211,47 +213,47 @@ The engine manufacturer's installation manual will specify minimum clearances on
 
 ### Fire-Rated Room Construction
 
-For Level 1 EPSS installations under NFPA 110, the generator room must have a minimum two-hour fire resistance rating. The room must be dedicated to the EPSS and cannot be used for other purposes unrelated to the emergency power system. Parts, tools, and manuals for routine maintenance and repair are permitted, but general storage, unrelated mechanical equipment, or other building systems may not share the space.
+Under NFPA 37 (as summarized for the 2015 edition), rooms housing engines need walls, floors, and ceilings with at least a one-hour fire resistance rating (a top-floor room's ceiling may instead be noncombustible or sprinklered). For Level 1 EPSS installations under NFPA 110, the generator room must have a minimum two-hour fire resistance rating. The room cannot be used for purposes not directly related to the EPS. Parts, tools, and manuals for routine maintenance and repair are permitted, but general storage, unrelated mechanical equipment, or other building systems may not share the space. NFPA 110 also requires a battery-powered emergency light in generator rooms and walk-in enclosures.
 
 ## Fuel Storage Within the Generator Room
 
-NFPA 37 Chapter 6 establishes requirements for fuel storage associated with stationary engine installations. For commercial diesel generators, the fuel storage provisions directly affect room design.
+NFPA 37 Chapter 6 establishes requirements for liquid fuel storage associated with stationary engine installations. For commercial diesel generators, the fuel storage provisions directly affect room design.
 
 ### Indoor Tank Capacity Limits
 
-Fuel tanks located inside a building but not in a dedicated room are limited to 660 gallons (2,500 liters) per engine. Not more than one such tank, or multiple tanks with a combined capacity not exceeding 660 gallons, may be connected to a single engine.
+Under NFPA 37 (2015 edition provisions), a fuel tank located inside a building in a shared space is limited to 660 gallons. Larger tanks must be placed in a dedicated room that meets additional construction and protection requirements, with one set of provisions for tanks up to 1,320 gallons and more stringent provisions for tanks larger than 1,320 gallons.
 
-The aggregate capacity of all fuel tanks in a structure must not exceed 1,320 gallons unless additional storage is placed in rooms with appropriate fire resistance ratings. Fuel tanks larger than 660 gallons must be enclosed in a dedicated room.
+The International Fire Code, which many jurisdictions enforce alongside NFPA 37, also limits fuel oil tanks for generators inside buildings to 660 gallons, or up to 3,000 gallons for protected aboveground tanks with integral secondary containment. Exceeding the fire code's limits can push the space into a high-hazard (Group H) occupancy classification with much stricter construction requirements, so fuel quantity decisions should be settled with the AHJ early in design.
 
 ### Containment and Safety Features
 
-NFPA 37 requires spill containment for indoor fuel storage, emergency venting to prevent tank rupture from fire exposure, and manually operated shutoff valves accessible to first responders. Sub-base fuel tanks (tanks integral to the generator mounting base) must include secondary containment to prevent environmental contamination. All tank installations must comply with NFPA 30 for tank construction, using tanks listed to UL 142 or equivalent standards.
+NFPA 37 requires rooms containing fuel tanks to have spill containment capable of holding the capacity of the largest single tank. Gaseous fuel systems must have a manual shutoff valve to isolate the fuel supply. Tanks must be constructed and installed per NFPA 30 and their listing, and sub-base tanks (tanks integral to the generator mounting base) are commonly specified with secondary containment to meet fire code and environmental requirements. Confirm the containment, venting, and shutoff requirements that apply to your tank type with your fire marshal.
 
 ### Vent Termination
 
-Primary and emergency tank vents must extend outside the generator enclosure and terminate at a minimum height of 12 feet above grade to prevent ignition of fuel vapors by external sources.
+Tank vents must discharge vapors to a safe location outdoors. Adopted fire codes set specific dimensions; for example, the Oregon adoption of the fire code requires normal vent outlets for Class I, II, and IIIA liquid tanks to release vapors outside buildings at least 12 feet above finished ground level and at least 5 feet from building openings. Check the edition and amendments your jurisdiction enforces.
 
 ## Noise Compliance for Commercial Generators
 
-Generator noise is regulated at the municipal level through local noise ordinances and zoning codes. There is no single federal standard that sets a universal decibel limit for stationary generators, which means the applicable limits vary significantly by jurisdiction. Facility managers must identify and comply with the specific noise regulations enforced in their locality.
+Generator noise is regulated at the state and municipal level through noise ordinances and zoning codes. There is no single federal standard that sets a universal decibel limit for stationary generators, which means the applicable limits vary significantly by jurisdiction. Facility managers must identify and comply with the specific noise regulations enforced in their locality.
 
 ### Typical Decibel Limits
 
-Commercial and industrial zones generally permit noise levels between 65 and 75 dBA measured at the property line. Residential zones impose stricter limits, often 50 to 65 dBA, which becomes relevant when a commercial property borders a residential area. A commercial generator rated at 100 kW or above typically produces 72 to 85 dBA at the unit, measured at a distance of approximately 23 feet (7 meters).
+According to dB Engineering's generator noise tutorial, maximum permitted overall noise levels in North America range from about 45 to 72 dBA depending on location and zoning, while untreated generator set noise can approach 100 dBA or more. Residential zones generally carry the lowest limits, which becomes relevant when a commercial property borders a residential area. Manufacturer sound data and silencer grades are usually stated at a distance of 7 meters (23 feet), so compare like with like when checking a unit against a property-line limit.
 
-Many ordinances also specify different limits for daytime and nighttime hours. Emergency generator operation during a power outage is frequently exempt from noise limits, but routine testing and maintenance runs are typically not exempt. This distinction has significant implications for testing schedules and sound attenuation design.
+Many ordinances also specify different limits for daytime and nighttime hours, and some treat emergency operation during an outage differently from routine testing. Read your local ordinance to see whether outage operation is exempt and whether test runs are restricted to certain hours; this has significant implications for testing schedules and sound attenuation design.
 
 ### Noise Mitigation Strategies
 
 When generator noise levels exceed local ordinance limits at the property line, facility managers have several mitigation options:
 
-**Enclosures and sound-attenuated housings.** Factory-built sound-attenuated enclosures can reduce generator noise by 15 to 30 dBA depending on the enclosure construction and materials. These are the most effective single measure for noise reduction and are frequently the only practical solution when noise exceeds ordinance limits by more than 10 dBA.
+**Enclosures and sound-attenuated housings.** Standard generator enclosures typically reduce radiated noise by at least 10 dBA, and purpose-built sound-attenuated enclosures that combine barrier and absorption materials reduce it further. Steel enclosures provide about 2 to 3 dBA better attenuation than aluminum. Enclosures must be designed so they do not restrict ventilation or reduce load-carrying capacity.
 
-**Exhaust silencer upgrades.** Upgrading from industrial-grade to critical-grade or hospital-grade mufflers can reduce exhaust noise by an additional 10 to 15 dBA. The exhaust outlet is typically the dominant noise source, so muffler selection has a significant impact on overall sound levels.
+**Exhaust silencer upgrades.** Without a silencer, engine exhaust noise can reach 120 to 130 dBA or more. Moving from a commercial-grade silencer (about 14 to 20 dBA of reduction) to a critical-grade silencer (about 25 to 35 dBA) is one of the most direct ways to lower overall sound levels.
 
-**Barrier walls and berms.** Solid masonry or concrete barrier walls between the generator and the property line or sensitive receptor can provide 5 to 15 dBA of reduction depending on height and proximity. Earth berms offer similar attenuation with a less imposing visual profile.
+**Barrier walls and berms.** Rigid, massive materials such as sheet steel, concrete- or sand-filled block, or solid concrete walls reduce sound transmission between the generator and the property line or sensitive receptor. The benefit depends on height, mass, and proximity, so have it modeled rather than assumed.
 
-**Distance.** Sound pressure level decreases by approximately 6 dBA each time the distance from the source doubles. Where site conditions allow, increasing the setback distance from property lines can bring noise levels within compliance.
+**Distance.** Where there are no reflecting walls, sound level decreases by approximately 6 dBA each time the distance from the generator doubles. Close to the unit (the near field, within about twice its largest dimension), levels are less predictable. Where site conditions allow, increasing the setback distance from property lines can bring noise levels within compliance.
 
 <table>
   <thead>
@@ -263,23 +265,23 @@ When generator noise levels exceed local ordinance limits at the property line, 
   </thead>
   <tbody>
     <tr>
-      <td>Sound-attenuated enclosure</td>
-      <td>15 -- 30</td>
-      <td>Primary mitigation for all installations</td>
+      <td>Standard enclosure</td>
+      <td>10 or more</td>
+      <td>Baseline for outdoor installations</td>
     </tr>
     <tr>
-      <td>Critical-grade muffler</td>
-      <td>25 -- 35 (total attenuation)</td>
+      <td>Critical-grade silencer</td>
+      <td>25 -- 35 (rated attenuation)</td>
       <td>Exhaust noise dominant sources</td>
     </tr>
     <tr>
       <td>Barrier wall (masonry/concrete)</td>
-      <td>5 -- 15</td>
+      <td>Site-specific; model before relying on it</td>
       <td>Property-line noise reduction</td>
     </tr>
     <tr>
       <td>Doubling distance from source</td>
-      <td>~6</td>
+      <td>~6 (free field)</td>
       <td>Sites with adequate setback space</td>
     </tr>
     <tr>
@@ -292,47 +294,47 @@ When generator noise levels exceed local ordinance limits at the property line, 
 
 ### Conducting a Noise Assessment
 
-Before finalizing generator placement, conduct a noise assessment that includes the rated sound power level from the manufacturer, the distance from the generator to the nearest property line and sensitive receptor, the applicable local noise ordinance limits (daytime and nighttime), and any existing ambient noise levels that affect the measurement context. An acoustical engineer can model the expected noise propagation and recommend the most cost-effective combination of mitigation measures for your specific site.
+Before finalizing generator placement, conduct a noise assessment that includes the rated sound level from the manufacturer, the distance from the generator to the nearest property line and sensitive receptor, the applicable local noise ordinance limits (daytime and nighttime), and any existing ambient noise levels that affect the measurement context. An acoustical engineer can model the expected noise propagation and recommend the most cost-effective combination of mitigation measures for your specific site.
 
 ## Foundation and Structural Requirements
 
-The generator and its associated equipment impose significant static and dynamic loads on the building structure. A reinforced concrete pad is the industry standard for generator foundations. It is against most modern building codes to place a stationary industrial generator on gravel or dirt.
+The generator and its associated equipment impose significant static and dynamic loads on the building structure. A reinforced concrete pad or engineered structural slab is standard practice for stationary generators; one generator dealer's installation guide describes pads 6 to 12 inches thick, extending 6 to 12 inches beyond the generator skid on all sides, and perfectly level. Your structural engineer and the manufacturer's installation manual set the actual design.
 
 ### Slab Design Considerations
 
-The foundation slab must be designed to support the combined static weight of the generator, fuel tank, coolant, and any attached accessories, plus the dynamic loads from engine vibration. For large generators (500 kW and above), a structural engineer should design the foundation to account for soil bearing capacity, vibration isolation requirements, and secondary containment volume if a sub-base fuel tank is used.
+The foundation slab must be designed to support the combined static weight of the generator, fuel tank, coolant, and any attached accessories, plus the dynamic loads from engine vibration. For large generators, a structural engineer should design the foundation to account for soil bearing capacity, seismic and wind requirements, vibration isolation, and secondary containment volume if a sub-base fuel tank is used.
 
 Vibration isolation mounts between the generator and the foundation slab reduce the transmission of engine vibration into the building structure. This is especially important for indoor installations where vibration can propagate through the structure to occupied spaces above or adjacent to the generator room.
 
 ## Permitting and Inspection Process
 
-Commercial generator installations require permits from multiple jurisdictions. The permitting process varies by location, but the general framework is consistent across most municipalities.
+Commercial generator installations usually require permits from more than one discipline. The permitting process varies by location, but the general framework is similar across most municipalities.
 
 ### Required Permits
 
-Most commercial generator installations require a building permit for structural work including the foundation and room construction, an electrical permit for the generator connections, transfer switch, and distribution equipment, a mechanical permit for ventilation and exhaust systems, and a fuel storage permit for diesel or gas fuel systems. Some jurisdictions also require a fire department review and approval, an environmental review for emissions and fuel storage, and a zoning variance or special use permit if the installation does not conform to setback or noise requirements.
+Commercial generator installations commonly require electrical permits for the generator connections, transfer switch, and distribution equipment; mechanical or fuel line permits for fuel piping, ventilation, and exhaust; zoning review for setbacks and noise; and building and fire safety permits for the foundation, room construction, and fuel storage. Some jurisdictions also require an environmental or air quality review for emissions and fuel storage, and a zoning variance or special use permit if the installation does not conform to setback or noise requirements.
 
 ### Submission Requirements
 
-Permit applications for commercial generators typically require a site plan showing the generator location relative to buildings, property lines, and sensitive receptors, structural drawings for the foundation and any room modifications, electrical one-line diagrams and panel schedules, mechanical drawings for the ventilation and exhaust systems, generator specifications including kW rating, fuel type, sound level, and emissions data, and fire protection plans if sprinklers or detection systems are involved.
+Permit applications typically require a site plan showing the generator location relative to buildings, property lines, and sensitive receptors; electrical one-line diagrams; and generator specifications. Larger commercial projects commonly add structural drawings for the foundation and any room modifications, mechanical drawings for ventilation and exhaust systems, sound and emissions data, and fire protection plans if sprinklers or detection systems are involved.
 
 ### The Inspection Sequence
 
-Once permits are issued and construction begins, inspections typically occur at the following stages:
+Once permits are issued and construction begins, inspections are made before, during, and after installation. A typical sequence looks like this:
 
-**Foundation inspection.** The building inspector verifies the concrete reinforcement, dimensions, and placement before the pour. For commercial properties, a field density test may be required to verify a minimum of 95 percent of maximum dry density for the subgrade soil.
+**Foundation inspection.** The building inspector verifies the concrete reinforcement, dimensions, and placement before the pour, along with any soil or subgrade testing the engineer or AHJ requires.
 
 **Rough-in inspections.** Electrical, mechanical, and plumbing inspectors verify conduit routing, ventilation ductwork, fuel piping, and exhaust system installation before walls are closed.
 
 **Fire-rated assembly inspection.** The fire marshal or building inspector verifies the fire resistance rating of the generator room walls, ceiling, floor, and all penetrations.
 
-**Final inspections.** Each trade (electrical, mechanical, fire) conducts a final inspection of the completed installation. The electrical inspection will include verifying transfer switch operation, proper grounding, and load testing.
+**Final inspections.** Each trade (electrical, mechanical, fire) conducts a final inspection of the completed installation, including transfer switch operation and grounding.
 
-**Operational test.** Many AHJs require a witnessed operational test demonstrating that the generator starts, picks up load within the required transfer time, and operates at rated load for a specified duration.
+**Operational test.** For emergency and legally required standby systems, the NEC requires the AHJ to conduct or witness a test of the complete system upon installation, demonstrating that the generator starts and picks up load within the required transfer time.
 
 ### Common Inspection Failures
 
-The most frequent causes of failed generator room inspections include ventilation openings that are undersized for the heat rejection load, fire dampers installed in Level 1 EPSS ventilation ductwork (which is prohibited), exhaust termination points too close to building openings, missing or inadequate firestop at wall and floor penetrations, insufficient working clearance around electrical panels, fuel tank containment that does not meet capacity requirements, and missing or improperly located emergency fuel shutoff valves.
+Frequent causes of failed generator room inspections include ventilation openings that are undersized for the heat rejection load, fire dampers installed in Level 1 EPSS ventilation openings (which NFPA 110 does not permit), exhaust termination points too close to building openings or air intakes, missing or inadequate firestop at wall and floor penetrations, insufficient working clearance around electrical panels, fuel tank containment that does not meet capacity requirements, and missing or improperly located fuel shutoff valves.
 
 Addressing these items during the design phase is far less expensive than correcting them after construction.
 
@@ -343,7 +345,7 @@ Before engaging an engineer or contractor for a generator room project, gather t
 - Generator kW rating, fuel type, and manufacturer heat rejection data
 - EPSS classification (Level 1 or Level 2) per NFPA 110
 - Local noise ordinance limits at the property line (daytime and nighttime)
-- Local AHJ requirements beyond national codes
+- Local AHJ requirements beyond national codes, and the editions of NFPA 37, NFPA 110, and the fire code being enforced
 - Available room dimensions or site area for the installation
 - Distance from the proposed location to the nearest building openings, property lines, and sensitive receptors
 - Structural capacity of the existing floor or proposed foundation location
@@ -353,20 +355,23 @@ Before engaging an engineer or contractor for a generator room project, gather t
 
 ## Sources and References
 
-- **NFPA 37** -- Standard for the Installation and Use of Stationary Combustion Engines and Gas Turbines. National Fire Protection Association. [https://www.nfpa.org/codes-and-standards/nfpa-37-standard-development/37](https://www.nfpa.org/codes-and-standards/nfpa-37-standard-development/37)
+- **NFPA 37** -- Standard for the Installation and Use of Stationary Combustion Engines and Gas Turbines (document information and edition history). National Fire Protection Association. [https://www.nfpa.org/codes-and-standards/nfpa-37-standard-development/37](https://www.nfpa.org/codes-and-standards/nfpa-37-standard-development/37)
 - **NFPA 110** -- Standard for Emergency and Standby Power Systems. National Fire Protection Association. [https://www.nfpa.org/codes-and-standards/nfpa-110-standard-development/110](https://www.nfpa.org/codes-and-standards/nfpa-110-standard-development/110)
 - **NFPA 30** -- Flammable and Combustible Liquids Code. National Fire Protection Association. [https://www.nfpa.org/codes-and-standards/nfpa-30-standard-development/30](https://www.nfpa.org/codes-and-standards/nfpa-30-standard-development/30)
-- **NFPA 70 (NEC)** -- National Electrical Code, Article 110.26 (Working Space). National Fire Protection Association. [https://www.nfpa.org/codes-and-standards/nfpa-70-standard-development/70](https://www.nfpa.org/codes-and-standards/nfpa-70-standard-development/70)
+- **NFPA 70 (NEC)** -- National Electrical Code. National Fire Protection Association. [https://www.nfpa.org/codes-and-standards/nfpa-70-standard-development/70](https://www.nfpa.org/codes-and-standards/nfpa-70-standard-development/70)
+- Consulting-Specifying Engineer -- "Defining NFPA 37" (Wesley Stiles, PE, 2015 edition). [https://www.csemag.com/articles/defining-nfpa-37/](https://www.csemag.com/articles/defining-nfpa-37/)
+- Clifford Power Systems -- "Generator Code Compliance: Outdoor Generator Distance from Buildings." [https://cliffordpower.com/generator-code-compliance-outdoor-generator-distance-from-structures/](https://cliffordpower.com/generator-code-compliance-outdoor-generator-distance-from-structures/)
 - Curtis Power Solutions -- "Get to Know NFPA 37: Fire Safety Requirements for Permanently Installed Engines." [https://www.curtispowersolutions.com/news/get-to-know-nfpa-37-fire-safety-requirements-for-permanently-installed-engines](https://www.curtispowersolutions.com/news/get-to-know-nfpa-37-fire-safety-requirements-for-permanently-installed-engines)
 - Curtis Power Solutions -- "NFPA 110 Installation and Environmental Considerations." [https://www.curtispowersolutions.com/nfpa-110-installation](https://www.curtispowersolutions.com/nfpa-110-installation)
-- Electro-Motion -- "Understanding NFPA 110 Compliance for Commercial Generator Ventilation Systems." [https://electromotion.com/2025/01/14/understanding-nfpa-110-compliance-for-commercial-generator-ventilation-systems/](https://electromotion.com/2025/01/14/understanding-nfpa-110-compliance-for-commercial-generator-ventilation-systems/)
-- Caterpillar -- "Design Generator Rooms for Optimum Performance." [https://www.cat.com/en_US/by-industry/electric-power/Articles/ep-news/ep-news-design-generator-rooms-for-optimum-performance.html](https://www.cat.com/en_US/by-industry/electric-power/Articles/ep-news/ep-news-design-generator-rooms-for-optimum-performance.html)
-- Carolinacat / Caterpillar -- "Engine Room Ventilation Application and Installation Guide." [https://carolinacat.com/content/uploads/sites/4/2023/02/Engine-Room-Ventilation-Application-Installation-Guide.pdf](https://carolinacat.com/content/uploads/sites/4/2023/02/Engine-Room-Ventilation-Application-Installation-Guide.pdf)
+- Caterpillar -- "Application and Installation Guide: Engine Room Ventilation" (LEBW4971-06). [https://s7d2.scene7.com/is/content/Caterpillar/CM20160713-53120-44971](https://s7d2.scene7.com/is/content/Caterpillar/CM20160713-53120-44971)
 - MacAllister Power Systems -- "Generator Set Ventilation." [https://www.macallisterpowersystems.com/solutions/engineering-toolbox/generator-set-ventilation/](https://www.macallisterpowersystems.com/solutions/engineering-toolbox/generator-set-ventilation/)
-- Generator Source -- "Generator Installation: Engineering, Permitting, and 2026 Standards." [https://generatorsource.com/backup-power/generator-installation-engineering-permitting-and-2026-standards/](https://generatorsource.com/backup-power/generator-installation-engineering-permitting-and-2026-standards/)
-- Consulting-Specifying Engineer -- "Defining NFPA 37." [https://www.csemag.com/articles/defining-nfpa-37/](https://www.csemag.com/articles/defining-nfpa-37/)
-- Consulting-Specifying Engineer -- "A Practical Understanding of NFPA 110-2016." [https://www.csemag.com/pratical-understanding-nfpa-110-2016/](https://www.csemag.com/pratical-understanding-nfpa-110-2016/)
-- Clifford Power -- "Generator Code Compliance: Outdoor Generator Distance from Buildings." [https://cliffordpower.com/generator-code-compliance-outdoor-generator-distance-from-structures/](https://cliffordpower.com/generator-code-compliance-outdoor-generator-distance-from-structures/)
-- PermitFlow -- "Generator Permit Guide: Requirements and Costs." [https://www.permitflow.com/blog/generator-permit](https://www.permitflow.com/blog/generator-permit)
 - Turnkey Industries -- "The Importance of Proper Ventilation in Generator Rooms." [https://turnkey-industries.com/the-importance-of-proper-ventilation-in-generator-rooms](https://turnkey-industries.com/the-importance-of-proper-ventilation-in-generator-rooms)
+- IAEI Magazine -- "Working Space Requirements for Electrical Panelboards." [https://iaeimagazine.org/issue/july-august-2020/working-space-requirements-for-electrical-panelboards/](https://iaeimagazine.org/issue/july-august-2020/working-space-requirements-for-electrical-panelboards/)
 - Code Red Consultants -- "Emergency Generator Fuel Oil Storage." [https://coderedconsultants.com/insights/emergency-generator-fuel-oil-storage-control-area-group-h-high-hazard-occupancy-or-other/](https://coderedconsultants.com/insights/emergency-generator-fuel-oil-storage-control-area-group-h-high-hazard-occupancy-or-other/)
+- UpCodes -- Oregon Structural Specialty Code, Section N5704.2.7.3.3, "Tank Vents for Normal Venting." [https://up.codes/s/tank-vents-for-normal-venting](https://up.codes/s/tank-vents-for-normal-venting)
+- W Power Products -- "Generator Exhaust Silencers: Types and Grades for Noise Reduction." [https://www.wpowerproducts.com/blog/power-generation-equipment-resources/generator-silencer-types/](https://www.wpowerproducts.com/blog/power-generation-equipment-resources/generator-silencer-types/)
+- dB Engineering -- "Generator Set Noise Solutions." [https://800nonoise.com/tutorials/generator-set-noise-solutions/](https://800nonoise.com/tutorials/generator-set-noise-solutions/)
+- Generator Source -- "Generator Installation: Engineering, Permitting, and 2026 Standards." [https://generatorsource.com/backup-power/generator-installation-engineering-permitting-and-2026-standards/](https://generatorsource.com/backup-power/generator-installation-engineering-permitting-and-2026-standards/)
+- PermitFlow -- "Generator Permit Guide: Requirements and Costs." [https://www.permitflow.com/blog/generator-permit](https://www.permitflow.com/blog/generator-permit)
+- Connecticut Department of Administrative Services -- "IBC Section 2702 Emergency and Standby Power Systems." [https://portal.ct.gov/-/media/DAS/OEDM/2015-CD-HO/ibc_section_2702_emergency_and_standby_power_systems.pdf?la=en](https://portal.ct.gov/-/media/DAS/OEDM/2015-CD-HO/ibc_section_2702_emergency_and_standby_power_systems.pdf?la=en)
+- ESL Power Systems -- "Review of 2026 NEC Article 700 Emergency Systems." [https://eslpwr.com/wp-content/PDF/Webinar%20-%202026%20NEC%20Article%20700%20(PDH).pdf](https://eslpwr.com/wp-content/PDF/Webinar%20-%202026%20NEC%20Article%20700%20(PDH).pdf)

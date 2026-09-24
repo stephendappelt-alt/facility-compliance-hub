@@ -6,6 +6,7 @@ import { getAllArticles } from "@/lib/articles";
 export const metadata: Metadata = {
   title: "Search",
   description: "Search compliance guides, maintenance schedules, and checklists.",
+  robots: { index: false, follow: true },
 };
 
 export default function SearchPage({

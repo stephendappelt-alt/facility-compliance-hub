@@ -16,6 +16,15 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteConfig.url),
+  // Set these in Vercel env vars with the codes from Google Search Console
+  // and Bing Webmaster Tools (HTML tag verification method).
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+    other: process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION
+      ? { "msvalidate.01": process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION }
+      : undefined,
+  },
   title: {
     default: siteConfig.name,
     template: `%s | ${siteConfig.name}`,
@@ -71,6 +80,17 @@ export default function RootLayout({
               name: siteConfig.name,
               url: siteConfig.url,
               description: siteConfig.description,
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: siteConfig.name,
+              url: siteConfig.url,
             }),
           }}
         />

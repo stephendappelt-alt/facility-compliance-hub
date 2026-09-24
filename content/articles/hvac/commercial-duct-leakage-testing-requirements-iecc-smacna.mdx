@@ -1,10 +1,12 @@
 ---
 title: "Commercial Duct Leakage Testing Requirements: IECC, SMACNA, and ASHRAE 90.1 Compliance Guide"
 description: "Complete guide to commercial duct leakage testing requirements including IECC Section C403, SMACNA test procedures, ASHRAE 90.1 sealing standards, California Title 24 Class A requirements, and permit documentation."
+seoTitle: "Commercial Duct Leakage Testing: IECC, SMACNA & 90.1"
+seoDescription: "Commercial duct leakage testing requirements under the IECC, SMACNA test procedures, ASHRAE 90.1 sealing standards, and permit documentation."
 vertical: "hvac"
 category: "compliance-guides"
 date: "2026-03-26"
-lastUpdated: "2026-03-31"
+lastUpdated: "2026-09-24"
 author: "FCH Editorial Team"
 readingTime: 14
 featured: false
@@ -18,79 +20,84 @@ keywords:
   - mechanical permit duct testing
 ---
 
-Duct leakage is one of the most consequential—and most overlooked—sources of energy waste in commercial buildings. Studies from the U.S. Department of Energy have found that the average commercial duct system loses 20 to 30 percent of conditioned air before it reaches occupied zones. For a building with a 100-ton HVAC plant, that translates directly into wasted energy, elevated utility bills, and comfort complaints that drain facility management resources.
+Duct leakage is one of the most overlooked sources of energy waste in commercial buildings. Conditioned air that escapes before it reaches occupied zones means wasted fan and conditioning energy, higher utility bills, and comfort complaints that drain facility management resources.
 
-Regulators have responded with increasingly rigorous testing mandates. The 2021 International Energy Conservation Code (IECC), ASHRAE Standard 90.1, SMACNA's *HVAC Air Duct Leakage Test Manual*, and California's Title 24 Part 6 each impose specific sealing, construction, and verification requirements on commercial duct systems. Understanding how these frameworks interact—and what your permit package must demonstrate—is essential for any facility manager overseeing new construction, renovation, or equipment replacement projects.
+Energy and mechanical codes address this with sealing, construction, and verification requirements. The International Energy Conservation Code (IECC), ASHRAE Standard 90.1, SMACNA's *HVAC Air Duct Leakage Test Manual*, and California's Title 24 Part 6 each impose specific requirements on commercial duct systems. Understanding how these frameworks interact -- and what your permit package must demonstrate -- is essential for any facility manager overseeing new construction, renovation, or equipment replacement projects.
 
-This guide breaks down every major compliance layer, explains the testing procedures inspectors actually use, and walks through the documentation your project team needs to close out a mechanical permit.
+This guide breaks down the major compliance layers, explains the testing approach inspectors rely on, and walks through the documentation your project team needs to close out a mechanical permit.
 
 ---
 
 ## Why Duct Leakage Testing Is Mandated for Commercial Buildings
 
-Conditioned air that escapes ductwork before reaching supply registers represents direct energy loss. Beyond efficiency, duct leakage creates negative pressure imbalances that draw unconditioned outdoor air and moisture into the building envelope, degrade indoor air quality, and cause HVAC equipment to short-cycle. In healthcare, laboratory, and cleanroom environments, duct leakage can compromise pressurization regimes required for infection control or process integrity.
+Conditioned air that escapes ductwork before reaching supply registers represents direct energy loss. Beyond efficiency, duct leakage can create pressure imbalances that draw unconditioned air and moisture into the building, degrade indoor air quality, and make it harder to deliver design airflow. In healthcare, laboratory, and cleanroom environments, duct leakage can also compromise pressurization relationships required for infection control or process integrity.
 
-Code bodies have recognized these risks for decades, but requirements have grown markedly more stringent with each code cycle. The 2021 IECC in particular introduced new testing thresholds and extended the scope of which duct systems must be tested, regardless of whether they are inside or outside the building thermal envelope.
+Commercial codes focus leakage testing on the ductwork where leakage matters most -- high-pressure systems -- and rely on sealing requirements for the rest. Some state and local codes go further, as noted below.
 
 ---
 
-## IECC 2021 Commercial Duct Leakage Requirements: Section C403
+## IECC Commercial Duct Leakage Requirements: Section C403
 
 ### Scope and Applicability
 
-The commercial energy efficiency provisions of the 2021 IECC are found in Chapter 4 (CE). Section C403 governs mechanical systems, and Section C403.12.2 addresses duct construction, sealing, and testing for new commercial buildings and additions.
+The commercial provisions of the IECC are in Chapter 4 [CE]. Section C403 governs mechanical systems. In the 2021 IECC, duct construction requirements are in Section C403.12.2, with high-pressure duct systems in Section C403.12.2.3. In the 2024 IECC, the same provision is numbered C403.13.2.3.
 
-The IECC's duct testing mandate applies to two categories of commercial ductwork:
+The IECC classifies commercial ductwork by design static pressure (low- and medium-pressure thresholds shown are from the 2018 IECC as adopted in Colorado; the high-pressure provisions are the same in the 2021 and 2024 editions):
 
-1. **High-pressure systems** — ducts and plenums designed to operate at static pressures equal to or greater than 3 inches water gauge (750 Pa).
-2. **Outside-envelope systems** — all supply and return ductwork located outside the building thermal envelope that serves conditioned space, regardless of operating pressure.
+1. **Low-pressure systems** (2 inches water gauge or less) -- joints, seams, and connections must be securely fastened and sealed.
+2. **Medium-pressure systems** (over 2 and under 3 inches w.g.) -- must be insulated and sealed.
+3. **High-pressure systems** (3 inches w.g. or greater) -- must be insulated and sealed **and** leak-tested in accordance with the SMACNA *HVAC Air Duct Leakage Test Manual*, with a rate of air leakage (CL) of **4.0 or less**.
 
-Both categories must be leak-tested in accordance with the SMACNA *HVAC Air Duct Leakage Test Manual* and must demonstrate a leakage coefficient (CL) of **4.0 or less**.
+Documentation must show that representative sections totaling at least **25 percent** of the duct area have been tested and that all tested sections comply.
+
+<Callout type="warning" title="Local Amendments Can Expand Testing">
+Some jurisdictions amend the IECC to require more testing. For example, the Seattle Commercial Energy Code (2021) also requires leak testing of supply and return ductwork located outside the building thermal envelope that serves conditioned space, regardless of pressure class. Always check your adopted code and amendments.
+</Callout>
 
 ### The Leakage Coefficient Defined
 
-The leakage coefficient CL is not the same as a volumetric leakage rate. It is a dimensionless number derived from the SMACNA formula:
+The leakage class CL relates measured leakage to test pressure using the SMACNA relationship:
 
-**F = CL × P^0.65**
+**CL = F / P^0.65**
 
-Where F is leakage airflow in CFM per 100 square feet of duct surface area, and P is the test pressure in inches water column. A CL of 4.0 at a 1-inch w.c. test pressure, for example, corresponds to approximately 4.0 CFM per 100 square feet of duct surface area.
+Where F is the measured leakage rate in CFM per 100 square feet of duct surface area and P is the test pressure in inches water column. Because 1 raised to any power is 1, a CL of 4.0 corresponds to 4.0 CFM per 100 square feet of duct surface at a 1-inch w.c. test pressure; at higher test pressures, the allowable leakage rises with P raised to the 0.65 power (for example, about 8.2 CFM per 100 square feet at 3 inches w.c.).
 
-### Test Pressure Selection Under IECC 2021
+### Test Pressure Selection
 
-Section C403.12.2.3 requires that ducts be tested at a pressure equal to **the average operating pressure or the design duct construction pressure class level**, as defined in the SMACNA manual. This means the contractor must know the system's design pressure class before scheduling the test — a detail that should appear on the mechanical drawings submitted for permit.
+Test pressure requirements vary by code. The Seattle amendment, for example, requires testing at a pressure equal to the average operating pressure or the design duct construction pressure class level, and New York City's energy code requires testing at the design duct pressure class rating. The contractor must know the system's design pressure class before scheduling the test, so it should appear on the mechanical drawings submitted for permit.
 
 ### Representative Sampling vs. Full System Testing
 
-The 2021 IECC allows representative sampling rather than requiring 100 percent of the duct system to be tested. This is consistent with SMACNA methodology, which identifies a minimum test sample to demonstrate code compliance without requiring every section to be individually pressurized. The authority having jurisdiction (AHJ) may require full system testing on high-risk projects; confirm sampling requirements with your local building department before work begins.
+The IECC allows testing of representative sections rather than 100 percent of the high-pressure duct system, with the 25 percent minimum noted above. The authority having jurisdiction (AHJ) may require more on specific projects; confirm sampling requirements with your local building department before work begins.
 
-### IECC 2021 Compliance Summary
+### IECC Compliance Summary
 
 <table>
   <thead>
     <tr>
       <th>Duct Category</th>
       <th>Trigger Condition</th>
-      <th>Required CL</th>
+      <th>Requirement</th>
       <th>Test Reference Standard</th>
     </tr>
   </thead>
   <tbody>
     <tr>
+      <td>Low-pressure systems</td>
+      <td>Design static pressure 2 in. w.g. or less</td>
+      <td>Fasten and seal joints, seams, and connections</td>
+      <td>No IECC leakage test</td>
+    </tr>
+    <tr>
+      <td>Medium-pressure systems</td>
+      <td>Over 2 and under 3 in. w.g.</td>
+      <td>Insulate and seal</td>
+      <td>No IECC leakage test</td>
+    </tr>
+    <tr>
       <td>High-pressure systems</td>
-      <td>Operating static pressure ≥ 3 in. w.g. (750 Pa)</td>
-      <td>≤ 4.0</td>
-      <td>SMACNA HVAC Air Duct Leakage Test Manual</td>
-    </tr>
-    <tr>
-      <td>Outside-envelope supply ducts</td>
-      <td>Located outside building thermal envelope, serving conditioned space</td>
-      <td>≤ 4.0</td>
-      <td>SMACNA HVAC Air Duct Leakage Test Manual</td>
-    </tr>
-    <tr>
-      <td>Outside-envelope return ducts</td>
-      <td>Located outside building thermal envelope, serving conditioned space</td>
-      <td>≤ 4.0</td>
+      <td>3 in. w.g. or greater</td>
+      <td>Insulate, seal, and leak-test at least 25% of duct area; CL 4.0 or less</td>
       <td>SMACNA HVAC Air Duct Leakage Test Manual</td>
     </tr>
   </tbody>
@@ -102,94 +109,80 @@ The 2021 IECC allows representative sampling rather than requiring 100 percent o
 
 ### Standard Overview
 
-The *SMACNA HVAC Air Duct Leakage Test Manual* (ANSI/SMACNA 016-2012, second edition) is the foundational reference for commercial duct leakage testing in North America. It is incorporated by reference into the IECC, ASHRAE 90.1, and multiple state energy codes, including California Title 24. The manual covers test apparatus requirements, setup procedures, acceptable leakage rates by leakage class, sample leakage analysis, and educational guidance for designers and specifiers.
+The *SMACNA HVAC Air Duct Leakage Test Manual* (ANSI/SMACNA 016-2012, second edition) is the reference test method named by the IECC and ASHRAE 90.1 for commercial duct leakage testing. According to SMACNA, the second edition covers revised leakage criteria, expected leakage rates for ductwork built to the SMACNA duct construction standards, test procedures, recommendations on the use of leakage testing, test apparatus and setup, sample leakage analysis, and a new educational chapter for designers and specifiers.
 
-### SMACNA Leakage Classes
+### SMACNA Seal Classes and Leakage Classes
 
-SMACNA defines leakage classes as numerical values that represent the maximum allowable leakage for a given duct construction type and pressure class. The leakage class is expressed as CFM of leakage per 100 square feet of duct surface area at 1 inch w.c. test pressure.
+SMACNA's leakage classes express leakage in CFM per 100 square feet of duct surface at 1 inch w.g. The table below reproduces the traditional SMACNA applicable-leakage-class table as summarized by McGill AirFlow (from the 1985 SMACNA test manual and the 2005 *HVAC Duct Construction Standards*). It shows expected leakage, not an allowable leakage specification, and codes such as the IECC set their own limits.
 
 <table>
   <thead>
     <tr>
-      <th>Leakage Class (CL)</th>
-      <th>Typical Application</th>
+      <th>Duct Pressure Class</th>
       <th>Seal Class</th>
-      <th>SMACNA Pressure Class</th>
+      <th>Sealing Applicable</th>
+      <th>Leakage Class -- Rectangular Metal</th>
+      <th>Leakage Class -- Round Metal</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>CL 3</td>
-      <td>Extremely tight systems (cleanrooms, labs)</td>
-      <td>A</td>
-      <td>4-, 6-, 10-in. w.g.</td>
-    </tr>
-    <tr>
-      <td>CL 6</td>
-      <td>High-pressure commercial systems</td>
-      <td>A</td>
-      <td>4-, 6-, 10-in. w.g.</td>
-    </tr>
-    <tr>
-      <td>CL 12</td>
-      <td>Medium-pressure commercial systems</td>
-      <td>B</td>
-      <td>3-in. w.g.</td>
-    </tr>
-    <tr>
-      <td>CL 24</td>
-      <td>Low-pressure commercial systems</td>
+      <td>½-, 1-, or 2-in. w.g.</td>
       <td>C</td>
-      <td>½-, 1-, 2-in. w.g.</td>
+      <td>Transverse joints only</td>
+      <td>24</td>
+      <td>12</td>
     </tr>
     <tr>
-      <td>CL 48</td>
-      <td>Unsealed rectangular ductwork (benchmark only)</td>
-      <td>None</td>
-      <td>Reference baseline</td>
+      <td>3-in. w.g.</td>
+      <td>B</td>
+      <td>Transverse joints and seams</td>
+      <td>12</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>4-, 6-, or 10-in. w.g.</td>
+      <td>A</td>
+      <td>Joints, seams, and all wall penetrations</td>
+      <td>6</td>
+      <td>3</td>
     </tr>
   </tbody>
 </table>
 
-When a designer does not designate a pressure class on the contract drawings, SMACNA provides default leakage classes: CL 24 with Seal Class C for ½-, 1-, and 2-inch w.g. systems; CL 12 with Seal Class B for 3-inch w.g. systems; and CL 6 with Seal Class A for 4-, 6-, and 10-inch w.g. systems.
+McGill AirFlow also notes that when a designer does not designate duct pressure classes on the contract drawings, SMACNA's basis of compliance is 2-inch w.g. for ducts between the supply fan and variable volume boxes and 1-inch w.g. for all other ducts. Current energy codes (ASHRAE 90.1 and Title 24) now require Seal Class A for ductwork with pressure class ratings, so the lower seal classes in this table are mainly of historical and design-estimating interest.
 
 ### SMACNA Seal Classes Defined
 
-SMACNA defines three seal classes based on which duct joints and seams must be sealed:
-
-- **Seal Class A** — All transverse joints, longitudinal seams, and duct wall penetrations must be sealed. This is the most stringent class.
-- **Seal Class B** — All transverse joints and longitudinal seams must be sealed. Wall penetrations are not required to be sealed.
-- **Seal Class C** — Only transverse joints must be sealed.
+- **Seal Class A** -- All transverse joints, longitudinal seams, and duct wall penetrations sealed. This is the most stringent class.
+- **Seal Class B** -- All transverse joints and longitudinal seams sealed.
+- **Seal Class C** -- Only transverse joints sealed.
 
 ### Test Equipment and Setup
 
-A SMACNA-compliant duct leakage test requires three core components:
+A duct leakage test generally requires:
 
-1. A **calibrated pressurization fan** (duct blower) capable of supplying the test flow and pressure range.
-2. A **calibrated manometer** to measure duct static pressure during the test.
-3. **Blocking materials** (rigid plugs, inflatable bladders, or tape-sealed caps) to isolate the duct section being tested by sealing all registers, grilles, and diffusers.
+1. A **calibrated test fan** (flow-measuring apparatus) capable of supplying the test flow at the required pressure.
+2. A **calibrated pressure gauge or manometer** to measure duct static pressure during the test.
+3. **Blanking materials** (caps, plugs, bladders, or sealed covers) to isolate the duct section being tested by sealing open ends, registers, grilles, and diffusers.
 
-The duct section is pressurized (or depressurized) to the specified test pressure. The fan flow rate required to maintain that pressure is the measured leakage. Results are expressed as CFM per 100 square feet of duct surface area and compared to the applicable leakage class limit.
+The duct section is pressurized (or depressurized) to the specified test pressure. The airflow the fan must supply to maintain that pressure is the measured leakage. Results are converted to CFM per 100 square feet of duct surface area and compared to the applicable limit.
 
 ### Test Section Requirements
 
-SMACNA specifies testing representative sections that total at least **25 percent of the ductwork** designed to operate above 3 inches water column. The contractor and the AHJ agree on which sections constitute the representative sample prior to testing. Failed sections must be repaired and retested; all test results — pass and fail alike — must be documented and submitted.
+Under the IECC and ASHRAE 90.1, representative sections totaling at least **25 percent** of the high-pressure duct area must be tested. The contractor and the AHJ should agree on which sections make up the representative sample before testing. Failed sections must be repaired and retested, and all results -- pass and fail -- should be documented.
 
 ---
 
-## ASHRAE 90.1 Duct Sealing Requirements: Section 6.4.4
+## ASHRAE 90.1 Duct Sealing Requirements: Section 6.4.4.2
 
 ### Standard Context
 
-ANSI/ASHRAE/IES Standard 90.1, *Energy Standard for Sites and Buildings Except Low-Rise Residential Buildings*, is the primary energy efficiency standard referenced by the IECC for commercial buildings. Many states adopt ASHRAE 90.1 directly rather than the IECC commercial provisions. The current adopted version in most jurisdictions is 90.1-2019, while 90.1-2022 is the most recently published edition.
+ANSI/ASHRAE/IES Standard 90.1, *Energy Standard for Sites and Buildings Except Low-Rise Residential Buildings*, is recognized by the IECC as an alternative compliance path for commercial buildings, and some jurisdictions adopt it directly. ASHRAE's newest edition is 90.1-2025; 90.1-2019 and 90.1-2022 remain widely referenced because jurisdictions adopt editions on their own schedules.
 
-### Section 6.4.4.2: Duct Construction and Sealing
+### Section 6.4.4.2.1: Duct Sealing
 
-Under ASHRAE 90.1, Section 6.4.4.2 establishes mandatory duct sealing requirements. The 2022 edition specifies:
-
-**Section 6.4.4.2.1** — All ductwork and plenums with pressure class ratings shall be constructed to **Seal Class A** as defined in SMACNA's *HVAC Air Duct Leakage Test Manual*.
-
-This is a blanket Seal Class A mandate that applies uniformly to all pressure-classified commercial ductwork — there is no lower seal class option under ASHRAE 90.1-2022 unless a specific exception applies.
+ASHRAE 90.1 Section 6.4.4.2.1 requires ductwork and all plenums with pressure class ratings to be constructed to **Seal Class A**. As reproduced in New York City's 2025 Energy Code (which is based on 90.1), the provision also requires sealing of all connections, specifies how pressure-sensitive tape may be used, exempts spiral lock seams, and requires openings for rotating shafts to be sealed with bushings or other devices.
 
 ### Key Sealing Details Under ASHRAE 90.1
 
@@ -214,11 +207,7 @@ This is a blanket Seal Class A mandate that applies uniformly to all pressure-cl
       <td>Must be sealed (Seal Class A)</td>
     </tr>
     <tr>
-      <td>Spin-ins and taps</td>
-      <td>All connections must be sealed</td>
-    </tr>
-    <tr>
-      <td>Branch connections</td>
+      <td>Spin-ins, taps, and other branch connections</td>
       <td>All connections must be sealed</td>
     </tr>
     <tr>
@@ -226,27 +215,31 @@ This is a blanket Seal Class A mandate that applies uniformly to all pressure-cl
       <td>Must be sealed</td>
     </tr>
     <tr>
-      <td>Duct-to-equipment connections</td>
+      <td>Duct connections to equipment</td>
       <td>Must be sealed</td>
     </tr>
     <tr>
       <td>Rotating shaft openings</td>
-      <td>Sealed with bushings or equivalent devices</td>
+      <td>Sealed with bushings or other devices</td>
     </tr>
     <tr>
       <td>Spiral lock seams</td>
-      <td>Exception — not required to be sealed</td>
+      <td>Exception -- need not be sealed</td>
     </tr>
   </tbody>
 </table>
 
 ### Tape Restrictions
 
-A critical and frequently misunderstood provision: **pressure-sensitive tape shall not be used as the primary sealant** unless it has been independently certified to comply with UL-181A or UL-181B and is applied in accordance with that certification. Cloth-backed duct tape does not meet this standard and fails over time due to adhesive degradation. Mastic sealant or UL-listed foil tape is required for durable, code-compliant sealing.
+Under 90.1 Section 6.4.4.2.1, pressure-sensitive tape shall not be used as the primary sealant unless it is certified by an independent testing laboratory to comply with UL-181A or UL-181B and is used in accordance with that certification. California's Title 24 separately prohibits sealing joints and seams with cloth-back rubber adhesive duct tape unless it is used with mastic and drawbands. Mastic or properly listed tape is the practical choice for durable, code-compliant sealing.
+
+### Section 6.4.4.2.2: Duct Leakage Tests
+
+Section 6.4.4.2.2 requires ductwork designed to operate at more than 3 inches w.c. to be leak-tested, with representative sections totaling at least 25 percent of the total installed duct area tested, and duct pressure ratings above 3 inches w.c. identified on the drawings. Maximum permitted leakage is Lmax = CL × P^0.65 in CFM per 100 square feet of duct surface area. New York City's 2025 version sets CL at 4 and the test pressure at the design duct pressure class rating, and also applies testing to outdoor ductwork; confirm the values in your adopted edition.
 
 ### ASHRAE 90.1 vs. IECC: Which Standard Controls?
 
-Jurisdictions adopting the IECC for commercial buildings may reference ASHRAE 90.1 as an alternate compliance path. Where both apply, the more stringent requirement governs. In most cases, ASHRAE 90.1-2022's universal Seal Class A mandate is more restrictive than the IECC's pressure-threshold-based trigger, so designers and contractors should default to Seal Class A for all new commercial ductwork unless the AHJ confirms otherwise.
+Where a jurisdiction adopts the IECC, the design team generally chooses either the IECC commercial provisions or ASHRAE 90.1 as the compliance path, and must then meet that path's requirements. Because ASHRAE 90.1 and Title 24 both require Seal Class A for pressure-rated ductwork, many owners simply specify Seal Class A for all new commercial ductwork unless the AHJ confirms otherwise.
 
 ---
 
@@ -254,55 +247,47 @@ Jurisdictions adopting the IECC for commercial buildings may reference ASHRAE 90
 
 ### Overview of California's Commercial Energy Code
 
-California's Building Energy Efficiency Standards (Title 24, Part 6), enforced by the California Energy Commission (CEC), impose some of the most stringent duct leakage requirements in the United States. The current cycle is the 2022 California Energy Code, effective January 1, 2023.
+California's Building Energy Efficiency Standards (Title 24, Part 6), administered by the California Energy Commission (CEC), impose some of the most stringent duct requirements in the United States. The 2025 Energy Code took effect January 1, 2026, replacing the 2022 code. The provisions described below are from the 2022 code as summarized by Energy Code Ace; confirm them against the 2025 code for new permits.
 
 ### Class A Sealing Mandate
 
-California Title 24 Section 120.4 requires that new and replacement commercial ductwork be sealed to **Seal Class A** as defined by SMACNA. This aligns with ASHRAE 90.1-2022 and applies regardless of operating pressure class. Cloth-backed rubber adhesive duct tape is explicitly prohibited unless used in combination with mastic and draw bands.
+Section 120.4 of the 2022 Energy Code requires air distribution ducts to meet California Mechanical Code requirements and the SMACNA duct construction standards, and requires ductwork with pressure class ratings to be constructed to **Seal Class A**. Sealing materials must comply with UL 181, UL 181A, or UL 181B, and cloth-back rubber adhesive duct tape may not be used on joints and seams unless combined with mastic and drawbands.
 
 ### Duct Leakage Testing Requirements Under Title 24
 
-Title 24 requires both sealing verification and leakage testing for new commercial systems. The testing scope varies by system type:
+Title 24 uses two testing routes for new duct systems:
 
 <table>
   <thead>
     <tr>
       <th>System Type</th>
-      <th>Minimum Test Sample</th>
-      <th>Notes</th>
+      <th>Requirement</th>
+      <th>Verification</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Constant Air Volume (CAV) supply systems</td>
-      <td>10% of ductwork</td>
-      <td>Representative sample required</td>
+      <td>Constant volume, single-zone systems serving less than 5,000 ft² with more than 25% of duct surface area outdoors or in unconditioned space (not serving healthcare facilities)</td>
+      <td>Leakage not to exceed 6 percent of nominal air handler airflow</td>
+      <td>HERS field verification and diagnostic testing</td>
     </tr>
     <tr>
-      <td>Variable Air Volume (VAV) — upstream of VAV boxes</td>
-      <td>10% of upstream ductwork</td>
-      <td>Tested separately from downstream</td>
-    </tr>
-    <tr>
-      <td>Variable Air Volume (VAV) — downstream of VAV boxes</td>
-      <td>10% of downstream ductwork</td>
-      <td>Tested separately from upstream</td>
-    </tr>
-    <tr>
-      <td>New ductwork added to existing systems</td>
-      <td>The new ductwork section</td>
-      <td>Existing ductwork may be exempt with documentation</td>
+      <td>Other new duct systems</td>
+      <td>California Mechanical Code duct leakage testing</td>
+      <td>Per CMC (see below)</td>
     </tr>
   </tbody>
 </table>
 
+For duct systems outside the HERS route, the California Mechanical Code requires leak testing of representative sections totaling at least **10 percent** of the installed duct area, escalating to 40 percent and then 100 percent if tested sections fail, with maximum leakage calculated as Lmax = CL × P^0.65 using CL = 6. The section number varies by CMC edition, so check the edition adopted for your project.
+
 ### HERS Rater Involvement
 
-For residential and some small commercial projects, California requires a Home Energy Rating System (HERS) rater — a certified third-party verifier — to witness and certify duct leakage testing. For larger commercial projects, the mechanical engineer of record or a qualified third-party testing contractor typically performs and documents the tests. Verify HERS rater requirements with your local jurisdiction before scheduling inspections.
+For the small single-zone systems described above, duct leakage must be confirmed through HERS (Home Energy Rating System) field verification and diagnostic testing. For other systems, the CMC requires tests to be performed by technicians certified through AABC, NEBB, TABB, or equivalent approved agencies. Verify requirements with your local jurisdiction before scheduling inspections.
 
 ### Leakage Rate Pass/Fail Thresholds
 
-California's pass/fail thresholds for commercial duct leakage are expressed as a percentage of system airflow rather than a fixed CFM-per-area figure. The CEC uses a maximum leakage rate tied to the SMACNA leakage class established for the system. Projects that fail must be repaired, re-sealed, and retested; test reports for both failing and passing tests must be submitted to the compliance documentation package.
+California uses a percentage-of-airflow limit (6 percent of nominal air handler airflow) for the HERS-verified small systems and a surface-area-based limit (CL = 6) for CMC testing. Projects that fail must be repaired, re-sealed, and retested, and test documentation should be kept with the compliance package.
 
 ---
 
@@ -310,17 +295,13 @@ California's pass/fail thresholds for commercial duct leakage are expressed as a
 
 ### What CFM25 Means
 
-CFM25 is the volumetric air flow rate — measured in cubic feet per minute — required to maintain 25 Pascals (0.10 inches water column) of pressure differential across the duct system. It is the standard reporting metric for residential duct leakage testing under IECC Section R403 and is widely used in light commercial applications.
+CFM25 is the airflow, in cubic feet per minute, needed to create a 25 Pascal (about 0.10 inch water column) pressure difference in the ductwork. It is the common reporting metric for residential duct leakage testing.
 
-**Important distinction for facility managers:** Commercial duct leakage testing under IECC Section C403 and SMACNA does not use CFM25 as its primary metric. Commercial testing uses the SMACNA leakage coefficient (CL) methodology, with test pressures matched to the system's design pressure class, which may range from 0.5 inches w.c. to 10 inches w.c. CFM25 testing at 25 Pa is appropriate only when required by the applicable code or the AHJ for low-pressure systems.
+**Important distinction for facility managers:** Commercial duct leakage testing under IECC Section C403 and ASHRAE 90.1 does not use CFM25 as its metric. It uses the SMACNA leakage-class (CL) method, with test pressures tied to the system's design pressure class, which can be several inches of water column for high-pressure systems. California's small single-zone systems use a percentage-of-airflow limit instead.
 
 ### When CFM25 Testing Is Used in Commercial Contexts
 
-CFM25 may appear in commercial project specifications in three scenarios:
-
-1. **Light commercial buildings** under 50,000 square feet where the AHJ accepts residential-equivalent testing protocols.
-2. **Low-pressure duct systems** (½- to 1-inch w.g. design pressure) where 25 Pa is representative of operating conditions.
-3. **State or local amendments** that adopt CFM25 criteria for commercial systems — verify with your AHJ.
+CFM25-style testing may appear on commercial projects where a light-commercial system is being tested with residential-style equipment and procedures, or where a state or local amendment or project specification calls for it. Confirm the required metric and test pressure with your AHJ and the engineer of record before testing.
 
 ### Commercial Duct Leakage Pass/Fail at a Glance
 
@@ -335,40 +316,34 @@ CFM25 may appear in commercial project specifications in three scenarios:
   </thead>
   <tbody>
     <tr>
-      <td>IECC 2021 Section C403.12.2.3</td>
-      <td>Leakage Coefficient (CL)</td>
-      <td>CL ≤ 4.0</td>
-      <td>≥ 3 in. w.g. or outside thermal envelope</td>
+      <td>IECC 2021 Section C403.12.2.3 (2024: C403.13.2.3)</td>
+      <td>Leakage class (CL)</td>
+      <td>CL 4.0 or less</td>
+      <td>Design static pressure 3 in. w.g. or greater</td>
     </tr>
     <tr>
-      <td>SMACNA CL 6 (high-pressure)</td>
-      <td>CFM / 100 ft² at test pressure</td>
-      <td>≤ 6 CFM/100 ft²</td>
-      <td>4-, 6-, 10-in. w.g. pressure class</td>
+      <td>ASHRAE 90.1 Section 6.4.4.2.2</td>
+      <td>Lmax = CL × P^0.65</td>
+      <td>Per CL in adopted edition (CL 4 in NYC 2025 version)</td>
+      <td>Ductwork designed above 3 in. w.c.</td>
     </tr>
     <tr>
-      <td>SMACNA CL 12 (medium-pressure)</td>
-      <td>CFM / 100 ft² at test pressure</td>
-      <td>≤ 12 CFM/100 ft²</td>
-      <td>3-in. w.g. pressure class</td>
-    </tr>
-    <tr>
-      <td>SMACNA CL 24 (low-pressure)</td>
-      <td>CFM / 100 ft² at test pressure</td>
-      <td>≤ 24 CFM/100 ft²</td>
-      <td>½-, 1-, 2-in. w.g. pressure class</td>
-    </tr>
-    <tr>
-      <td>ASHRAE 90.1-2022 Section 6.4.4</td>
+      <td>ASHRAE 90.1 Section 6.4.4.2.1</td>
       <td>Seal Class A (construction standard)</td>
-      <td>Seal Class A required; CL per SMACNA</td>
-      <td>All pressure-classified commercial ductwork</td>
+      <td>Seal Class A required</td>
+      <td>Ductwork and plenums with pressure class ratings</td>
     </tr>
     <tr>
-      <td>California Title 24 (2022)</td>
-      <td>% system airflow / SMACNA CL</td>
-      <td>Per SMACNA CL for pressure class</td>
-      <td>New and replacement commercial ductwork</td>
+      <td>California Title 24 (2022) -- small single-zone systems</td>
+      <td>% of nominal air handler airflow</td>
+      <td>6 percent or less</td>
+      <td>Constant volume single-zone, under 5,000 ft², more than 25% of duct area outdoors/unconditioned</td>
+    </tr>
+    <tr>
+      <td>California Mechanical Code -- other systems</td>
+      <td>Lmax = CL × P^0.65</td>
+      <td>CL = 6</td>
+      <td>Other new duct systems (10% sample, escalating on failure)</td>
     </tr>
   </tbody>
 </table>
@@ -379,25 +354,25 @@ CFM25 may appear in commercial project specifications in three scenarios:
 
 ### Drawing Requirements
 
-Mechanical permit drawings for commercial projects must include the following duct-related information to satisfy IECC, ASHRAE 90.1, and SMACNA documentation requirements:
+Mechanical permit drawings for commercial projects should include the following duct-related information to support IECC, ASHRAE 90.1, and SMACNA-based review:
 
-- Design duct static pressure class for each system or duct section
-- Seal class designation (Seal Class A, B, or C)
-- Leakage class (CL) for each pressure classification zone
+- Design duct static pressure class for each system or duct section (ASHRAE 90.1 requires ratings above 3 inches w.c. to be identified on the drawings)
+- Seal class designation
+- Leakage class (CL) or allowable leakage for sections requiring testing
 - Test pressure for each duct section requiring leakage verification
 - Identification of ductwork located outside the building thermal envelope
 
-If the designer does not designate pressure class on the drawings, inspectors will apply SMACNA's default leakage classes, which may be more restrictive than the designer intended.
+If the designer does not designate pressure classes on the drawings, SMACNA's default basis of compliance applies, which may not match what the designer intended.
 
 ### Test Report Documentation
 
-After testing is complete, the following documentation must be included in the compliance package submitted to the AHJ:
+After testing is complete, the following documentation is typically included in the compliance package submitted to the AHJ:
 
 <table>
   <thead>
     <tr>
       <th>Document</th>
-      <th>Required Content</th>
+      <th>Typical Content</th>
     </tr>
   </thead>
   <tbody>
@@ -407,7 +382,7 @@ After testing is complete, the following documentation must be included in the c
     </tr>
     <tr>
       <td>Test equipment calibration records</td>
-      <td>Calibration certificate for pressurization fan and manometer, calibration date</td>
+      <td>Calibration certificate for test fan/flow meter and pressure gauge, calibration date</td>
     </tr>
     <tr>
       <td>Representative sample identification</td>
@@ -415,22 +390,22 @@ After testing is complete, the following documentation must be included in the c
     </tr>
     <tr>
       <td>Sealing material product data</td>
-      <td>Manufacturer data sheets for mastic, tape (with UL-181A/B listing), or other sealants used</td>
+      <td>Manufacturer data sheets for mastic, tape (with UL 181A/181B listing), or other sealants used</td>
     </tr>
     <tr>
       <td>Repair and retest records</td>
       <td>Documentation of any failed sections, repairs performed, and subsequent retest results</td>
     </tr>
     <tr>
-      <td>Third-party verifier credentials</td>
-      <td>Where required by the AHJ or state code (e.g., California HERS rater certification)</td>
+      <td>Tester or verifier credentials</td>
+      <td>Where required by the AHJ or state code (e.g., California HERS Rater, ATT, or AABC/NEBB/TABB certification)</td>
     </tr>
   </tbody>
 </table>
 
 ### COMcheck and Compliance Software
 
-The DOE's COMcheck software is the most widely used tool for demonstrating commercial energy code compliance on mechanical permit applications. COMcheck includes fields for documenting duct insulation and sealing compliance. However, COMcheck does not replace the physical leakage test report — it documents the design intent, while the test report documents field verification.
+DOE's COMcheck software is widely used to document commercial energy code compliance on permit applications. COMcheck documents design intent; it does not replace the physical leakage test report, which documents field verification.
 
 ---
 
@@ -438,23 +413,23 @@ The DOE's COMcheck software is the most widely used tool for demonstrating comme
 
 ### Failure 1: Using Cloth-Backed Duct Tape
 
-The single most common sealing failure observed during inspections is the use of standard cloth-backed duct tape as the primary sealant. This tape does not comply with UL-181A or UL-181B, degrades rapidly under temperature cycling, and is explicitly prohibited by ASHRAE 90.1 and California Title 24. Use UL-listed foil tape or mastic sealant for all primary sealing applications.
+A common sealing failure is using standard cloth-backed duct tape as the primary sealant. ASHRAE 90.1 does not allow pressure-sensitive tape as the primary sealant unless it is certified to UL-181A or UL-181B, and California's Title 24 prohibits cloth-back rubber adhesive duct tape on joints and seams unless combined with mastic and drawbands. Use listed tape or mastic for all primary sealing.
 
 ### Failure 2: Missing Pressure Class Designations on Drawings
 
-When mechanical drawings omit pressure class designations, inspectors apply SMACNA defaults. Designers should explicitly label every duct section with its design pressure class and the corresponding seal and leakage class requirements. This prevents ambiguity during inspection and establishes a clear baseline for testing.
+When mechanical drawings omit pressure class designations, SMACNA's default basis applies and ASHRAE 90.1's requirement to identify ratings above 3 inches w.c. is not met. Designers should label every duct section with its design pressure class and the corresponding seal and leakage requirements.
 
 ### Failure 3: Testing at the Wrong Pressure
 
-Testing at a pressure lower than the design pressure class will produce artificially low measured leakage and a false pass. Section C403.12.2.3 of the IECC and the SMACNA manual both require testing at the design pressure class level or average operating pressure. Confirm the correct test pressure with the mechanical engineer of record before conducting the test.
+Testing at a pressure lower than required will produce artificially low measured leakage and a false pass. Confirm the required test pressure in your adopted code (for example, the design duct pressure class rating) with the mechanical engineer of record before conducting the test.
 
 ### Failure 4: Inadequate Sample Size
 
-Testing less than the required percentage of duct surface area — whether from misunderstanding the SMACNA sampling rules or from scheduling pressure — is a common cause of permit hold-ups. Document the total duct surface area by pressure class, calculate the required test sample, and identify specific sections on the drawings before the test is scheduled.
+Testing less than the required share of duct area -- 25 percent under the IECC and ASHRAE 90.1, 10 percent initially under the California Mechanical Code -- is a common cause of permit delays. Document total duct surface area by pressure class, calculate the required sample, and identify specific sections on the drawings before the test is scheduled.
 
 ### Failure 5: Incomplete Records for Repairs
 
-When a duct section fails, the repair process and retest must be documented with the same rigor as the original test. Inspectors frequently reject permit closeout packages that show a failed test with no subsequent repair report and passing retest.
+When a duct section fails, the repair and retest should be documented with the same rigor as the original test. A closeout package that shows a failed test with no repair record and passing retest invites rejection.
 
 ---
 
@@ -462,49 +437,43 @@ When a duct section fails, the repair process and retest must be documented with
 
 For facility managers overseeing new construction or major HVAC renovation projects, the following sequence will keep duct leakage compliance on track:
 
-1. **Confirm the adopted code** — verify which IECC edition and whether ASHRAE 90.1 or California Title 24 applies in your jurisdiction before design begins.
-2. **Require pressure class designations on drawings** — make this a standard checklist item during mechanical drawing review before permit submission.
-3. **Specify Seal Class A universally** — defaulting to the most stringent sealing class eliminates ambiguity and meets requirements under ASHRAE 90.1-2022 and Title 24.
-4. **Pre-qualify the testing contractor** — confirm the testing firm has calibrated equipment, SMACNA-compliant procedures, and experience producing AHJ-acceptable test reports in your jurisdiction.
-5. **Schedule tests before concealment** — duct leakage tests must be performed before ducts are enclosed in chases, ceilings, or insulation. Coordinate with the general contractor to build a testing window into the project schedule.
-6. **Retain all test records** — both passing and failing test reports become part of the permanent building file and may be required for future permit applications or energy audits.
+1. **Confirm the adopted code** -- verify which IECC edition, local amendments, and whether ASHRAE 90.1 or California Title 24 applies in your jurisdiction before design begins.
+2. **Require pressure class designations on drawings** -- make this a standard checklist item during mechanical drawing review before permit submission.
+3. **Specify Seal Class A** -- it is required for pressure-rated ductwork under ASHRAE 90.1 and Title 24, and specifying it universally eliminates ambiguity.
+4. **Pre-qualify the testing contractor** -- confirm the testing firm has calibrated equipment, SMACNA-based procedures, any required certifications, and experience producing AHJ-acceptable test reports in your jurisdiction.
+5. **Schedule tests before concealment** -- duct leakage tests should be performed before ducts are enclosed in chases, ceilings, or insulation. Coordinate with the general contractor to build a testing window into the project schedule.
+6. **Retain all test records** -- both passing and failing test reports belong in the permanent building file and may be useful for future permit applications or energy audits.
 
 ---
 
 ## Sources and References
 
-- **ICC Digital Codes — 2021 IECC Section C403.12.2.3 (Commercial Duct Leakage Testing)**
-  [https://codes.iccsafe.org/s/IECC2021V3.0/chapter-4-ce-commercial-energy-efficiency/IECC2021V3.0-CE-Ch04-SecC403.12.2.3](https://codes.iccsafe.org/s/IECC2021V3.0/chapter-4-ce-commercial-energy-efficiency/IECC2021V3.0-CE-Ch04-SecC403.12.2.3)
+- **Michigan Commercial Energy Code 2021 (based on 2021 IECC) -- Section C403.12.2.3 High-Pressure Duct Systems** -- ICC Digital Codes. [https://codes.iccsafe.org/s/MIECC2021P1/chapter-4-ce-commercial-energy-efficiency/MIECC2021P1-Ch04-SecC403.12.2.3](https://codes.iccsafe.org/s/MIECC2021P1/chapter-4-ce-commercial-energy-efficiency/MIECC2021P1-Ch04-SecC403.12.2.3)
 
-- **SMACNA — HVAC Air Duct Leakage Test Manual (ANSI/SMACNA 016-2012)**
-  [https://store.smacna.org/hvac-air-duct-leakage-test-manual/](https://store.smacna.org/hvac-air-duct-leakage-test-manual/)
+- **C403.13.2.3 High-Pressure Duct Systems (Colorado IECC 2024)** -- UpCodes. [https://up.codes/s/high-pressure-duct-systems](https://up.codes/s/high-pressure-duct-systems)
 
-- **SMACNA — HVAC Air Duct Leakage Test Manual (Public Preview, ANSI)**
-  [https://webstore.ansi.org/preview-pages/ANSI/preview_SMACNA+016-2012.pdf](https://webstore.ansi.org/preview-pages/ANSI/preview_SMACNA+016-2012.pdf)
+- **Construction of HVAC System Elements (Colorado IECC 2018 duct pressure classes)** -- UpCodes. [https://up.codes/s/construction-of-hvac-system-elements-mandatory](https://up.codes/s/construction-of-hvac-system-elements-mandatory)
 
-- **ASHRAE — Standard 90.1-2022, Energy Standard for Sites and Buildings Except Low-Rise Residential Buildings**
-  [https://www.ashrae.org/technical-resources/bookstore/standard-90-1](https://www.ashrae.org/technical-resources/bookstore/standard-90-1)
+- **Duct Leak Testing (Seattle Commercial Energy Code 2021, Section C403.10.2.4)** -- UpCodes. [https://up.codes/s/duct-leak-testing](https://up.codes/s/duct-leak-testing)
 
-- **ASHRAE — Addendum t to ANSI/ASHRAE/IES Standard 90.1-2019 (Duct Sealing Updates)**
-  [https://www.ashrae.org/file%20library/technical%20resources/standards%20and%20guidelines/standards%20addenda/90_1_2019_t_20220812.pdf](https://www.ashrae.org/file%20library/technical%20resources/standards%20and%20guidelines/standards%20addenda/90_1_2019_t_20220812.pdf)
+- **6.4.4 HVAC System Construction and Insulation (NYC Energy Code 2025)** -- UpCodes. [https://up.codes/s/hvac-system-construction-and-insulation](https://up.codes/s/hvac-system-construction-and-insulation)
 
-- **U.S. DOE / PNNL — Duct Insulation and Sealing Requirements in Commercial Buildings (OSTI)**
-  [https://www.osti.gov/servlets/purl/1764644](https://www.osti.gov/servlets/purl/1764644)
+- **ANSI/ASHRAE/IES Standard 90.1-2019: HVAC (training presentation, PNNL-SA-153210)** -- U.S. DOE Building Energy Codes Program, hosted by Oregon Building Codes Division. [https://www.oregon.gov/bcd/codes-stand/Documents/90.1-2019-HVAC-training.pdf](https://www.oregon.gov/bcd/codes-stand/Documents/90.1-2019-HVAC-training.pdf)
 
-- **California Energy Commission — 2022 Building Energy Efficiency Standards (Title 24, Part 6)**
-  [https://www.energy.ca.gov/programs-and-topics/programs/building-energy-efficiency-standards/2022-building-energy-efficiency](https://www.energy.ca.gov/programs-and-topics/programs/building-energy-efficiency-standards/2022-building-energy-efficiency)
+- **Understanding ASHRAE 90.1's Role in Energy Codes and Regulations** -- Consulting-Specifying Engineer. [https://www.csemag.com/understanding-ashrae-90-1s-role-in-energy-codes-and-regulations/](https://www.csemag.com/understanding-ashrae-90-1s-role-in-energy-codes-and-regulations/)
 
-- **Title 24 Stakeholders — Proposal Summary: 2022 California Energy Code Duct Leakage Testing**
-  [https://title24stakeholders.com/wp-content/uploads/2020/01/T24-2022-Duct-Leakage-Testing-Summary1.pdf](https://title24stakeholders.com/wp-content/uploads/2020/01/T24-2022-Duct-Leakage-Testing-Summary1.pdf)
+- **ASHRAE Standard 90.1** -- ASHRAE Bookstore. [https://www.ashrae.org/technical-resources/bookstore/standard-90-1](https://www.ashrae.org/technical-resources/bookstore/standard-90-1)
 
-- **McGill AirFlow — What is an Allowable Duct System Leakage Specification?**
-  [https://www.mcgillairflow.com/pdf/cas/techBulletin3.1.pdf](https://www.mcgillairflow.com/pdf/cas/techBulletin3.1.pdf)
+- **SMACNA -- HVAC Air Duct Leakage Test Manual (ANSI/SMACNA 016-2012)** -- SMACNA Store. [https://store.smacna.org/hvac-air-duct-leakage-test-manual/](https://store.smacna.org/hvac-air-duct-leakage-test-manual/)
 
-- **ICC — IECC Compliance Resources**
-  [https://www.iccsafe.org/advocacy/iecc-compliance/](https://www.iccsafe.org/advocacy/iecc-compliance/)
+- **What is an Allowable Duct System Leakage Specification? (Tech Bulletin CAS-TB3.1-2006)** -- McGill AirFlow. [https://www.mcgillairflow.com/pdf/cas/techBulletin3.1.pdf](https://www.mcgillairflow.com/pdf/cas/techBulletin3.1.pdf)
 
-- **DOE Building America Solution Center — Total Duct Leakage Tests**
-  [https://basc.pnnl.gov/resource-guides/total-duct-leakage-tests](https://basc.pnnl.gov/resource-guides/total-duct-leakage-tests)
+- **Section 120.4 -- Requirements for Air Distribution System Ducts and Plenums (2022)** -- Energy Code Ace. [https://energycodeace.com/content/section-1204-requirements-for-air-distribution-system-ducts](https://energycodeace.com/content/section-1204-requirements-for-air-distribution-system-ducts)
 
-- **UpCodes — IECC Duct Leak Testing (Section C403)**
-  [https://up.codes/s/duct-leak-testing](https://up.codes/s/duct-leak-testing)
+- **Duct Sealing for New Duct Systems, Section 120.4(g)1 (2022)** -- Energy Code Ace. [https://www.energycodeace.com/content/1-new-duct-systems-that-meet-the-criteria-in-subsections-a-b](https://www.energycodeace.com/content/1-new-duct-systems-that-meet-the-criteria-in-subsections-a-b)
+
+- **Duct Sealing, Insulation and Leakage Testing (California Mechanical Code)** -- GoCodeBook. [https://gocodebook.com/us/california/california-mechanical-code/duct-systems/installation-supports-and-sealing/duct-sealing-insulation-and-leakage-testing](https://gocodebook.com/us/california/california-mechanical-code/duct-systems/installation-supports-and-sealing/duct-sealing-insulation-and-leakage-testing)
+
+- **Overview of 2025 Title 24, Part 6 Changes (effective date)** -- Schnackel Engineers. [https://schnackel.com/blogs/overview-of-2025-title-24part-6-changes](https://schnackel.com/blogs/overview-of-2025-title-24part-6-changes)
+
+- **Duct Leakage Testing (CFM25 definition)** -- Wikipedia. [https://en.wikipedia.org/wiki/Duct_leakage_testing](https://en.wikipedia.org/wiki/Duct_leakage_testing)

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Sponsor } from "@/types/sponsor";
+import { withUtm } from "@/lib/tracking";
 
 interface SponsorBadgeProps {
   sponsor: Sponsor;
@@ -9,9 +10,12 @@ interface SponsorBadgeProps {
 export default function SponsorBadge({ sponsor, size = "sm" }: SponsorBadgeProps) {
   return (
     <a
-      href={sponsor.website}
+      href={withUtm(sponsor.website, {
+        campaign: sponsor.verticals[0],
+        content: "vertical-header__badge",
+      })}
       target="_blank"
-      rel="noopener noreferrer"
+      rel="sponsored noopener"
       className={`flex flex-col items-center rounded-xl border border-gray-200 bg-gray-50 text-center transition hover:border-primary-300 hover:shadow-md ${
         size === "lg" ? "px-8 py-6 gap-3" : "px-5 py-3 gap-2"
       }`}

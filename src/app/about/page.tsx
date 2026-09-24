@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "About",
   description:
     "Facility Compliance Hub is an independent, vendor-neutral resource for commercial facility compliance guides, maintenance schedules, and checklists.",
+  alternates: { canonical: "/about" },
 };
 
 export default function AboutPage() {
@@ -122,6 +123,31 @@ export default function AboutPage() {
               </span>
             </li>
           </ul>
+
+          <h2 className="mt-10 text-2xl font-bold text-gray-900">
+            Editorial Standards
+          </h2>
+
+          <p>
+            Every guide is researched against primary sources: the codes and
+            standards themselves (NFPA, NEC, ASHRAE, ICC), federal regulations
+            on eCFR, CMS and EPA guidance, and accrediting bodies such as The
+            Joint Commission. Each article lists its sources at the end so you
+            can verify requirements yourself.
+          </p>
+
+          <p>
+            We review our most-read guides when codes or regulations change
+            and show the date of the last review at the top of each article.
+            If you spot an error or an outdated requirement, email{" "}
+            <a
+              href="mailto:hello@facilitycompliancehub.org"
+              className="font-medium text-primary-700 hover:underline"
+            >
+              hello@facilitycompliancehub.org
+            </a>{" "}
+            and we will correct it.
+          </p>
 
           <h2 className="mt-10 text-2xl font-bold text-gray-900">
             Verticals We Cover

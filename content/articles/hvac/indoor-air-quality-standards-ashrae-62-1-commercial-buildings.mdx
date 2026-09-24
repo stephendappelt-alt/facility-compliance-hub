@@ -1,10 +1,12 @@
 ---
 title: "Indoor Air Quality Standards for Commercial Buildings: ASHRAE 62.1 and OSHA Compliance"
 description: "Complete guide to indoor air quality compliance for commercial facilities including ASHRAE 62.1 ventilation requirements, CO2 monitoring, filtration standards, and OSHA guidelines."
+seoTitle: "Commercial Indoor Air Quality: ASHRAE 62.1 & OSHA Guide"
+seoDescription: "Indoor air quality compliance for commercial buildings: ASHRAE 62.1 ventilation rates, CO2 monitoring, filtration standards, and OSHA guidance."
 vertical: "hvac"
 category: "compliance-guides"
 date: "2026-03-07"
-lastUpdated: "2026-03-31"
+lastUpdated: "2026-09-24"
 author: "FCH Editorial Team"
 readingTime: 14
 featured: false
@@ -24,7 +26,7 @@ Indoor air quality (IAQ) directly affects the health, productivity, and comfort 
 
 Commercial buildings present unique IAQ challenges. Dense occupancy, diverse mechanical systems, variable outdoor air conditions, and a wide range of occupant activities all introduce pollutants and deplete fresh air. Managing these factors requires a working knowledge of the primary standards that govern ventilation and air quality in commercial settings.
 
-The two dominant frameworks facility managers must understand are ANSI/ASHRAE Standard 62.1, which establishes the engineering requirements for ventilation systems, and OSHA's General Industry guidelines, which define employer obligations when IAQ complaints arise. This guide covers both, along with the filtration standards and CO2 monitoring practices that form the operational backbone of any IAQ compliance program.
+The two dominant frameworks facility managers must understand are ANSI/ASHRAE Standard 62.1, which establishes the engineering requirements for ventilation systems, and OSHA's guidance and General Duty Clause, which shape employer obligations when IAQ complaints arise. This guide covers both, along with the filtration standards and CO2 monitoring practices that form the operational backbone of any IAQ compliance program.
 
 ## ANSI/ASHRAE Standard 62.1: The Foundation of Commercial Ventilation Compliance
 
@@ -32,16 +34,15 @@ The two dominant frameworks facility managers must understand are ANSI/ASHRAE St
 
 ANSI/ASHRAE Standard 62.1, *Ventilation and Acceptable Indoor Air Quality*, is the primary technical standard for commercial and institutional buildings in the United States. Published and maintained by the American Society of Heating, Refrigerating and Air-Conditioning Engineers, it specifies minimum ventilation rates, system design requirements, and operational procedures for HVAC systems serving buildings occupied by humans.
 
-The 2022 edition (ANSI/ASHRAE 62.1-2022) is the version currently referenced in the International Mechanical Code (IMC) and adopted by most state and local building departments. A 2025 edition has since been published, introducing expanded humidity control requirements, new emergency ventilation controls, and additional calculation methods -- facility managers in jurisdictions that adopt updated codes should verify which edition applies to their building.
+Standard 62.1 is referenced in the ventilation requirements of the International Mechanical Code (IMC) and IAPMO's codes, and ASHRAE reports that it is referenced in 18 state codes. Those references are often limited in scope -- for example, a code may adopt the ventilation rates but not the operations and maintenance requirements. The 2022 edition was followed by a 2025 edition, which refines humidity control requirements, adds emergency ventilation control provisions, and introduces new calculation methods (including for intake and exhaust separation distances). Verify which edition, and which parts of it, your jurisdiction has adopted.
 
-ASHRAE 62.1 applies to:
+ASHRAE 62.1:
 
-- New commercial and institutional buildings
-- Additions to existing buildings
-- Significant alterations to existing HVAC systems
-- Existing buildings where IAQ improvements are being made voluntarily or under regulatory direction
+- Is written for new buildings and certain changes or additions to existing buildings
+- Can guide IAQ improvement in existing buildings through its operations and maintenance requirements
+- Applies to indoor or enclosed spaces people may occupy, except where other standards require more ventilation
 
-It does **not** apply to single-family homes, low-rise residential buildings (covered by ASHRAE 62.2), or industrial process areas where occupancy is incidental.
+It does **not** apply to dwelling units such as homes and apartments (covered by ASHRAE 62.2) or to healthcare facilities (covered by ASHRAE Standard 170).
 
 ### Ventilation Design Procedures Under ASHRAE 62.1
 
@@ -57,7 +58,7 @@ The vast majority of commercial HVAC systems are designed under the Ventilation 
 
 ### Minimum Ventilation Rates by Space Type
 
-Table 6-1 of ASHRAE 62.1-2022 establishes the minimum outdoor air rates for the breathing zone in various commercial occupancy categories. The total outdoor airflow for a zone is calculated as:
+Table 6.2.2.1 of ASHRAE 62.1 establishes the minimum outdoor air rates for the breathing zone in various occupancy categories. The total outdoor airflow for a zone is calculated as:
 
 **Vbz = Rp × Pz + Ra × Az**
 
@@ -68,7 +69,7 @@ Where:
 - **Ra** = area outdoor air rate (CFM per ft²)
 - **Az** = zone floor area (ft²)
 
-The following table summarizes minimum outdoor air rates for common commercial space types under the Ventilation Rate Procedure:
+The following table summarizes minimum outdoor air rates for common commercial space types. The values shown are from the International Mechanical Code's Table 403.3.1.1, which uses the same people-based and area-based rates as ASHRAE 62.1 for these space types:
 
 <table>
   <thead>
@@ -81,52 +82,52 @@ The following table summarizes minimum outdoor air rates for common commercial s
   </thead>
   <tbody>
     <tr>
-      <td>Office Space (general)</td>
+      <td>Office Space</td>
       <td>5</td>
       <td>0.06</td>
       <td>5</td>
     </tr>
     <tr>
-      <td>Conference Rooms</td>
+      <td>Conference / Meeting Rooms</td>
       <td>5</td>
       <td>0.06</td>
       <td>50</td>
     </tr>
     <tr>
-      <td>Lobbies / Reception</td>
+      <td>Main Entry Lobbies (office)</td>
       <td>5</td>
       <td>0.06</td>
       <td>10</td>
     </tr>
     <tr>
-      <td>Retail Stores</td>
-      <td>7</td>
+      <td>Reception Areas</td>
+      <td>5</td>
+      <td>0.06</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <td>Retail Sales Floors</td>
+      <td>7.5</td>
       <td>0.12</td>
       <td>15</td>
     </tr>
     <tr>
-      <td>Restaurants (dining area)</td>
-      <td>7</td>
+      <td>Restaurant Dining Rooms</td>
+      <td>7.5</td>
       <td>0.18</td>
       <td>70</td>
     </tr>
     <tr>
-      <td>Classrooms (K-12)</td>
+      <td>Classrooms (age 9 plus)</td>
       <td>10</td>
       <td>0.12</td>
       <td>35</td>
     </tr>
     <tr>
-      <td>Healthcare Waiting Rooms</td>
-      <td>7.5</td>
-      <td>0.06</td>
-      <td>120</td>
-    </tr>
-    <tr>
-      <td>Gymnasium / Fitness Areas</td>
+      <td>Health Club / Weight Room</td>
       <td>20</td>
       <td>0.06</td>
-      <td>7</td>
+      <td>10</td>
     </tr>
     <tr>
       <td>Corridors</td>
@@ -137,40 +138,45 @@ The following table summarizes minimum outdoor air rates for common commercial s
   </tbody>
 </table>
 
-*Source: ANSI/ASHRAE Standard 62.1-2022, Table 6-1. Values represent minimum breathing zone outdoor airflow. Final system outdoor air quantities must also account for zone air distribution effectiveness (Ez) and system ventilation efficiency.*
+*Sources: IMC Table 403.3.1.1 (2021 and 2024 editions, as published by adopting jurisdictions); ASHRAE 62.1 Table 6.2.2.1. Values represent minimum breathing zone outdoor airflow. Final system outdoor air quantities must also account for zone air distribution effectiveness (Ez) and system ventilation efficiency. Healthcare spaces are governed by ASHRAE 170, not this table.*
 
 ### Key 2022 Updates Facility Managers Must Know
 
-The 2022 edition introduced several changes that affect ongoing compliance:
+According to ASHRAE, the 2022 edition changed the following compared with 62.1-2019:
 
-- **Differential CO2 concentration limits for Demand Controlled Ventilation (DCV):** Systems using DCV must now maintain indoor CO2 concentrations no more than 700 ppm above outdoor air CO2 levels. Since outdoor ambient CO2 is approximately 420 ppm, this translates to an indoor target of approximately 1,100-1,120 ppm in occupied zones.
-- **Reorganized Section 5:** Requirements for systems and equipment were restructured to follow the path of airflow through the system, making it easier to verify compliance at each stage.
-- **Maximum dew-point temperatures:** Mechanically cooled buildings must now comply with maximum dew-point limits to control moisture-related IAQ risks.
-- **Required exhaust air separation distances:** Updated separation requirements between outdoor air intakes and exhaust discharge points reduce the risk of re-entrainment.
+- **Improved IAQ Procedure** and modified requirements for maximum dew-point temperatures in mechanically cooled buildings. (The 2019 edition introduced the dew-point limit: generally a maximum indoor dew point of 60°F during both occupied and unoccupied hours when the outdoor dew point is above 60°F, with exceptions.)
+- **Updated exhaust air separation distances** between outdoor air intakes and exhaust or relief outlets.
+- **Reorganized Section 5, "Systems and Equipment,"** to better show how buildings, systems, and equipment are interrelated.
+- **Outpatient and ambulatory care spaces** moved to a new appendix, with certain spaces required to comply with ASHRAE Standard 170.
+- **Owner acknowledgment of ASHRAE Standard 188** (Legionellosis risk management for building water systems) is now required.
+
+<Callout type="info" title="ASHRAE 62.1 Does Not Set an Indoor CO2 Limit">
+Despite a common misconception, ASHRAE 62.1 does not set a limit for indoor CO2 concentration. According to ASHRAE's 2025 position document on indoor CO2, a 2023 addendum added space-specific "maximum CO2 above ambient" values, but the standard states they are only for implementing CO2-based demand-controlled ventilation and should not be used as indicators of IAQ.
+</Callout>
 
 ## OSHA Indoor Air Quality Guidelines for Commercial Buildings
 
 ### OSHA's Role in IAQ Compliance
 
-OSHA does not have a specific comprehensive IAQ standard for commercial office environments. However, this does not mean employers are without legal obligation. OSHA enforces IAQ-related issues through the **General Duty Clause (Section 5(a)(1) of the OSH Act)**, which requires employers to provide a workplace free from recognized hazards that are causing or likely to cause death or serious physical harm.
+OSHA states that it does not have IAQ standards, although it does have standards on ventilation and on some of the air contaminants involved in IAQ problems. OSHA also notes that California and New Jersey have their own indoor air regulations. The absence of an IAQ standard does not mean employers are without legal obligation. OSHA enforces IAQ-related issues through the **General Duty Clause (Section 5(a)(1) of the OSH Act)**, which requires employers to provide a workplace free from recognized hazards that are causing or likely to cause death or serious physical harm.
 
-In practice, this means that if an OSHA inspector documents a pattern of occupant complaints, verifiable contaminant levels, or a demonstrably inadequate ventilation system, the employer can receive a citation even without a specific IAQ regulation being violated.
+In practice, a General Duty Clause citation requires a recognized hazard that is causing or likely to cause serious harm, so it is reserved for serious situations. Most IAQ complaints involve comfort issues, but documented, prompt responses to complaints are still the best protection.
 
 ### OSHA Recommendations and Permissible Exposure Limits
 
-While OSHA's General Industry standards do establish Permissible Exposure Limits (PELs) for specific chemical contaminants, its IAQ guidance for commercial buildings focuses on preventive management practices. The agency recommends:
+While OSHA's General Industry standards do establish Permissible Exposure Limits (PELs) for specific chemical contaminants, its IAQ guidance for commercial buildings (OSHA 3430) focuses on preventive management practices. That guidance recommends:
 
-- Temperature maintained between **68°F and 76°F** (20°C to 24.5°C)
-- Relative humidity maintained between **20% and 60%**
+- Checking that temperature is kept in a recommended comfort range of **68°F to 78°F**
+- Checking that relative humidity is kept between **30% and 60%**, the range ASHRAE recommends for comfort
 - Adequate fresh outdoor air delivery in accordance with ASHRAE 62.1
 - Regular HVAC maintenance and filter replacement schedules
 - Prompt investigation and remediation of water intrusion or mold growth
 
-For carbon dioxide specifically, OSHA's PEL is **5,000 ppm as an 8-hour time-weighted average (TWA)** -- a threshold designed to prevent acute CO2 toxicity in industrial settings. This level is rarely approached in normal commercial buildings and should not be confused with the lower IAQ benchmarks used for occupant comfort and cognitive performance.
+For carbon dioxide specifically, OSHA's PEL is **5,000 ppm as an 8-hour time-weighted average (TWA)**. NIOSH's recommended limits are 5,000 ppm (TWA) and 30,000 ppm as a 15-minute short-term exposure limit. These levels are rarely approached in normal commercial buildings and should not be confused with the much lower CO2 values used as ventilation indicators.
 
-### Common OSHA-Cited IAQ Violations
+### Common IAQ Issues and Their Regulatory Basis
 
-The following table summarizes the most frequently cited IAQ-related issues in commercial building inspections and the applicable regulatory basis:
+The following table summarizes common IAQ-related issues in commercial buildings and the regulatory basis that can apply:
 
 <table>
   <thead>
@@ -183,7 +189,7 @@ The following table summarizes the most frequently cited IAQ-related issues in c
   <tbody>
     <tr>
       <td>Inadequate ventilation / fresh air delivery</td>
-      <td>General Duty Clause; ASHRAE 62.1 (adopted by reference)</td>
+      <td>General Duty Clause; local mechanical code ventilation requirements</td>
       <td>Blocked or undersized outdoor air dampers; failed economizer controls</td>
     </tr>
     <tr>
@@ -198,8 +204,8 @@ The following table summarizes the most frequently cited IAQ-related issues in c
     </tr>
     <tr>
       <td>Asbestos-containing materials (ACMs)</td>
-      <td>29 CFR 1910.1001</td>
-      <td>Disturbed ACMs during renovation in pre-1980 buildings</td>
+      <td>29 CFR 1910.1001 (general industry); 29 CFR 1926.1101 (construction and renovation work)</td>
+      <td>Disturbed asbestos-containing or presumed asbestos-containing materials (OSHA presumes thermal system insulation and surfacing material in buildings constructed no later than 1980 contain asbestos unless tested)</td>
     </tr>
     <tr>
       <td>Inadequate temperature/humidity control</td>
@@ -214,93 +220,85 @@ The following table summarizes the most frequently cited IAQ-related issues in c
   </tbody>
 </table>
 
-*Source: OSHA Indoor Air Quality in Commercial and Institutional Buildings (OSHA 3430-04 2011); OSHA General Duty Clause enforcement guidance.*
+*Sources: OSHA Indoor Air Quality in Commercial and Institutional Buildings (OSHA 3430-04 2011); OSHA Indoor Air Quality overview; 29 CFR 1910.1001.*
 
 ## CO2 Monitoring: Requirements, Thresholds, and Best Practices
 
 ### Why CO2 is the Central IAQ Indicator
 
-Carbon dioxide is not a hazardous gas at typical indoor concentrations, but it functions as the most practical proxy for overall ventilation adequacy in occupied spaces. When CO2 levels rise, it indicates that occupant-generated exhaled air is accumulating -- which also means other occupant-generated pollutants (VOCs, bioeffluents, airborne pathogens) are accumulating at proportional rates.
+Carbon dioxide is not a hazardous gas at typical indoor concentrations, but it is a practical indicator of outdoor air ventilation per person in occupied spaces. When outdoor air ventilation drops, CO2 rises along with other occupant-generated contaminants. ASHRAE's position document cautions that indoor CO2 is **not an overall indicator of IAQ** -- it says nothing about contaminants that are not tied to occupancy, such as VOCs from materials or outdoor particles -- but it can be a useful tool when interpreted correctly.
 
-Monitoring CO2 continuously gives facility managers real-time visibility into whether ventilation systems are delivering adequate fresh air to each occupied zone.
+Monitoring CO2 continuously gives facility managers visibility into whether ventilation systems are delivering the intended outdoor air to each occupied zone.
 
-### CO2 Concentration Thresholds
+### CO2 Reference Points
+
+There is no single regulatory indoor CO2 limit for commercial buildings short of the occupational exposure limits. The values below are reference points, not compliance thresholds:
 
 <table>
   <thead>
     <tr>
       <th>CO2 Level (ppm)</th>
-      <th>Interpretation</th>
-      <th>Recommended Action</th>
+      <th>What It Means</th>
+      <th>Source</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>400 -- 500 ppm</td>
-      <td>Normal outdoor ambient level</td>
-      <td>No action required; baseline reference</td>
+      <td>About 300 -- 500 ppm</td>
+      <td>Typical range for acceptable outdoor air</td>
+      <td>ASHRAE, as cited in OSHA 3430</td>
     </tr>
     <tr>
-      <td>500 -- 800 ppm</td>
-      <td>Good indoor air quality; well-ventilated space</td>
-      <td>Maintain current ventilation rates</td>
+      <td>About 1,000 ppm</td>
+      <td>Long-used benchmark; corresponds to roughly 16 cfm of outdoor air per person at steady state and was based on body-odor perception. It is not a health limit and not an ASHRAE 62.1 requirement.</td>
+      <td>ASHRAE Position Document on Indoor CO2 (2025)</td>
     </tr>
     <tr>
-      <td>800 -- 1,000 ppm</td>
-      <td>Acceptable; approaching the upper comfort threshold</td>
-      <td>Monitor closely; review occupancy and airflow balance</td>
+      <td>Space-specific differentials above outdoor</td>
+      <td>Set points for CO2-based DCV only, added to ASHRAE 62.1 by a 2023 addendum; not IAQ indicators</td>
+      <td>ASHRAE Position Document on Indoor CO2 (2025)</td>
     </tr>
     <tr>
-      <td>1,000 -- 1,200 ppm</td>
-      <td>Marginal; ASHRAE DCV threshold (700 ppm above ~420 ppm outdoor)</td>
-      <td>Increase outdoor air delivery; verify DCV controls are responding</td>
+      <td>5,000 ppm</td>
+      <td>OSHA Permissible Exposure Limit (8-hour TWA); also the NIOSH recommended 8-hour limit</td>
+      <td>OSHA 3430; ASHRAE Position Document</td>
     </tr>
     <tr>
-      <td>1,200 -- 2,000 ppm</td>
-      <td>Poor; clear indication of inadequate ventilation</td>
-      <td>Investigate and correct ventilation system immediately; document findings</td>
-    </tr>
-    <tr>
-      <td>Above 2,000 ppm</td>
-      <td>Unacceptable; occupant health effects possible</td>
-      <td>Reduce occupancy or vacate space; emergency HVAC corrective action required</td>
-    </tr>
-    <tr>
-      <td>5,000 ppm (OSHA PEL)</td>
-      <td>OSHA Permissible Exposure Limit (8-hr TWA)</td>
-      <td>Industrial safety threshold; triggers mandatory OSHA reporting if exceeded</td>
+      <td>30,000 ppm</td>
+      <td>NIOSH 15-minute short-term exposure limit</td>
+      <td>ASHRAE Position Document</td>
     </tr>
   </tbody>
 </table>
 
+Because required outdoor air depends on space type, occupant density, and activity, a single CO2 number does not fit all spaces. Use CO2 trends to spot under-ventilated zones and investigate, rather than treating any one value as pass/fail.
+
 ### Demand Controlled Ventilation (DCV) and CO2 Sensors
 
-Demand Controlled Ventilation systems use CO2 sensors to modulate outdoor air dampers based on real-time occupancy signals. ASHRAE 62.1-2022 requires DCV in spaces with high occupant variability -- typically spaces with a design occupant density of 25 or more people per 1,000 square feet that are served by systems with outdoor air capacity exceeding 3,000 CFM.
+Demand Controlled Ventilation systems use CO2 sensors (or other occupancy signals) to modulate outdoor air dampers based on actual occupancy. DCV itself is required by energy codes, not by 62.1: ASHRAE 90.1 and the IECC require it in higher-density spaces above certain size thresholds (see our [energy code guide](/hvac/commercial-hvac-energy-efficiency-codes-ashrae-90-1-iecc)). ASHRAE 62.1 permits DCV and sets rules so that it still delivers the required ventilation.
 
-**CO2 sensor requirements under ASHRAE 62.1-2022:**
+**CO2 sensor requirements in ASHRAE 62.1-2022 (Section 6.2.6.1.3, as summarized by Kaiterra):**
 
-- Sensors must be accurate within **±75 ppm** at concentrations of 600 ppm and 1,000 ppm, measured at sea level and 77°F (25°C)
-- Sensors must be factory-calibrated and certified by the manufacturer to require recalibration no more frequently than **once every five years**
-- Sensors must be located in the breathing zone of the occupied space (typically 3 to 6 feet above the floor) or in the return air stream
-- Building automation systems must log CO2 readings and trigger damper modulation responses automatically
-
-**2025 regulatory update:** The ANSI/ASHRAE 62.1-2025 standard further tightens DCV requirements, mandating that ventilation systems automatically respond to real-time air quality data. Static ventilation rates that do not adjust for changing occupancy conditions are increasingly viewed as non-compliant in jurisdictions that have adopted the 2025 edition.
+- Sensors must be accurate within **±75 ppm** at concentrations of both 600 ppm and 1,000 ppm, measured at sea level and 77°F (25°C)
+- Sensors must be factory-calibrated and certified by the manufacturer to require calibration no more frequently than **once every five years**
+- If a sensor fails, the system must reset to supply the minimum outdoor air required for the design zone population
+- Sensor location should represent conditions in the zone being controlled; follow the standard and the manufacturer's instructions
 
 ### Continuous Monitoring vs. Periodic Testing
 
-Regulatory trends across multiple jurisdictions are moving toward **continuous IAQ monitoring** rather than periodic spot testing. The practical standard for new construction and major renovations now includes:
+Many owners are moving toward **continuous IAQ monitoring** rather than periodic spot testing, and green building programs such as RESET Air and LEED O+M require or reward it. A good continuous monitoring setup typically includes:
 
 - Continuous CO2 monitoring in all primary occupied zones
 - Automated data logging with threshold alerting
 - Dashboard access for facility management staff
 - Integration with Building Automation Systems (BAS) for dynamic ventilation control
-- Annual calibration verification for all installed sensors
+- Periodic calibration checks for installed sensors, per the manufacturer's instructions
 
 ## MERV Filter Ratings: Understanding Filtration Requirements
 
 ### What MERV Ratings Mean
 
-The Minimum Efficiency Reporting Value (MERV) is the ASHRAE-standardized scale for rating air filter performance. Established by ASHRAE Standard 52.2, MERV ratings range from 1 (lowest efficiency) to 20 (highest efficiency), indicating a filter's ability to capture particles within specific size ranges.
+The Minimum Efficiency Reporting Value (MERV) is the ASHRAE-standardized scale for rating air filter performance. Defined by ASHRAE Standard 52.2, MERV ratings run from 1 (lowest efficiency) to 16 (highest), based on a filter's minimum capture efficiency in three particle size ranges: 0.3 to 1.0 micron (E1), 1.0 to 3.0 microns (E2), and 3.0 to 10 microns (E3). HEPA filters are not rated on the MERV scale; they are tested under separate standards.
 
 For facility managers, MERV ratings determine which particles your HVAC system can remove from recirculated air -- including dust, pollen, mold spores, bacteria, and fine particulate matter. Higher MERV ratings capture smaller particles, but they also increase airflow resistance (static pressure), which can reduce system efficiency and increase energy consumption if the HVAC system was not designed for higher-resistance filters.
 
@@ -310,66 +308,59 @@ For facility managers, MERV ratings determine which particles your HVAC system c
   <thead>
     <tr>
       <th>MERV Rating</th>
-      <th>Particle Size Captured</th>
-      <th>What It Captures</th>
+      <th>Minimum Capture Efficiency (ASHRAE 52.2)</th>
       <th>Typical Commercial Application</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>MERV 1 -- 4</td>
-      <td>&gt; 10 microns</td>
-      <td>Large dust, pollen, carpet fibers</td>
-      <td>Pre-filters; minimum protection; not suitable for occupied spaces</td>
+      <td>Less than 20% in the 3 -- 10 micron range</td>
+      <td>Pre-filters; minimal protection</td>
     </tr>
     <tr>
       <td>MERV 5 -- 7</td>
-      <td>3 -- 10 microns</td>
-      <td>Mold spores, dust mites, pet dander</td>
-      <td>Light commercial; warehouses; low-occupancy industrial</td>
+      <td>20% to 50% in the 3 -- 10 micron range</td>
+      <td>Pre-filters; light commercial and low-occupancy spaces</td>
     </tr>
     <tr>
       <td>MERV 8</td>
-      <td>3 -- 10 microns (improved)</td>
-      <td>Fine dust, mold spores, hair spray</td>
-      <td>General commercial; minimum acceptable for occupied office spaces</td>
+      <td>At least 70% (3 -- 10 microns) and 20% (1 -- 3 microns)</td>
+      <td>Common baseline; ASHRAE 62.1 minimum upstream of cooling coils and wetted surfaces</td>
     </tr>
     <tr>
       <td>MERV 11</td>
-      <td>1 -- 3 microns</td>
-      <td>Fine particles, auto emissions, welding fumes</td>
-      <td>Standard for office buildings, retail, hotels, and light commercial</td>
+      <td>At least 85% (3 -- 10), 65% (1 -- 3), and 20% (0.3 -- 1)</td>
+      <td>Offices, retail, hotels; ASHRAE 62.1 minimum for outdoor air where the PM2.5 standard is exceeded</td>
     </tr>
     <tr>
       <td>MERV 13</td>
-      <td>0.3 -- 1 micron</td>
-      <td>Bacteria, tobacco smoke, fine PM2.5 particles</td>
-      <td>Recommended for schools, healthcare waiting areas, high-occupancy offices; minimum for post-COVID best practice</td>
+      <td>At least 90% (3 -- 10), 85% (1 -- 3), and 50% (0.3 -- 1)</td>
+      <td>EPA suggests at least MERV 13 when upgrading, if the system can accommodate it; schools, high-occupancy offices</td>
     </tr>
     <tr>
       <td>MERV 14 -- 16</td>
-      <td>0.3 microns and smaller</td>
-      <td>Bacteria, virus carriers, fine combustion particles</td>
-      <td>Hospitals, surgical suites, pharmaceutical manufacturing</td>
+      <td>At least 90% -- 95% in the larger ranges and 75% to 95% in the 0.3 -- 1 micron range</td>
+      <td>Higher-performance filtration; some healthcare and laboratory applications (healthcare filtration is governed by ASHRAE 170)</td>
     </tr>
     <tr>
-      <td>MERV 17 -- 20 (HEPA)</td>
-      <td>0.1 -- 0.3 microns</td>
-      <td>Viruses, carbon dust, combustion smoke</td>
-      <td>Cleanrooms, isolation rooms, BSL laboratories</td>
+      <td>HEPA (not MERV-rated)</td>
+      <td>Tested under separate standards</td>
+      <td>Cleanrooms, isolation rooms, specialized laboratories</td>
     </tr>
   </tbody>
 </table>
 
-*Source: ASHRAE Standard 52.2; EPA MERV Rating guidance; Ferguson MERV Ratings for Commercial Buildings.*
+*Source: ANSI/ASHRAE Standard 52.2-2017, Table 12-1; EPA, What Is a MERV Rating?*
 
 ### ASHRAE and Code Minimum Filter Requirements
 
-ASHRAE 62.1 requires that air-handling systems include filtration adequate to protect downstream HVAC components and maintain acceptable IAQ. Specific minimum MERV requirements in the standard and related codes include:
+ASHRAE 62.1 includes specific minimum filtration requirements:
 
-- **MERV 8 minimum** for filters protecting cooling coils and heat exchangers in commercial systems
-- **MERV 13 recommended** by ASHRAE as the minimum for recirculated air in high-occupancy or healthcare-adjacent spaces, particularly following the post-COVID guidance issued in ASHRAE's Position Document on Infectious Aerosols (2022)
-- Some state energy codes (including California Title 24 and New York's energy code) reference minimum MERV ratings as part of HVAC system approval
+- **MERV 8 minimum** upstream of all cooling coils and other devices with wetted surfaces through which air is supplied to occupiable spaces (Section 5.9 in the 2019 edition)
+- **MERV 11 minimum** for outdoor air in buildings located where the national PM2.5 standard is exceeded (MERV 6 where the PM10 standard is exceeded)
+- Beyond these minimums, EPA advises that facilities upgrading filtration choose **at least MERV 13**, or as high as the system fan and filter slot can accommodate
+- Some state and local codes set higher minimums; check your jurisdiction
 
 ### Balancing Filtration and System Performance
 
@@ -390,14 +381,12 @@ Before upgrading MERV ratings, verify the following with your HVAC service contr
 
 ### Developing an IAQ Management Plan
 
-OSHA and EPA both recommend that commercial buildings maintain a formal IAQ Management Plan. While not universally mandated by federal regulation, an IAQ plan is increasingly required by:
+OSHA and EPA guidance both encourage building owners and managers to manage IAQ proactively rather than waiting for complaints. A formal IAQ management plan is not a general federal requirement, but it may be required by:
 
-- State and local building codes in jurisdictions that have adopted enhanced IAQ provisions
-- Lease requirements from institutional and government tenants
+- Lease requirements from some institutional and government tenants
 - Green building certifications (LEED, WELL, RESET) that require documented IAQ protocols
-- Risk management requirements from commercial property insurers
 
-A compliant IAQ Management Plan should include:
+A practical IAQ management plan should include:
 
 - Baseline IAQ survey results for all primary occupied zones
 - Documented HVAC maintenance schedules and filter replacement logs
@@ -410,11 +399,11 @@ A compliant IAQ Management Plan should include:
 
 ASHRAE 62.1 establishes minimum separation distances between outdoor air intakes and potential contamination sources to prevent re-entrainment of exhaust air or pollutants. Key requirements include:
 
-- Outdoor air intakes must be located a minimum distance from loading docks, cooling towers, sanitary exhaust outlets, and emergency generator exhausts
-- The 2022 edition specifies required separation distances in Table 5-1 based on exhaust flow rate and intake/exhaust orientation
-- Intakes must include bird screens and rain protection while maintaining sufficient free area to avoid excessive velocity and intake noise
+- Outdoor air intakes must be located at least the minimum separation distance from the contaminant sources listed in Table 5-1 (such as loading docks, cooling towers, exhaust and relief outlets, and combustion exhausts), or the distance calculated using the methods in Normative Appendix B
+- The 2022 edition updated required exhaust air separation distances, and the 2025 edition adds new calculation methods
+- The standard also addresses rain entrainment and bird screens at intakes
 
-Facility managers should audit outdoor air intake locations whenever building modifications occur near the intakes -- including the addition of generator enclosures, rooftop equipment, or renovation activities.
+Facility managers should audit outdoor air intake locations whenever building modifications occur near the intakes -- including the addition of generator enclosures, rooftop equipment, or renovation activities. For generator exhaust placement, see our guide to [generator room design and ventilation](/generators/generator-room-design-nfpa-37-ventilation-clearances).
 
 ### HVAC Maintenance Schedule for IAQ Compliance
 
@@ -423,49 +412,54 @@ Facility managers should audit outdoor air intake locations whenever building mo
     <tr>
       <th>Maintenance Task</th>
       <th>Frequency</th>
-      <th>Compliance Reference</th>
+      <th>Reference</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Air filter inspection and replacement</td>
-      <td>Monthly inspection; replace per pressure drop or per manufacturer schedule (typically 3 -- 6 months for MERV 8-13)</td>
-      <td>ASHRAE 62.1; local mechanical codes</td>
+      <td>Check filter pressure drop and scheduled replacement date; clean or replace as needed</td>
+      <td>Quarterly (minimum); many facilities check monthly</td>
+      <td>ASHRAE 62.1 Table 8-1</td>
     </tr>
     <tr>
-      <td>Condensate drain pan inspection and cleaning</td>
-      <td>Quarterly</td>
-      <td>ASHRAE 62.1 Section 5; mold prevention</td>
+      <td>Treat cooling tower and evaporative condenser water to limit microbiological growth</td>
+      <td>Monthly</td>
+      <td>ASHRAE 62.1 Table 8-1; ASHRAE 188</td>
+    </tr>
+    <tr>
+      <td>Visually inspect outdoor air intake louvers, bird screens, mist eliminators, and adjacent areas; clean and repair as needed</td>
+      <td>Semiannually</td>
+      <td>ASHRAE 62.1 Table 8-1</td>
+    </tr>
+    <tr>
+      <td>Check drain pans, drain lines, and coils for biological growth and adjacent areas for unintended wetting</td>
+      <td>Annually (minimum); more often during the cooling season is common practice</td>
+      <td>ASHRAE 62.1 Table 8-1</td>
     </tr>
     <tr>
       <td>Outdoor air damper operation verification</td>
-      <td>Semi-annually</td>
-      <td>ASHRAE 62.1 Section 8</td>
+      <td>Per O&amp;M manual; semiannual checks are common practice</td>
+      <td>ASHRAE 62.1 Section 8; good practice</td>
     </tr>
     <tr>
       <td>CO2 sensor calibration verification</td>
-      <td>Annually (or per manufacturer; ASHRAE requires recalibration within 5-year intervals)</td>
+      <td>Per manufacturer (DCV sensors must be certified to need calibration no more often than every 5 years)</td>
       <td>ASHRAE 62.1 DCV requirements</td>
     </tr>
     <tr>
-      <td>Cooling coil and heat exchanger inspection</td>
-      <td>Annually</td>
-      <td>ASHRAE 62.1 Section 5; OSHA mold guidance</td>
-    </tr>
-    <tr>
       <td>Ductwork inspection for leakage and contamination</td>
-      <td>Every 3 -- 5 years</td>
-      <td>SMACNA duct leakage standards; ASHRAE 62.1</td>
+      <td>As needed based on inspection findings</td>
+      <td>Good practice</td>
     </tr>
     <tr>
-      <td>Full HVAC system recommissioning</td>
-      <td>Every 5 years, or after major tenant changes</td>
-      <td>ASHRAE Guideline 0; LEED O+M</td>
+      <td>Retro-commissioning of HVAC systems</td>
+      <td>Periodically, or after major tenant or use changes</td>
+      <td>Good practice; mandated in some cities (e.g., every 10 years under NYC Local Law 87)</td>
     </tr>
     <tr>
       <td>Occupant IAQ complaint log review</td>
       <td>Monthly</td>
-      <td>OSHA General Duty Clause; OSHA 3430 guidance</td>
+      <td>OSHA 3430 guidance</td>
     </tr>
   </tbody>
 </table>
@@ -474,9 +468,9 @@ Facility managers should audit outdoor air intake locations whenever building mo
 
 Facility managers pursuing LEED Operations and Maintenance (LEED O+M), WELL Building Standard, or RESET certification will find that IAQ compliance overlaps significantly with these programs' requirements -- but the certification thresholds are often more stringent than regulatory minimums.
 
-- **LEED O+M** requires an Indoor Air Quality Management Plan and periodic IAQ testing, with CO2 monitoring in densely occupied spaces
-- **WELL Building Standard** sets performance targets for CO2 (below 1,100 ppm), PM2.5 (below 15 µg/m³), TVOC (below 500 µg/m³), and relative humidity (30-60%), and requires continuous monitoring in occupied spaces
-- **RESET Air Certification** uses continuous sensor monitoring with cloud-verified data and sets CO2 thresholds at 1,000 ppm (Acceptable) and 600 ppm (High Performance)
+- **LEED O+M** awards points for continuous monitoring of CO2, PM2.5, and TVOC (at intervals no longer than one hour) and for meeting performance thresholds
+- **WELL v2** requires PM2.5 of 15 µg/m³ or lower under its air quality precondition (A01), offers points for keeping CO2 at or below 900 ppm, with additional points at 750 ppm (A06, Enhanced Ventilation), and rewards continuous monitoring
+- **RESET Air** requires continuous sensor monitoring and sets CO2 at 1,000 ppm (Acceptable) and 600 ppm (High Performance), and PM2.5 at 35 µg/m³ (Acceptable) and 12 µg/m³ (High Performance) for commercial interiors
 
 For commercial properties competing for quality tenants, green certification IAQ thresholds are increasingly the effective performance standard -- even in the absence of a specific regulatory mandate.
 
@@ -484,12 +478,12 @@ For commercial properties competing for quality tenants, green certification IAQ
 
 Achieving and maintaining IAQ compliance in commercial buildings requires coordinating across multiple standards and operational programs. The following priorities should guide your compliance strategy:
 
-1. **Verify your ventilation system meets ASHRAE 62.1-2022** minimum outdoor air rates for all occupied zones, using the Ventilation Rate Procedure as the baseline.
-2. **Install and maintain CO2 monitoring** in all primary occupied zones, with sensors calibrated to within ±75 ppm accuracy and integrated with your BAS.
-3. **Implement Demand Controlled Ventilation** in high-occupancy, variable-load spaces (conference rooms, assembly areas, training rooms) to comply with ASHRAE DCV requirements and reduce energy waste.
-4. **Upgrade filters to MERV 13 minimum** in all air handlers serving occupied office, healthcare-adjacent, and educational spaces -- but verify your system can handle the increased static pressure.
+1. **Verify your ventilation system meets the minimum outdoor air rates** of the ASHRAE 62.1 or mechanical code edition that applies to your building, for all occupied zones.
+2. **Install and maintain CO2 monitoring** in primary occupied zones, using sensors that meet the ±75 ppm accuracy requirement for DCV and are integrated with your BAS.
+3. **Implement Demand Controlled Ventilation** in high-occupancy, variable-load spaces (conference rooms, assembly areas, training rooms) where the energy code requires it, and to reduce energy waste.
+4. **Consider upgrading filters to MERV 13 or higher**, as EPA suggests, in air handlers serving occupied spaces -- but verify your system can handle the increased static pressure.
 5. **Document everything.** OSHA enforces IAQ obligations under the General Duty Clause, and the strongest defense is a documented record of active management: complaint logs, maintenance records, sensor calibration certificates, and corrective action reports.
-6. **Review local code adoption.** The edition of ASHRAE 62.1 in effect in your jurisdiction may be 2019 or 2022 -- and some states have adopted the 2025 edition. Verify with your local Authority Having Jurisdiction (AHJ) which edition applies to your building.
+6. **Review local code adoption.** Codes often reference an older edition of ASHRAE 62.1, or only part of it. Verify with your local Authority Having Jurisdiction (AHJ) which edition and which requirements apply to your building.
 
 ---
 
@@ -505,28 +499,53 @@ Achieving and maintaining IAQ compliance in commercial buildings requires coordi
   </thead>
   <tbody>
     <tr>
-      <td>ASHRAE Standard 62.1 -- Official Page</td>
-      <td>ANSI/ASHRAE Standard 62.1-2022, Ventilation and Acceptable Indoor Air Quality (official bookstore and fact sheet)</td>
+      <td>ASHRAE Standards 62.1 and 62.2</td>
+      <td>ASHRAE bookstore page for Standard 62.1, Ventilation and Acceptable Indoor Air Quality</td>
       <td><a href="https://www.ashrae.org/technical-resources/bookstore/standards-62-1-62-2" target="_blank" rel="noopener noreferrer">ashrae.org</a></td>
     </tr>
     <tr>
       <td>ASHRAE 62.1-2022 Fact Sheet</td>
-      <td>ASHRAE government affairs advocacy fact sheet summarizing key 2022 changes</td>
+      <td>ASHRAE Government Affairs fact sheet: scope, code references, and changes from 62.1-2019</td>
       <td><a href="https://www.ashrae.org/file%20library/about/government%20affairs/advocacy%20toolkit/virtual%20packet/standard-62.1-fact-sheet.pdf" target="_blank" rel="noopener noreferrer">ashrae.org (PDF)</a></td>
     </tr>
     <tr>
-      <td>ANSI/ASHRAE 62.1-2025 Overview</td>
-      <td>ANSI Blog summary of the 2025 edition updates to ASHRAE 62.1</td>
-      <td><a href="https://blog.ansi.org/ansi/ansi-ashrae-62-1-2025-ventilation-indoor-air/" target="_blank" rel="noopener noreferrer">blog.ansi.org</a></td>
+      <td>The 2025 Edition of ANSI/ASHRAE Standard 62.1</td>
+      <td>ASHRAE Ireland Chapter summary of 62.1-2025 changes</td>
+      <td><a href="https://ashrae-ireland.org/2025/12/09/the-2025-edition-of-ansi-ashrae-standard-62-1-ventilation-and-acceptable-indoor-air-quality/" target="_blank" rel="noopener noreferrer">ashrae-ireland.org</a></td>
     </tr>
     <tr>
-      <td>ASHRAE 62.1 Compliance Guide (2026)</td>
-      <td>Envigilance ASHRAE 62.1 ventilation standards and compliance overview</td>
-      <td><a href="https://envigilance.com/compliance/ashrae-62-1/" target="_blank" rel="noopener noreferrer">envigilance.com</a></td>
+      <td>ASHRAE Standard 62.1-2019 (Engineers Newsletter Live)</td>
+      <td>Trane course booklet covering 62.1-2019 requirements, including Section 5.9 filtration, dew-point limit, and Table 8-1</td>
+      <td><a href="https://www.trane.com/content/dam/Trane/Commercial/global/learning-center/enl-booklets/APP-CMC077-EN_booklet.pdf" target="_blank" rel="noopener noreferrer">trane.com (PDF)</a></td>
+    </tr>
+    <tr>
+      <td>Addendum h to ANSI/ASHRAE Standard 62.1-2013</td>
+      <td>ASHRAE addendum text including outdoor air particulate filtration requirements (MERV 6 and MERV 11)</td>
+      <td><a href="https://www.ashrae.org/file%20library/technical%20resources/standards%20and%20guidelines/standards%20addenda/62_1_2013_h_20160302.pdf" target="_blank" rel="noopener noreferrer">ashrae.org (PDF)</a></td>
+    </tr>
+    <tr>
+      <td>ASHRAE 62.1 Ventilation Rates: The 2022 Ventilation Rate Procedure and 2024 IMC</td>
+      <td>DataDrivenAEC extract of IMC Table 403.3.1.1 ventilation rates</td>
+      <td><a href="https://datadrivenaec.com/insights/ashrae-62-1-ventilation-rates" target="_blank" rel="noopener noreferrer">datadrivenaec.com</a></td>
+    </tr>
+    <tr>
+      <td>403.3.1.1 Outdoor Airflow Rate</td>
+      <td>UpCodes (Pennsylvania Mechanical Code 2021, based on the IMC)</td>
+      <td><a href="https://up.codes/s/outdoor-airflow-rate" target="_blank" rel="noopener noreferrer">up.codes</a></td>
+    </tr>
+    <tr>
+      <td>ASHRAE Position Document on Indoor Carbon Dioxide</td>
+      <td>ASHRAE position document (approved February 12, 2025) on indoor CO2 as a ventilation and IAQ indicator</td>
+      <td><a href="https://www.ashrae.org/file%20library/about/position%20documents/pd-on-indoor-carbon-dioxide-english.pdf" target="_blank" rel="noopener noreferrer">ashrae.org (PDF)</a></td>
+    </tr>
+    <tr>
+      <td>Ensuring ASHRAE 62.1 Compliance for CO2 Sensors in DCV</td>
+      <td>Kaiterra summary of ASHRAE 62.1-2022 CO2 sensor requirements</td>
+      <td><a href="https://learn.kaiterra.com/en/resources/ensuring-ashrae-62.1-compliance-for-co2-sensors-in-demand-controlled-ventilation-dcv" target="_blank" rel="noopener noreferrer">kaiterra.com</a></td>
     </tr>
     <tr>
       <td>OSHA Indoor Air Quality Overview</td>
-      <td>OSHA official IAQ overview page covering employer obligations and recommendations</td>
+      <td>OSHA IAQ page covering employer obligations and state IAQ regulations</td>
       <td><a href="https://www.osha.gov/indoor-air-quality" target="_blank" rel="noopener noreferrer">osha.gov</a></td>
     </tr>
     <tr>
@@ -540,19 +559,14 @@ Achieving and maintaining IAQ compliance in commercial buildings requires coordi
       <td><a href="https://www.osha.gov/otm/section-3-health-hazards/chapter-2" target="_blank" rel="noopener noreferrer">osha.gov</a></td>
     </tr>
     <tr>
-      <td>Indoor Air Quality Monitoring: 2025 Compliance Rules</td>
-      <td>Envigilance summary of 2025 IAQ monitoring compliance changes</td>
-      <td><a href="https://envigilance.com/indoor-air-quality-monitoring-key-2025-changes-for-facilities/" target="_blank" rel="noopener noreferrer">envigilance.com</a></td>
+      <td>29 CFR 1910.1001 -- Asbestos</td>
+      <td>Cornell LII text of OSHA's general industry asbestos standard</td>
+      <td><a href="https://www.law.cornell.edu/cfr/text/29/1910.1001" target="_blank" rel="noopener noreferrer">law.cornell.edu</a></td>
     </tr>
     <tr>
-      <td>ASHRAE 62.1 CO2 Sensor DCV Compliance Guide</td>
-      <td>Kaiterra guide to ensuring ASHRAE 62.1 compliance for CO2 sensors in DCV systems</td>
-      <td><a href="https://learn.kaiterra.com/en/resources/ensuring-ashrae-62.1-compliance-for-co2-sensors-in-demand-controlled-ventilation-dcv" target="_blank" rel="noopener noreferrer">kaiterra.com</a></td>
-    </tr>
-    <tr>
-      <td>ASHRAE Position Document on Indoor CO2</td>
-      <td>ASHRAE official position document on indoor carbon dioxide as a ventilation indicator</td>
-      <td><a href="https://www.ashrae.org/file%20library/about/position%20documents/pd-on-indoor-carbon-dioxide-english.pdf" target="_blank" rel="noopener noreferrer">ashrae.org (PDF)</a></td>
+      <td>ANSI/ASHRAE Standard 52.2-2017</td>
+      <td>ASHRAE method of test for air-cleaning devices, including MERV Table 12-1</td>
+      <td><a href="https://www.ashrae.org/File%20Library/Technical%20Resources/COVID-19/52_2_2017_COVID-19_20200401.pdf" target="_blank" rel="noopener noreferrer">ashrae.org (PDF)</a></td>
     </tr>
     <tr>
       <td>EPA: What is a MERV Rating?</td>
@@ -560,19 +574,9 @@ Achieving and maintaining IAQ compliance in commercial buildings requires coordi
       <td><a href="https://www.epa.gov/indoor-air-quality-iaq/what-merv-rating" target="_blank" rel="noopener noreferrer">epa.gov</a></td>
     </tr>
     <tr>
-      <td>Ferguson: MERV Ratings for Commercial Buildings</td>
-      <td>Commercial HVAC guidance on selecting MERV-rated filters by building type</td>
-      <td><a href="https://www.ferguson.com/content/ideas-and-learning-center/trade-talk/merv-ratings-commercial-buildings/" target="_blank" rel="noopener noreferrer">ferguson.com</a></td>
-    </tr>
-    <tr>
-      <td>CO2 Levels in Commercial Buildings -- R-Zero</td>
-      <td>Overview of appropriate CO2 levels in commercial buildings for productivity and comfort</td>
-      <td><a href="https://rzero.com/blog/what-is-the-right-co2-level-in-commercial-buildings-for-productivity-and-comfort/" target="_blank" rel="noopener noreferrer">rzero.com</a></td>
-    </tr>
-    <tr>
-      <td>DOE Ventilation Assessment and Action Guide (September 2025)</td>
-      <td>U.S. Department of Energy ventilation assessment framework for commercial buildings</td>
-      <td><a href="https://www.energy.gov/sites/default/files/2025-09/ventilation-assessment-and-action-guide_september-2025.pdf" target="_blank" rel="noopener noreferrer">energy.gov (PDF)</a></td>
+      <td>Indoor Air Quality Requirements and Credits in WELL v2, LEED, and RESET Air</td>
+      <td>Kaiterra comparison of green building IAQ thresholds</td>
+      <td><a href="https://learn.kaiterra.com/en/resources/indoor-air-quality-requirements-and-credits-in-well-v2-leed-v4-and-reset-air" target="_blank" rel="noopener noreferrer">kaiterra.com</a></td>
     </tr>
   </tbody>
 </table>

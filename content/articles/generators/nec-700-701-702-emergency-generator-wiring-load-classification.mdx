@@ -1,10 +1,12 @@
 ---
 title: "NEC Articles 700, 701 & 702: Emergency Generator Wiring and Load Classification Guide"
 description: "Complete guide to National Electrical Code requirements for emergency generator installations, including load classification, wiring methods, transfer switch requirements, and circuit separation."
+seoTitle: "NEC 700, 701 & 702: Generator Wiring & Load Classes"
+seoDescription: "NEC Articles 700, 701, and 702 explained: emergency vs. legally required vs. optional standby loads, wiring rules, transfer switches, and coordination."
 vertical: "generators"
 category: "compliance-guides"
 date: "2026-03-28"
-lastUpdated: "2026-03-31"
+lastUpdated: "2026-09-24"
 author: "FCH Editorial Team"
 readingTime: 18
 featured: false
@@ -17,15 +19,18 @@ keywords:
   - emergency power installation
   - legally required standby
   - generator NEC compliance
+topics: ["healthcare"]
+ctaHeadline: "Need emergency, legally required, or optional standby power installed right?"
+ctaBody: "Buffalo Power Solutions delivers turnkey generator and transfer switch installations in Texas, with loads separated and classified to NEC 700, 701, and 702."
 ---
 
 ## Why NEC Articles 700, 701, and 702 Matter for Your Facility
 
 If your commercial facility has a backup generator, you are operating under one of the most regulated areas of the National Electrical Code (NEC), formally known as NFPA 70. The NEC dedicates three separate articles to emergency and standby power systems, each with distinct requirements based on why the power is needed and what it protects.
 
-Getting the classification wrong is not a minor paperwork issue. It determines the wiring methods your electrician must use, the type of transfer switch required, how quickly power must be restored after an outage, and how your circuits are separated and labeled throughout the building. An inspector who finds emergency loads wired to the wrong standards can shut down your system until corrections are made.
+Getting the classification wrong is not a minor paperwork issue. It determines the wiring methods your electrician must use, the type of transfer switch required, how quickly power must be restored after an outage, and how your circuits are separated and labeled throughout the building. An inspector who finds emergency loads wired to the wrong standards can require corrections before the system is accepted.
 
-This guide explains how all three articles work together, what each one requires, and what facility managers need to know to keep their installations compliant.
+This guide explains how all three articles work together, what each one requires, and what facility managers need to know to keep their installations compliant. Section numbers below are from the 2023 NEC unless noted. The 2026 NEC has been published and renumbers several Article 700 sections (for example, tests and maintenance moved from 700.3 to 700.4, transfer equipment from 700.5 to 700.6, and surge protection from 700.8 to 700.9), so check which edition your jurisdiction enforces.
 
 ## The Three-Tier Load Classification System
 
@@ -33,48 +38,48 @@ The NEC organizes backup power loads into three distinct categories. The classif
 
 ### Article 700: Emergency Systems
 
-Article 700 covers circuits and equipment that supply power essential for safety to human life. These are the loads where failure of the backup system could directly result in death or serious injury. Emergency systems exist to allow people to safely exit a building and to support active firefighting operations.
+Article 700 covers systems legally required and classed as emergency by municipal, state, federal, or other codes, or by a governmental agency having jurisdiction. They automatically supply illumination, power, or both to designated areas and equipment when the normal supply fails, and they exist for safety to human life: allowing people to exit a building safely and supporting firefighting operations.
 
-**Common Article 700 loads include:**
+**Common Article 700 loads (from the NEC's informational note examples) include:**
 
 - Exit signs and emergency egress lighting
-- Fire alarm and detection systems
-- Fire pump controllers (where required by the AHJ)
-- Smoke control and stairwell pressurization systems
-- Emergency communication systems
-- Elevator cab lighting and emergency recall circuits
+- Fire detection and alarm systems
+- Fire pumps (fire pump installations are also governed by NEC Article 695)
+- Elevators
+- Public safety and emergency communication systems
+- Ventilation where essential to maintain life
 
-The defining characteristic of an Article 700 load is that it is legally required by a municipal, state, federal, or other code and is directly tied to the preservation of human life.
+The defining characteristic of an Article 700 load is that it is legally required by a code or governmental agency and classed as emergency because it is directly tied to the preservation of human life.
 
 ### Article 701: Legally Required Standby Systems
 
-Article 701 addresses loads that are required by code but are not classified as emergency (life safety) loads. These systems support firefighting and rescue operations, control health hazards, or prevent conditions that could endanger occupants, but they are one step removed from the immediate life safety functions covered by Article 700.
+Article 701 addresses loads that are required by code but are not classified as emergency loads. These systems supply power to selected loads when the normal source fails, where loss of power could create hazards or hamper rescue or firefighting operations.
 
-**Common Article 701 loads include:**
+**Common Article 701 loads (from the NEC's informational note examples) include:**
 
-- Heating and refrigeration systems (where loss would endanger occupants)
+- Heating and refrigeration systems
+- Communication systems
 - Ventilation and smoke removal systems
-- Sewage lift pumps and sump pumps
-- Industrial process ventilation (where shutdown creates toxic exposure)
-- Communication systems required by the building code
-- Lighting for areas critical to rescue operations
+- Sewage disposal
+- Lighting systems
+- Industrial processes that, if stopped, could create hazards or hamper rescue or firefighting operations
 
-The AHJ ultimately determines which loads fall under Article 701 based on local building and fire code requirements. If a code requires the load to have backup power but it does not qualify as a life safety load under Article 700, it belongs under Article 701.
+The building code often assigns specific loads to standby rather than emergency power. For example, the IBC lists smoke control systems under standby power. The AHJ ultimately determines which loads fall under Article 701. If a code requires the load to have backup power but does not class it as emergency, it belongs under Article 701.
 
 ### Article 702: Optional Standby Systems
 
-Article 702 covers backup power that is not required by any code. These systems are installed at the owner's discretion to protect against financial loss, business interruption, or inconvenience during a power outage. Life safety does not depend on the performance of an optional standby system.
+Article 702 covers backup power that is not required by any code. These systems are installed at the owner's discretion to protect public or private facilities or property where life safety does not depend on the performance of the system, typically to avoid financial loss, business interruption, or inconvenience during a power outage.
 
 **Common Article 702 loads include:**
 
 - HVAC comfort systems
 - Refrigeration for food storage or pharmaceuticals
-- Data center and IT equipment
+- Data processing and communication equipment
 - Security cameras and access control (where not code-required)
 - General office lighting and receptacles
 - Production and manufacturing equipment
 
-Optional standby systems have the least restrictive NEC requirements of the three categories, but they still carry obligations around transfer switch installation, signage, and load calculations.
+Optional standby systems have the least restrictive NEC requirements of the three categories, but they still carry obligations around transfer equipment, signage, and capacity.
 
 ## Side-by-Side Comparison of Requirements
 
@@ -98,42 +103,42 @@ The practical differences between these three articles affect every aspect of yo
 </tr>
 <tr>
 <td>Maximum power restoration time</td>
-<td>10 seconds</td>
-<td>60 seconds</td>
+<td>10 seconds (700.12)</td>
+<td>60 seconds (701.12)</td>
 <td>Not specified</td>
 </tr>
 <tr>
 <td>Transfer switch type</td>
-<td>Automatic, listed for emergency use</td>
-<td>Automatic</td>
-<td>Manual or automatic permitted</td>
+<td>Automatic, listed, and marked for emergency use; supplies only emergency loads</td>
+<td>Automatic, listed, and marked for emergency or legally required standby use</td>
+<td>Manual or automatic permitted; must prevent inadvertent interconnection of sources</td>
 </tr>
 <tr>
-<td>Minimum on-site fuel supply</td>
+<td>Minimum on-site fuel supply (engine-driven generator)</td>
 <td>2 hours at full demand</td>
 <td>2 hours at full demand</td>
 <td>Not specified by NEC</td>
 </tr>
 <tr>
 <td>Wiring separation required</td>
-<td>Yes -- fully independent from all other wiring</td>
-<td>Yes -- independent from non-standby wiring (with some exceptions)</td>
+<td>Yes -- entirely independent of all other wiring, with limited exceptions (700.10)</td>
+<td>No -- may share raceways, cables, boxes, and cabinets with general wiring (701.10)</td>
 <td>No -- may share raceways with general wiring</td>
 </tr>
 <tr>
 <td>Selective coordination of overcurrent devices</td>
-<td>Required (700.27)</td>
-<td>Required (701.27)</td>
+<td>Required (700.32)</td>
+<td>Required (701.32)</td>
 <td>Not required</td>
 </tr>
 <tr>
 <td>Surge protection (SPD)</td>
-<td>Required (NEC 2023)</td>
-<td>Required (NEC 2023)</td>
-<td>Not specifically required</td>
+<td>Required on emergency switchgear, switchboards, and panelboards (700.8; 700.9 in the 2026 NEC)</td>
+<td>Confirm with your AHJ and adopted edition</td>
+<td>Confirm with your AHJ and adopted edition</td>
 </tr>
 <tr>
-<td>Acceptance testing by AHJ</td>
+<td>Acceptance test witnessed or conducted by AHJ</td>
 <td>Required</td>
 <td>Required</td>
 <td>Not required by NEC</td>
@@ -142,16 +147,16 @@ The practical differences between these three articles affect every aspect of yo
 <td>Periodic testing and maintenance</td>
 <td>Required with written records</td>
 <td>Required with written records</td>
-<td>Recommended but not mandated</td>
+<td>Recommended but not mandated by NEC</td>
 </tr>
 </tbody>
 </table>
 
-The most critical difference is the power restoration time. Emergency systems under Article 700 must restore power within 10 seconds, which effectively mandates a generator that is always in a ready-to-start condition with automatic controls. Legally required standby systems under Article 701 have 60 seconds, which still requires automatic operation but allows slightly more tolerance in the startup sequence.
+The most critical difference is the power restoration time. Emergency systems under Article 700 must make power available within the time required for the application, but not more than 10 seconds, which effectively mandates a generator that is always in a ready-to-start condition with automatic controls. Legally required standby systems under Article 701 have 60 seconds, which still requires automatic operation but allows slightly more tolerance in the startup sequence.
 
 ## Wiring Methods and Circuit Separation
 
-The wiring requirements represent the area where the three articles diverge most significantly, and where AHJ inspectors focus much of their attention during facility inspections.
+The wiring requirements represent the area where the three articles diverge most significantly, and where AHJ inspectors focus much of their attention.
 
 ### Article 700 Wiring Independence (Section 700.10)
 
@@ -159,101 +164,104 @@ Emergency system wiring must be kept entirely independent of all other wiring an
 
 **What independence means in practice:**
 
-- Emergency circuits must run in their own dedicated raceways, cables, boxes, and cabinets
-- Emergency wiring cannot share a conduit or cable tray with normal power or legally required standby circuits
-- Emergency distribution panels must be physically separate from normal and standby panels
-- Transfer switches, generators, and power panels that serve emergency loads must be marked for easy identification as components of the emergency system
+- Emergency circuits run in their own raceways, cables, boxes, and cabinets
+- Emergency wiring cannot share a conduit or cable tray with normal power, legally required standby, or optional standby circuits
+- Where one generator feeds emergency and other loads, the emergency loads must be separated in their own vertical switchgear sections, and emergency wiring cannot originate from the same section as other circuits
+- Transfer switches, generators, and power panels that serve emergency loads must be marked as components of the emergency system
 
-There are limited exceptions. Multiple emergency circuits supplied from the same source may share the same raceway, cable, box, or cabinet with each other. Additionally, emergency and normal wiring may occupy the same enclosure at the transfer switch point where both sources must be present by design.
+Emergency circuits can of course share raceways with other emergency circuits. The NEC also lists specific exceptions where emergency and other wiring may be in the same enclosure, including wiring from the normal source inside transfer equipment enclosures, exit or emergency luminaires supplied from two sources, listed load control relays and common junction boxes serving emergency luminaires or unit equipment, and the traveling cable to an elevator.
 
 ### Identification and Marking Requirements
 
-Section 700.10(A) requires all boxes, enclosures, transfer switches, generators, and panels serving emergency systems to be permanently marked as part of the emergency system. Exposed cables and raceways must be marked at intervals not exceeding 25 feet.
+Section 700.10(A) requires emergency circuit wiring to be permanently marked so it is readily identified as a component of an emergency circuit or system: all boxes and enclosures, and exposed cable or raceway systems at intervals not exceeding 25 feet.
 
-Receptacles supplied from the emergency system must be visually distinctive. The most common approach is using a distinctive color, typically red, or applying permanent labeling to the receptacle or its cover plate. This prevents maintenance staff or occupants from inadvertently plugging non-emergency loads into emergency circuits.
+Receptacles supplied from the emergency system must have a distinctive color or marking on the receptacle or its cover plate. This prevents maintenance staff or occupants from inadvertently plugging non-emergency loads into emergency circuits.
 
 ### Article 701 Wiring Requirements
 
-Legally required standby systems also require wiring separation from general building circuits, though the NEC permits slightly more flexibility than it does for emergency circuits. Article 701 wiring must be independent of general wiring but may share raceways with emergency circuits under certain conditions, provided the AHJ approves.
+Unlike emergency wiring, legally required standby system wiring is permitted to occupy the same raceways, cables, boxes, and cabinets as general wiring (701.10). The separation that matters for Article 701 systems is at the source and transfer equipment, not in the branch wiring.
 
-Panels, transfer switches, and enclosures serving legally required standby loads must also be identified and marked, following requirements similar to those in Article 700.
+Legally required standby systems also need signage at the service entrance indicating the type and location of on-site standby power sources, and panels and transfer switches should be clearly identified to prevent confusion during maintenance.
 
 ### Article 702 Wiring Flexibility
 
-Optional standby system wiring is permitted to occupy the same raceways, cables, boxes, and cabinets as general building wiring. This is a significant practical benefit because it reduces the installation cost and complexity for loads that do not have life safety implications.
+Optional standby system wiring is also permitted to occupy the same raceways, cables, boxes, and cabinets as general building wiring. This is a significant practical benefit because it reduces the installation cost and complexity for loads that do not have life safety implications.
 
-The primary wiring requirement for Article 702 systems is proper signage identifying the alternate source of power at the building service entrance and at transfer equipment locations.
+The primary identification requirement for Article 702 systems is a sign at the service disconnecting means indicating the presence of the optional standby source, along with the required markings on the transfer equipment.
 
 ## Transfer Switch Requirements
 
-The transfer switch is the device that disconnects your facility from the utility grid and connects it to the generator output. The NEC treats transfer switches as a critical safety component because an improperly installed switch can backfeed power onto utility lines, creating life-threatening conditions for line workers and the public.
+The transfer switch is the device that disconnects your facility loads from the utility supply and connects them to the generator output. The NEC treats transfer equipment as a critical safety component because an improperly installed switch can interconnect the two sources and backfeed power onto utility lines, creating life-threatening conditions for line workers and the public.
 
 ### Emergency Systems (Article 700)
 
-Article 700 requires an automatic transfer switch (ATS) that is listed and approved for emergency system use. The ATS must sense the loss of normal power and initiate the generator start sequence without any human intervention. The entire sequence, from utility failure detection through generator start and load transfer, must be complete within 10 seconds.
+Article 700 requires transfer equipment that is automatic, listed, and marked for emergency system or legally required standby use. Automatic transfer switches must be electrically operated and mechanically held, meter-mounted transfer switches are not permitted, and emergency transfer equipment may supply only emergency loads. When the normal supply fails, the generator must start automatically and the complete sequence -- failure detection, generator start, and load transfer -- must deliver power within 10 seconds.
 
 Key requirements for Article 700 transfer switches:
 
-- Must be automatic with no manual intervention required
-- Must be listed for emergency or legally required standby use
-- Must include status indication (audible and visual signals for system condition)
-- Must prevent any possibility of backfeed to the utility source
-- Must be accessible only to authorized personnel
+- Must be automatic, with no manual intervention required
+- Must be listed and marked for emergency or legally required standby use
+- Must supply only emergency loads
+- Must prevent interconnection of the normal and emergency sources (except as permitted for interconnected power production sources)
+- The system must provide audible and visual signals for malfunction of the emergency source, the source carrying load, battery charger failure, and (on larger systems) ground faults
+
+Where emergency loads are served by a single feeder in certain large assembly, high-rise, and educational occupancies, the 2026 NEC also requires bypass isolation or equivalent equipment so the transfer switch can be serviced safely.
 
 ### Legally Required Standby (Article 701)
 
-Article 701 also requires automatic transfer, but the 60-second restoration window provides more margin. The transfer equipment must be listed and marked for emergency or legally required standby use, and it must include audible and visual signal devices indicating system status, load carrying status, and ground fault conditions.
+Article 701 also requires automatic transfer, but the 60-second restoration window provides more margin. The transfer equipment must be automatic, listed, and marked for emergency system or legally required standby use, and meter-mounted transfer switches are not permitted. Signal devices must indicate malfunction of the standby source, whether the source is carrying load, battery charger malfunction, and ground faults on specified systems.
 
 ### Optional Standby (Article 702)
 
-Article 702 permits either manual or automatic transfer equipment. A manual transfer switch is acceptable because optional standby loads are not life safety loads, and a brief delay while an operator switches the power source is considered acceptable.
+Article 702 permits either manual or automatic transfer equipment. A manual transfer switch is acceptable because optional standby loads are not life safety loads. The choice affects sizing: with manual transfer, the source must be able to carry all the loads the operator will connect, while with automatic transfer it must carry the full load or use an energy management system to limit it.
 
-Regardless of whether the switch is manual or automatic, the transfer equipment must be designed and installed to prevent inadvertent interconnection of the normal utility source and the generator. This backfeed prevention requirement applies universally across all three articles.
+Regardless of whether the switch is manual or automatic, the transfer equipment must be listed and installed to prevent inadvertent interconnection of the normal utility source and the generator. This backfeed prevention requirement applies across all three articles.
 
 ## Overcurrent Protection and Selective Coordination
 
-Both Article 700 and Article 701 require selective coordination of overcurrent protective devices. This means that if a fault occurs on a branch circuit, only the overcurrent device immediately upstream of the fault should trip. The main breaker and other upstream devices should remain closed, keeping power flowing to all unaffected circuits.
+Both Article 700 and Article 701 require selective coordination of overcurrent protective devices (700.32 and 701.32). This means that if a fault occurs on a branch circuit, only the overcurrent device immediately upstream of the fault should open. Upstream devices should remain closed, keeping power flowing to all unaffected circuits.
 
-Without selective coordination, a fault on a single emergency lighting circuit could trip a main breaker and take down the entire emergency system, including fire alarm panels, exit signs, and smoke control systems. That scenario is exactly what selective coordination is designed to prevent.
+Without selective coordination, a fault on a single emergency lighting circuit could trip an upstream breaker and take down a large part of the emergency system, including fire alarm panels and exit signs. That scenario is exactly what selective coordination is designed to prevent.
 
 **What this means for facility managers:**
 
-- Your electrical engineer must perform a coordination study as part of the system design
-- Breakers and fuses must be selected and set so that downstream devices trip before upstream devices for any fault current
-- The coordination study documentation should be kept on file for AHJ review
-- Any changes to breakers or panel configurations require re-evaluation of coordination
+- Selective coordination must be selected by a licensed professional engineer or another qualified person who specializes in such studies
+- Breakers and fuses must be selected and set so that downstream devices open before upstream devices across the full range of fault currents
+- The selection must be documented and made available to authorized personnel, including those who inspect, maintain, and operate the system
+- Under the 2026 NEC, coordination must be re-evaluated whenever overcurrent devices are replaced or the emergency system is modified, added to, or reduced
 
 Article 702 does not require selective coordination, though it remains good engineering practice for any standby system.
 
 ## Fuel Supply and On-Site Storage
 
-Articles 700 and 701 both require a minimum of 2 hours of on-site fuel supply at full rated demand. This requirement applies when the generator uses an internal combustion engine as its prime mover, which covers the vast majority of commercial emergency generators running on diesel, natural gas, or propane.
+Articles 700 and 701 both require generator sets driven by internal combustion engines to have an on-site fuel supply sufficient for not less than 2 hours of full-demand operation. This covers the vast majority of commercial emergency generators running on diesel, natural gas, or propane.
 
-The 2-hour minimum is a floor, not a target. Many facilities maintain significantly more fuel on site based on risk assessments, AHJ requirements, or referenced standards like NFPA 110. Healthcare facilities, for example, often maintain 24 to 96 hours of fuel depending on their classification.
+The 2-hour minimum is a floor, not a target. Many facilities maintain significantly more fuel on site based on risk assessments, AHJ requirements, or referenced standards like NFPA 110, where the required run time is set by the system's Class. Healthcare generators, for example, are designated Class X, with the run time set by the AHJ, other codes, or the facility's emergency plan.
 
 **Practical fuel supply considerations:**
 
 - Fuel calculations must account for the full connected emergency and standby load, not just anticipated operating load
+- Where fuel transfer pumps are needed, they must be powered from the emergency system
 - Fuel quality and storage tank integrity directly affect whether your generator will start when needed
 - Local fire codes may impose additional requirements on fuel tank placement, containment, and monitoring
-- Natural gas systems connected to a reliable utility supply may satisfy the fuel requirement without on-site storage, subject to AHJ approval
+- Prime movers cannot be solely dependent on a public utility gas system for fuel or on a municipal water supply for cooling, unless the AHJ approves an exception based on a low probability of simultaneous failure of the normal power and gas supplies
 
 ## Testing, Maintenance, and Record Keeping
 
 ### Required Testing Under Articles 700 and 701
 
-The NEC requires that emergency and legally required standby systems undergo an acceptance test witnessed or conducted by the AHJ before the system is placed into service. This initial test verifies that the generator starts, transfers, and carries the connected loads within the required timeframes.
+The NEC requires the AHJ to conduct or witness a test of the complete emergency or legally required standby system upon installation, and for emergency systems periodically thereafter (700.3(A) and 701.3(A)). This commissioning test verifies that the generator starts, transfers, and carries the connected loads within the required timeframes.
 
-After commissioning, the NEC requires periodic testing and maintenance in accordance with manufacturer recommendations and applicable standards. While the NEC itself does not specify weekly or monthly intervals, the referenced standard NFPA 110 provides detailed testing schedules that most AHJs enforce:
+After commissioning, systems must be tested periodically on a schedule approved by the AHJ, and maintained in accordance with manufacturer instructions and industry standards. Emergency systems must also include a means for testing all emergency lighting and power systems during maximum anticipated load conditions. While the NEC itself does not specify weekly or monthly intervals, [NFPA 110](/generators/nfpa-110-emergency-generator-compliance-guide) provides the detailed testing schedule that most AHJs enforce:
 
-- **Weekly:** Visual inspections of the generator, transfer switch, and fuel system
-- **Monthly:** Generator run test under load, typically for a minimum of 30 minutes
-- **Annually:** Full-load or near-full-load testing for a minimum duration, often 2 hours
-- **Every 36 months:** Extended load bank testing for Level 1 systems (4 hours at rated load)
+- **Weekly:** Inspection of the generator, transfer switches, and fuel system
+- **Monthly:** Generator exercise under load for at least 30 minutes, at not less than 30% of nameplate kW or the manufacturer's recommended minimum exhaust gas temperature for diesel units
+- **Annually (only if monthly loading falls short):** Supplemental [load bank testing](/generators/load-bank-testing-requirements-commercial-generators) for 1.5 continuous hours -- 30 minutes at 50% of nameplate, then 60 minutes at 75%
+- **Every 36 months:** A 4-hour continuous test for Level 1 systems, at not less than 30% of nameplate kW or the minimum exhaust gas temperature
 
 ### Record Keeping Obligations
 
-Both Articles 700 and 701 require written records of all testing and maintenance activities. These records must be available for AHJ review during inspections. A missing or incomplete maintenance log is one of the most common generator compliance violations cited by inspectors.
+Both Articles 700 and 701 require a written record of all required tests and maintenance (the 2026 NEC allows a written or digital record for emergency systems). These records must be available for AHJ review during inspections. A missing or incomplete maintenance log is one of the most common generator compliance problems inspectors find.
 
 Your maintenance records should document:
 
@@ -268,35 +276,35 @@ Your maintenance records should document:
 
 ### Article 702 Systems
 
-The NEC does not mandate specific testing or maintenance for optional standby systems. However, a generator that never gets tested is a generator that may not start when you need it. Applying the same testing discipline to optional standby systems as you would to emergency systems is strongly recommended.
+The NEC does not mandate testing or maintenance for optional standby systems. However, a generator that never gets tested is a generator that may not start when you need it. Applying the same testing discipline to optional standby systems as you would to emergency systems is strongly recommended.
 
 ## Surge Protection in the 2023 NEC
 
-The 2023 edition of the NEC introduced expanded surge protective device (SPD) requirements that directly affect emergency and legally required standby systems. SPDs must be installed on emergency system panelboards and switchboards to protect sensitive equipment from transient voltage events.
+The 2023 NEC requires a listed surge protective device (SPD) to be installed in or on all emergency system switchgear, switchboards, and panelboards (700.8). The 2026 NEC moves this requirement to 700.9 and requires the SPD to be integral to or immediately adjacent to that equipment. The 2023 edition also added SPD requirements for several related systems, including fire pump controllers (695.15), elevator equipment with emergency loads (620.51(E)), fire alarm control panels (760.33), and critical operations power systems (708.20(D)).
 
-Generator systems are particularly vulnerable to voltage transients during transfer operations and during the initial moments after the generator assumes the load. SPDs help prevent damage to connected emergency equipment, including fire alarm panels, communication systems, and electronically controlled lighting.
+SPDs help protect connected emergency equipment, including fire alarm panels, communication systems, and electronically controlled lighting, from transient overvoltages.
 
-Facility managers upgrading older generator installations should verify that SPD requirements have been addressed as part of any panel replacement or system expansion project.
+Facility managers upgrading older generator installations should verify that SPD requirements for their adopted code edition have been addressed as part of any panel replacement or system expansion project.
 
 ## Common Compliance Mistakes and How to Avoid Them
 
-Understanding the code requirements is one thing. Applying them correctly across a real facility is another. These are the compliance issues that inspectors encounter most frequently.
+Understanding the code requirements is one thing. Applying them correctly across a real facility is another. These are the compliance issues inspectors encounter frequently.
 
 ### Misclassified Loads
 
-The most consequential error is placing loads under the wrong article. A fire pump controller wired as a legally required standby load (Article 701) instead of an emergency load (Article 700) means the wiring separation, transfer time, and coordination requirements are all wrong. Load classification should be established during the design phase by a qualified electrical engineer in consultation with the AHJ.
+The most consequential error is placing loads under the wrong article. Egress lighting fed through a legally required standby transfer switch (Article 701) instead of emergency transfer equipment (Article 700) means the wiring separation, transfer time, and coordination requirements are all wrong. Load classification should be established during the design phase by a qualified electrical engineer in consultation with the AHJ.
 
 ### Emergency and Normal Wiring in Shared Raceways
 
-Running emergency circuits through the same conduit as normal building wiring is a direct violation of Section 700.10(B). This violation is particularly common in renovation projects where new emergency circuits are pulled through existing conduit runs for convenience. Every emergency circuit must have its own dedicated pathway.
+Running emergency circuits through the same conduit as normal building wiring violates the independence requirement of Section 700.10(B). This violation is particularly common in renovation projects where new emergency circuits are pulled through existing conduit runs for convenience. Emergency circuits must stay in pathways that carry only emergency wiring, except for the specific exceptions the code lists.
 
 ### Missing or Incomplete Labeling
 
-Unlabeled emergency panels, transfer switches, and circuit boxes create confusion during maintenance and create a compliance finding during inspection. Every component of the emergency system must be permanently marked, and exposed raceways and cables must be identified at intervals not exceeding 25 feet.
+Unlabeled emergency panels, transfer switches, and circuit boxes create confusion during maintenance and create a compliance finding during inspection. Every box and enclosure of the emergency system must be permanently marked, and exposed raceways and cables must be identified at intervals not exceeding 25 feet.
 
 ### Overcurrent Devices That Are Not Selectively Coordinated
 
-Installing standard breakers without performing a coordination study means that a downstream fault could trip upstream devices and take down the entire emergency distribution system. Coordination studies must be performed by a qualified engineer and documented for AHJ review.
+Installing standard breakers without performing a coordination study means that a downstream fault could trip upstream devices and take down the entire emergency distribution system. Coordination must be selected by a qualified engineer or other qualified person and documented.
 
 ### Inadequate Fuel Supply Documentation
 
@@ -310,25 +318,26 @@ A generator that has not been tested in months is a compliance liability. Even i
 
 Most commercial facilities with emergency generators serve loads from more than one article. A single generator might power Article 700 emergency loads, Article 701 legally required standby loads, and Article 702 optional standby loads simultaneously.
 
-When a single generator serves multiple load categories, the most restrictive requirements generally govern the generator and its primary distribution. However, the wiring downstream of the transfer switches must comply with the specific article governing each load category.
+When a single generator serves multiple load categories, the source must meet the Article 700 requirements for the emergency loads it supplies, and the wiring downstream of the transfer switches must comply with the specific article governing each load category.
 
 **Practical implications of multi-tier generator systems:**
 
-- The generator itself must meet Article 700 requirements if it serves any emergency loads (10-second start, automatic operation, listed transfer switches)
+- The generator must meet Article 700 source requirements if it serves any emergency loads (power within 10 seconds, automatic start and transfer, 2-hour on-site fuel)
 - Emergency circuits must be wired independently per Article 700, even if the same generator also serves optional standby loads
-- Separate transfer switches are typically required for each load tier to maintain proper circuit separation and to allow load shedding priorities
-- Load shedding controls should prioritize Article 700 loads first, Article 701 loads second, and Article 702 loads last
+- Because emergency transfer equipment may supply only emergency loads, emergency loads need their own transfer switch or switches, separate from those serving standby loads
+- The NEC permits selective load pickup and load shedding so that emergency circuits are served first, legally required standby circuits second, and optional standby circuits last
 
 This multi-tier approach is standard practice in commercial and institutional buildings. Your electrical engineer should design the distribution system so that each tier can be isolated, tested, and maintained independently.
 
 ## Working With Your AHJ
 
-The Authority Having Jurisdiction has significant latitude in interpreting and enforcing NEC requirements. Building a productive working relationship with your local AHJ is one of the most practical steps a facility manager can take to maintain compliance.
+The Authority Having Jurisdiction has significant latitude in interpreting and enforcing NEC requirements, including approving the periodic testing schedule for emergency systems. Building a productive working relationship with your local AHJ is one of the most practical steps a facility manager can take to maintain compliance.
 
 **Recommendations for effective AHJ engagement:**
 
-- Invite the AHJ to witness acceptance testing of new or modified generator systems
+- Schedule the AHJ-witnessed acceptance test for new or modified generator systems early
 - Ask for clarification on load classification decisions before installation, not after
+- Confirm which edition of the NEC (2020, 2023, or 2026) your jurisdiction enforces, since section numbers differ
 - Maintain organized testing and maintenance records that are readily accessible during inspections
 - Address cited deficiencies promptly and document the corrective actions taken
 - When planning renovations or system expansions, consult with the AHJ early in the design phase to confirm that your approach aligns with local code interpretation
@@ -338,26 +347,28 @@ The AHJ is not your adversary. Inspectors are focused on ensuring that the syste
 ## Key Takeaways for Facility Managers
 
 - Every backup power load in your facility falls under Article 700 (emergency), Article 701 (legally required standby), or Article 702 (optional standby), and the classification determines your compliance obligations
-- Article 700 emergency loads carry the strictest requirements: 10-second power restoration, fully independent wiring, automatic transfer switches, and selective coordination
-- Article 701 legally required standby loads must restore power within 60 seconds and require automatic transfer, but allow slightly more wiring flexibility
-- Article 702 optional standby loads have the fewest NEC requirements, but still require proper transfer switch installation and signage
-- Wiring separation between emergency and non-emergency circuits is one of the most inspected and most violated provisions in the entire NEC
+- Article 700 emergency loads carry the strictest requirements: power within 10 seconds, fully independent wiring, automatic transfer equipment that serves only emergency loads, and selective coordination
+- Article 701 legally required standby loads must have power within 60 seconds and require automatic transfer and selective coordination, but their wiring may share raceways with general wiring
+- Article 702 optional standby loads have the fewest NEC requirements, but still require listed transfer equipment that prevents interconnection and proper signage
+- Wiring separation between emergency and non-emergency circuits is one of the most inspected provisions in the NEC
 - Testing, maintenance, and documentation are ongoing obligations, not one-time tasks completed at installation
-- When a single generator serves loads from multiple articles, the most restrictive article governs the generator itself, but each downstream circuit must comply with its own article
+- The 2026 NEC renumbered several Article 700 sections, so confirm your jurisdiction's adopted edition before citing section numbers
 
 ## Sources and References
 
-- NFPA 70: National Electrical Code (NEC), 2023 Edition -- Articles 700, 701, and 702. Published by the National Fire Protection Association. [https://www.nfpa.org/codes-and-standards/nfpa-70-standard-development/70](https://www.nfpa.org/codes-and-standards/nfpa-70-standard-development/70)
-- NFPA 110: Standard for Emergency and Standby Power Systems, 2022 Edition. Published by the National Fire Protection Association. [https://www.nfpa.org/codes-and-standards/nfpa-110-standard-development/110](https://www.nfpa.org/codes-and-standards/nfpa-110-standard-development/110)
-- EC&M, "Article 700: Emergency Systems." [https://www.ecmweb.com/national-electrical-code/code-basics/article/20891942/article-700-emergency-systems](https://www.ecmweb.com/national-electrical-code/code-basics/article/20891942/article-700-emergency-systems)
+- NFPA 70: National Electrical Code (NEC) -- document information and edition history. Published by the National Fire Protection Association. [https://www.nfpa.org/codes-and-standards/nfpa-70-standard-development/70](https://www.nfpa.org/codes-and-standards/nfpa-70-standard-development/70)
+- NFPA 110: Standard for Emergency and Standby Power Systems. Published by the National Fire Protection Association. [https://www.nfpa.org/codes-and-standards/nfpa-110-standard-development/110](https://www.nfpa.org/codes-and-standards/nfpa-110-standard-development/110)
+- ESL Power Systems, "Review of 2026 NEC Article 700 Emergency Systems." [https://eslpwr.com/wp-content/PDF/Webinar%20-%202026%20NEC%20Article%20700%20(PDH).pdf](https://eslpwr.com/wp-content/PDF/Webinar%20-%202026%20NEC%20Article%20700%20(PDH).pdf)
+- EC&M (Mike Holt), "NEC Requirements for Standby Power Systems" (2023 NEC). [https://www.ecmweb.com/national-electrical-code/code-basics/article/21283566/nec-requirements-for-standby-power-systems](https://www.ecmweb.com/national-electrical-code/code-basics/article/21283566/nec-requirements-for-standby-power-systems)
 - EC&M, "NEC Requirements for Emergency and Standby Systems." [https://www.ecmweb.com/national-electrical-code/code-basics/article/55285564/nec-requirements-for-emergency-and-standby-systems](https://www.ecmweb.com/national-electrical-code/code-basics/article/55285564/nec-requirements-for-emergency-and-standby-systems)
-- EC&M, "Legally Required and Optional Standby Systems." [https://www.ecmweb.com/national-electrical-code/code-basics/article/20891075/legally-required-and-optional-standby-systems](https://www.ecmweb.com/national-electrical-code/code-basics/article/20891075/legally-required-and-optional-standby-systems)
+- EC&M (Mike Holt), "Legally Required and Optional Standby Systems" (2005 NEC background). [https://www.ecmweb.com/national-electrical-code/code-basics/article/20891075/legally-required-and-optional-standby-systems](https://www.ecmweb.com/national-electrical-code/code-basics/article/20891075/legally-required-and-optional-standby-systems)
+- IAEI Magazine, "Emergency and Standby Power for Commercial Occupancies." [https://iaeimagazine.org/issue/july-august-2021/emergency-and-standby-power-for-commercial-occupancies/](https://iaeimagazine.org/issue/july-august-2021/emergency-and-standby-power-for-commercial-occupancies/)
 - JADE Learning, "National Electrical Code Articles 701 and 702." [https://www.jadelearning.com/blog/national-electrical-code-articles-701-and-702-legally-required-and-optional-standby-systems/](https://www.jadelearning.com/blog/national-electrical-code-articles-701-and-702-legally-required-and-optional-standby-systems/)
 - Code Red Consultants, "Emergency and Standby Power." [https://coderedconsultants.com/insights/emergency-and-standby-power/](https://coderedconsultants.com/insights/emergency-and-standby-power/)
+- Connecticut Department of Administrative Services, "IBC Section 2702 Emergency and Standby Power Systems." [https://portal.ct.gov/-/media/DAS/OEDM/2015-CD-HO/ibc_section_2702_emergency_and_standby_power_systems.pdf?la=en](https://portal.ct.gov/-/media/DAS/OEDM/2015-CD-HO/ibc_section_2702_emergency_and_standby_power_systems.pdf?la=en)
 - Citel, "NEC 2023 Article 700 Emergency Systems." [https://citel.us/en/nec-2023-article-700-emergency-systems](https://citel.us/en/nec-2023-article-700-emergency-systems)
-- SolveForce, "NEC Article 700: Emergency Systems." [https://solveforce.com/nec-article-700-emergency-systems-sections-700-1-to-700-32/](https://solveforce.com/nec-article-700-emergency-systems-sections-700-1-to-700-32/)
-- SolveForce, "NEC Article 701: Legally Required Standby Systems." [https://solveforce.com/nec-article-701-legally-required-standby-systems-sections-701-1-to-701-32/](https://solveforce.com/nec-article-701-legally-required-standby-systems-sections-701-1-to-701-32/)
-- SolveForce, "NEC Article 702: Optional Standby Systems." [https://solveforce.com/nec-article-702-optional-standby-systems-sections-702-1-to-702-12/](https://solveforce.com/nec-article-702-optional-standby-systems-sections-702-1-to-702-12/)
-- UpCodes, "700.10 Wiring, Emergency System." [https://up.codes/s/wiring-emergency-system](https://up.codes/s/wiring-emergency-system)
-- W Power Products, "NEC 700.3 Code Language: Tests and Maintenance." [https://www.wpowerproducts.com/engine-and-generator-service/nec7003/](https://www.wpowerproducts.com/engine-and-generator-service/nec7003/)
+- Leviton, "NEC Code Requirements for Surge." [https://leviton.com/products/commercial/surge-protection/nec-code-requirements-for-surge](https://leviton.com/products/commercial/surge-protection/nec-code-requirements-for-surge)
 - Curtis Power Solutions, "Emergency vs. Standby Systems: What is the Difference?" [https://www.curtispowersolutions.com/news/emergency-vs.-standby-systems-what-is-the-difference](https://www.curtispowersolutions.com/news/emergency-vs.-standby-systems-what-is-the-difference)
+- Clifford Power Systems, "NFPA 110 Levels 1 and 2 Standards for Generator Systems." [https://cliffordpower.com/wp-content/uploads/2024/02/IS_25_NFPA110_Level1_2-REV-11-1-19.pdf](https://cliffordpower.com/wp-content/uploads/2024/02/IS_25_NFPA110_Level1_2-REV-11-1-19.pdf)
+- Health Facilities Management (HFM) Magazine, "Complying with Inspection, Testing and Maintenance for Electrical Systems." [https://www.hfmmagazine.com/articles/4461-complying-with-inspection-testing-and-maintenance-for-electrical-systems](https://www.hfmmagazine.com/articles/4461-complying-with-inspection-testing-and-maintenance-for-electrical-systems)
+- CMS State Operations Manual Appendix Z, Emergency Preparedness (Tag E-0041). [https://www.cms.gov/Regulations-and-Guidance/Guidance/Manuals/downloads/som107ap_z_emergprep.pdf](https://www.cms.gov/Regulations-and-Guidance/Guidance/Manuals/downloads/som107ap_z_emergprep.pdf)

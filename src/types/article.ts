@@ -9,6 +9,10 @@ export type ArticleCategory =
 export interface ArticleFrontmatter {
   title: string;
   description: string;
+  /** <title> tag (max 60 chars, no site name). Falls back to title. */
+  seoTitle?: string;
+  /** Meta description (max 160 chars). Falls back to description. */
+  seoDescription?: string;
   vertical: string;
   category: ArticleCategory;
   date: string;
@@ -21,6 +25,11 @@ export interface ArticleFrontmatter {
   draft?: boolean;
   readingTime?: number;
   relatedSlugs?: string[];
+  /** Topic hubs this article belongs to, e.g. ["healthcare"] */
+  topics?: string[];
+  /** Headline for the in-article sponsor CTA (shown before the 2nd H2) */
+  ctaHeadline?: string;
+  ctaBody?: string;
 }
 
 export interface Article extends ArticleFrontmatter {

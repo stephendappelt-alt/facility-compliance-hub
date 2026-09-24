@@ -1,6 +1,8 @@
 import { compileMDX } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
 import Callout from "./Callout";
+import PrintButton from "./PrintButton";
+import PrintableLog from "./PrintableLog";
 
 function slugify(text: string) {
   return text
@@ -34,16 +36,22 @@ const components = {
     </div>
   ),
   Callout,
+  PrintButton,
+  PrintableLog,
 };
 
 interface MDXContentProps {
   source: string;
+  extraComponents?: Record<string, React.ComponentType>;
 }
 
-export default async function MDXContent({ source }: MDXContentProps) {
+export default async function MDXContent({
+  source,
+  extraComponents,
+}: MDXContentProps) {
   const { content } = await compileMDX({
     source,
-    components,
+    components: { ...components, ...extraComponents },
     options: {
       parseFrontmatter: false,
       mdxOptions: { remarkPlugins: [remarkGfm] },

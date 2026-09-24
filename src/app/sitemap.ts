@@ -7,20 +7,34 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const articles = getAllArticles();
   const verticals = getAllVerticals();
 
+  // Use real content dates so lastmod only changes when content does
+  const modified = (list: typeof articles) =>
+    new Date(
+      Math.max(...list.map((a) => new Date(a.lastUpdated || a.date).getTime()))
+    );
+  const healthcare = articles.filter((a) => a.topics?.includes("healthcare"));
+
   const staticPages = [
-    { url: siteConfig.url, lastModified: new Date(), priority: 1.0 },
-    {
-      url: `${siteConfig.url}/about`,
-      lastModified: new Date(),
-      priority: 0.7,
-    },
+    { url: siteConfig.url, lastModified: modified(articles), priority: 1.0 },
+    { url: `${siteConfig.url}/about`, priority: 0.5 },
   ];
 
-  const verticalPages = verticals.map((v) => ({
+  // Only list verticals that have published articles (skip "coming soon" pages)
+  const verticalPages = verticals
+    .filter((v) => articles.some((a) => a.vertical === v.slug))
+    .map((v) => ({
     url: `${siteConfig.url}/${v.slug}`,
-    lastModified: new Date(),
+    lastModified: modified(articles.filter((a) => a.vertical === v.slug)),
     priority: 0.9,
   }));
+
+  const hubPages = [
+    {
+      url: `${siteConfig.url}/healthcare`,
+      lastModified: modified(healthcare),
+      priority: 0.9,
+    },
+  ];
 
   const articlePages = articles.map((a) => ({
     url: `${siteConfig.url}${a.url}`,
@@ -28,5 +42,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...staticPages, ...verticalPages, ...articlePages];
+  return [...staticPages, ...hubPages, ...verticalPages, ...articlePages];
 }
