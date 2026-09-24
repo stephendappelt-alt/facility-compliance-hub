@@ -18,45 +18,147 @@
   }
 }
 
-/* Printable logs: on pages that contain one, print only the forms */
+/* ---------- Printable generator test log (GeneratorTestLog.tsx) ---------- */
+
+.log-sheet {
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  background: #fff;
+  padding: 1.5rem;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.04), 0 8px 24px -12px rgb(12 74 110 / 0.18);
+}
+
+.log-table {
+  width: 100%;
+  min-width: 760px;
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 11px;
+}
+
+.log-table th {
+  background: #e0f2fe;
+  color: #0c4a6e;
+  font-weight: 700;
+  text-align: left;
+  vertical-align: bottom;
+  line-height: 1.2;
+  padding: 7px 8px;
+  border-top: 1px solid #bae6fd;
+  border-bottom: 2px solid #14b8a6;
+  border-right: 1px solid #bae6fd;
+}
+
+.log-table th:first-child {
+  border-left: 1px solid #bae6fd;
+  border-top-left-radius: 6px;
+}
+
+.log-table th:last-child {
+  border-top-right-radius: 6px;
+}
+
+.log-table th span {
+  display: block;
+  margin-top: 1px;
+  font-weight: 400;
+  font-size: 9.5px;
+  color: #0369a1;
+}
+
+.log-table td {
+  height: 30px;
+  border-right: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.log-table td:first-child {
+  border-left: 1px solid #e5e7eb;
+}
+
+.log-table-tall td {
+  height: 54px;
+}
+
+.log-table tbody tr:nth-child(even) td {
+  background: #f8fafc;
+}
+
+@page log {
+  size: letter landscape;
+  margin: 0.45in;
+}
+
 @media print {
-  body:has(.printable-log) * {
-    visibility: hidden;
+  /* On the test log page, print only the forms: hide everything that
+     neither contains nor sits inside .log-sheets, and flatten the
+     wrappers around it. */
+  body:has(.log-sheets) *:not(:has(.log-sheets)):not(.log-sheets):not(.log-sheets *) {
+    display: none !important;
   }
-  body:has(.printable-log) .printable-log,
-  body:has(.printable-log) .printable-log * {
-    visibility: visible;
+
+  body:has(.log-sheets) :has(.log-sheets) {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    max-width: none !important;
+    width: auto !important;
+    background: #fff !important;
   }
-  body:has(.printable-log) .printable-log {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
+
+  .log-sheets {
+    margin: 0 !important;
   }
-  .printable-log h3 {
-    break-before: page;
-    margin-top: 0;
+
+  .log-sheet {
+    page: log;
+    /* Fill the printable area so the sign-off footer sits at the bottom */
+    display: flex !important;
+    flex-direction: column;
+    height: 7.55in;
+    break-after: page;
+    break-inside: avoid;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+    margin: 0 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
-  .printable-log h3:first-child {
-    break-before: auto;
+
+  .log-sheet:last-child {
+    break-after: auto;
   }
-  .printable-log table {
-    width: 100%;
-    font-size: 11px;
-    border-collapse: collapse;
+
+  .log-table-wrap {
+    overflow: visible !important;
   }
-  .printable-log th,
-  .printable-log td {
-    border: 1px solid #555;
-    padding: 10px 6px;
+
+  .log-table {
+    min-width: 0;
   }
+
+  .log-table td {
+    height: 0.36in;
+  }
+
+  .log-table-tall td {
+    height: 0.72in;
+  }
+
+  .log-footer {
+    margin-top: auto !important;
+  }
+
+  .log-fill {
+    height: 0.3in;
+  }
+
   .print-hidden {
     display: none !important;
   }
-}
-
-/* Blank log tables on screen */
-.printable-log td {
-  border: 1px solid #e5e7eb;
-  height: 2.25rem;
 }

@@ -2,7 +2,7 @@ import { compileMDX } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
 import Callout from "./Callout";
 import PrintButton from "./PrintButton";
-import PrintableLog from "./PrintableLog";
+import GeneratorTestLog from "./GeneratorTestLog";
 
 function slugify(text: string) {
   return text
@@ -37,7 +37,7 @@ const components = {
   ),
   Callout,
   PrintButton,
-  PrintableLog,
+  GeneratorTestLog,
 };
 
 interface MDXContentProps {
