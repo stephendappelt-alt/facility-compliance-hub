@@ -45,13 +45,17 @@ export default function InlineSponsorCTA({
       <p className="mt-2 text-sm leading-relaxed text-gray-700">
         {body || sponsor.description}
       </p>
-      <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center">
+      <div
+        className={`mt-4 flex flex-col gap-3 ${
+          showLogo ? "items-center" : "sm:flex-row sm:items-center"
+        }`}
+      >
         <SponsorLink
           sponsor={sponsor}
           placement={placement}
           pageId={pageId}
           vertical={vertical}
-          className="inline-block rounded-lg bg-teal-700 px-5 py-2.5 text-center text-sm font-semibold text-white hover:bg-teal-600"
+          className={`inline-block rounded-lg bg-teal-700 px-5 py-2.5 text-center text-sm font-semibold text-white hover:bg-teal-600 ${showLogo ? "w-full" : ""}`}
         >
           {sponsor.ctaText}
         </SponsorLink>
