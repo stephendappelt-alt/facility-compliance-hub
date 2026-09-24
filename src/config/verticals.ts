@@ -48,7 +48,7 @@ export const verticals: VerticalConfig[] = [
     icon: "Flame",
     image: "/images/verticals/fire-protection.jpg",
     color: "#DC2626",
-    active: false,
+    active: true,
     categories: [
       "compliance-guides",
       "maintenance-schedules",

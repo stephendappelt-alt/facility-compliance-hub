@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Sponsor } from "@/types/sponsor";
 import { withUtm } from "@/lib/tracking";
+import { isPlaceholderSponsor } from "@/config/sponsors";
 import SponsorLink from "@/components/sponsor/SponsorLink";
 
 interface SponsorBadgeProps {
@@ -18,10 +19,15 @@ export default function SponsorBadge({ sponsor, size = "sm" }: SponsorBadgeProps
       }`}
     >
       <a
-        href={withUtm(sponsor.website, {
-          campaign: vertical,
-          content: "vertical-header__badge",
-        })}
+        href={
+          // Open slots link to the sponsorship inquiry email instead of "#"
+          isPlaceholderSponsor(sponsor)
+            ? sponsor.ctaUrl
+            : withUtm(sponsor.website, {
+                campaign: vertical,
+                content: "vertical-header__badge",
+              })
+        }
         target="_blank"
         rel="sponsored noopener"
         className="flex flex-col items-center gap-3"
