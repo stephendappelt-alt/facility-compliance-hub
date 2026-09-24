@@ -6,4 +6,6 @@ export const siteConfig = {
   url: "https://facilitycompliancehub.org",
   author: "Facility Compliance Hub Editorial Team",
   locale: "en_US",
+  // GA4 measurement ID (public). An env var can override it per environment.
+  gaMeasurementId: "G-6ZBJQ5C0T9",
 };

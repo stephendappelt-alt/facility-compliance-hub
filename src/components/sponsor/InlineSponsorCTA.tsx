@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Sponsor } from "@/types/sponsor";
 import { SponsorPlacement } from "@/lib/tracking";
 import SponsorLink from "./SponsorLink";
@@ -9,6 +10,7 @@ interface InlineSponsorCTAProps {
   pageId: string;
   vertical: string;
   placement?: SponsorPlacement;
+  showLogo?: boolean;
 }
 
 export default function InlineSponsorCTA({
@@ -18,6 +20,7 @@ export default function InlineSponsorCTA({
   pageId,
   vertical,
   placement = "inline",
+  showLogo = false,
 }: InlineSponsorCTAProps) {
   return (
     <aside
@@ -25,8 +28,17 @@ export default function InlineSponsorCTA({
       className="not-prose my-8 rounded-xl border border-teal-200 bg-teal-50 p-5 sm:p-6"
     >
       <p className="text-[10px] font-semibold uppercase tracking-wider text-teal-700">
-        From our Platinum Sponsor &middot; {sponsor.name}
+        {showLogo ? "Platinum Sponsor" : <>From our Platinum Sponsor &middot; {sponsor.name}</>}
       </p>
+      {showLogo && (
+        <Image
+          src={sponsor.logo}
+          alt={sponsor.name}
+          width={200}
+          height={44}
+          className="mt-3 h-auto w-48 object-contain"
+        />
+      )}
       <p className="mt-2 text-lg font-bold leading-snug text-gray-900">
         {headline}
       </p>
@@ -50,7 +62,7 @@ export default function InlineSponsorCTA({
             pageId={pageId}
             vertical={vertical}
             kind="phone"
-            className="text-sm font-medium text-teal-800 hover:underline"
+            className="whitespace-nowrap text-sm font-medium text-teal-800 hover:underline"
           >
             or call {sponsor.phone}
           </SponsorLink>

@@ -6,7 +6,12 @@
 // custom events). Both work independently.
 // ============================================================
 
-export type SponsorPlacement = "inline" | "sidebar" | "footer-strip" | "hub";
+export type SponsorPlacement =
+  | "inline"
+  | "sidebar"
+  | "footer-strip"
+  | "hub"
+  | "vertical-header";
 
 export function withUtm(
   url: string,

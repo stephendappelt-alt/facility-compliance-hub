@@ -48,7 +48,7 @@ export default function ArticleGrid({
               <span>{article.readingTime} min read</span>
               <span>&middot;</span>
               <span>
-                {new Date(article.date).toLocaleDateString("en-US", {
+                {new Date(`${article.date}T12:00:00`).toLocaleDateString("en-US", {
                   month: "short",
                   day: "numeric",
                   year: "numeric",

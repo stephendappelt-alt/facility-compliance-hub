@@ -126,6 +126,7 @@ export default function HealthcareHubPage() {
                 pageId="healthcare-hub"
                 vertical="healthcare"
                 placement="hub"
+                showLogo
               />
             </div>
           )}
