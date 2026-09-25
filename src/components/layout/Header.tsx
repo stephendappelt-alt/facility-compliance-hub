@@ -1,13 +1,42 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { navigation } from "@/config/navigation";
 import Container from "@/components/ui/Container";
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [verticalDropdown, setVerticalDropdown] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+  const closeTimer = useRef<ReturnType<typeof setTimeout>>();
+
+  // Hover opens immediately; closing waits briefly so moving the mouse from
+  // the button down into the menu doesn't collapse it.
+  const openDropdown = () => {
+    clearTimeout(closeTimer.current);
+    setVerticalDropdown(true);
+  };
+  const closeDropdownSoon = () => {
+    clearTimeout(closeTimer.current);
+    closeTimer.current = setTimeout(() => setVerticalDropdown(false), 200);
+  };
+
+  useEffect(() => {
+    if (!verticalDropdown) return;
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setVerticalDropdown(false);
+    const onClick = (e: MouseEvent) => {
+      if (!dropdownRef.current?.contains(e.target as Node)) setVerticalDropdown(false);
+    };
+    document.addEventListener("keydown", onKey);
+    document.addEventListener("mousedown", onClick);
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.removeEventListener("mousedown", onClick);
+    };
+  }, [verticalDropdown]);
+
+  useEffect(() => () => clearTimeout(closeTimer.current), []);
 
   return (
     <header className="sticky top-0 z-50 border-b border-gray-200 bg-white/95 backdrop-blur">
@@ -51,11 +80,18 @@ export default function Header() {
 
             {/* Verticals Dropdown */}
             <div
+              ref={dropdownRef}
               className="relative"
-              onMouseEnter={() => setVerticalDropdown(true)}
-              onMouseLeave={() => setVerticalDropdown(false)}
+              onMouseEnter={openDropdown}
+              onMouseLeave={closeDropdownSoon}
             >
-              <button className="flex items-center gap-1 text-sm font-medium text-gray-600 hover:text-primary-700">
+              <button
+                type="button"
+                aria-haspopup="true"
+                aria-expanded={verticalDropdown}
+                onClick={() => setVerticalDropdown((open) => !open)}
+                className="flex items-center gap-1 py-2 text-sm font-medium text-gray-600 hover:text-primary-700"
+              >
                 Verticals
                 <svg
                   className={`h-4 w-4 transition-transform ${verticalDropdown ? "rotate-180" : ""}`}
@@ -68,13 +104,22 @@ export default function Header() {
                 </svg>
               </button>
 
-              {verticalDropdown && (
-                <div className="absolute left-0 top-full mt-1 w-56 rounded-lg border border-gray-200 bg-white py-2 shadow-lg">
+              {/* pt-2 (not margin) keeps the hover area continuous down to the menu.
+                  The menu stays in the DOM so crawlers can follow the links. */}
+              <div
+                className={`absolute right-0 top-full z-50 w-60 pt-2 transition duration-150 ${
+                  verticalDropdown
+                    ? "visible translate-y-0 opacity-100"
+                    : "invisible -translate-y-1 opacity-0"
+                }`}
+              >
+                <div className="rounded-lg border border-gray-200 bg-white py-2 shadow-lg">
                   {navigation.verticals.map((item) => (
                     <Link
                       key={item.href}
                       href={item.href}
-                      className="flex items-center justify-between px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"
+                      onClick={() => setVerticalDropdown(false)}
+                      className="flex items-center justify-between px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary-700"
                     >
                       {item.label}
                       {!item.active && (
@@ -85,7 +130,7 @@ export default function Header() {
                     </Link>
                   ))}
                 </div>
-              )}
+              </div>
             </div>
           </nav>
 

@@ -16,17 +16,17 @@ export default function Hero() {
       </div>
 
       <div className="container-main relative">
-        <div className="mx-auto max-w-3xl text-center">
-          <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
+        <div className="mx-auto max-w-4xl text-center">
+          <h1 className="mx-auto max-w-3xl text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
             Your Trusted Resource for{" "}
             <span className="text-teal-300">Facility Compliance</span>
           </h1>
-          <p className="mt-6 text-lg leading-relaxed text-primary-100 sm:text-xl">
+          <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-primary-100 sm:text-xl">
             Free compliance guides, maintenance schedules, and checklists for
             commercial facility managers. Every trade. Every code requirement.
             One resource.
           </p>
-          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:flex-wrap">
             <Link
               href="/generators"
               className="rounded-lg bg-white px-6 py-3 text-sm font-semibold text-primary-900 shadow-lg hover:bg-gray-50"
@@ -38,6 +38,12 @@ export default function Hero() {
               className="rounded-lg bg-teal-500 px-6 py-3 text-sm font-semibold text-white shadow-lg hover:bg-teal-400"
             >
               Explore HVAC Compliance
+            </Link>
+            <Link
+              href="/fire-protection"
+              className="rounded-lg bg-red-600 px-6 py-3 text-sm font-semibold text-white shadow-lg hover:bg-red-500"
+            >
+              Explore Fire Protection
             </Link>
             <Link
               href="/about"
